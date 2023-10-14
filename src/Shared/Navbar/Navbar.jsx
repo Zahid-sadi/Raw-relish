@@ -41,11 +41,11 @@ const Navbar = () => {
                             />
                         </svg>
                     </label>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2  hover:underlie">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2">
                  {navItem}
                     </ul>
                 </div>
-                <a className="text-2xl font-extrabold text-yellow-900">Raw Relish</a>
+                <a className="text-2xl font-extrabold text-yellow-700">Raw Relish</a>
             </div>
             <div className="navbar-center hidden lg:flex ">
                 <ul className="menu menu-horizontal px-1 underline">
