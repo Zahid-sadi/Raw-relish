@@ -5,9 +5,9 @@ import img1 from '../../assets/bl-spooon.jpg'
 
 const Hero = () => {
     return (
-        <div className="bg-cover h-1/4">
+        <div className="bg-cover h-1/4 ">
         
-          <img src={img1} alt="Vegetable" className=" min-h-min w-full" />
+          <img src={img1} alt="Vegetable" className=" min-h-min w-full " />
         
       </div>
     );

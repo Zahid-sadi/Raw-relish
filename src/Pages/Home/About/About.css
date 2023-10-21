@@ -8,16 +8,17 @@
 
 
 
+
 .custom-hov:hover {
     height:800px;
     
     transition-timing-function: ease;
   }
-.custom-hov p :hover {
+/* .custom-hov p :hover {
    display: block;
     
     transition-timing-function: ease;
-  }
+  } */
 
  
 
