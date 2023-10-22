@@ -1,7 +1,7 @@
 import CategoryHero from "../../CategoryHero/CategoryHero";
 import imgBanner from '../../../assets/Restaurant food cinematic video advertisement (Bangladesh).mp4';
 import useItems from "../../../Hooks/useItems";
-import FoodDisplay from "../OfferedFood/FoodDisplay";
+import FoodDisplay from "../FoodDisplay/FoodDisplay";
 
 const FoodMenu = () => {
 
@@ -18,7 +18,7 @@ const FoodMenu = () => {
             details ={" this is category hero there is some new food for offer for today's  "}
             ></CategoryHero>,
 
-            <div className=" h-min p-10 flex">
+            <div className=" p-10 flex">
                 <div className="w-1/2 items-center justify-center p-60  ">
                     <h3 className=" text-4xl font-bold text-white text-center uppercase p-10  shadow-sm shadow-white ">
                         __________today's offer__________
@@ -31,7 +31,7 @@ const FoodMenu = () => {
                         quia laudantium.
                     </p>
                 </div>
-                <div className=" w-fit   p-10  grid grid-flow-row md:grid-cols-2 sm:grid-cols-1">
+                <div className=" w-fit h-full  grid grid-flow-row md:grid-cols-2 sm:grid-cols-1">
                     {
                         offeredItems.map((offeredItem) => (
                             <FoodDisplay key={offeredItem._id} offeredItem={offeredItem}></FoodDisplay>

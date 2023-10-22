@@ -1,4 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {useState} from "react";
 const CategoryHero = ({bgvideo, heading, details}) => {
     const [isPlaying, setIsPlaying] = useState(false);
@@ -17,7 +16,7 @@ const CategoryHero = ({bgvideo, heading, details}) => {
             className="hero h-[800px] bg-fixed"
             // style={{backgroundImage: `url("${imageUrl}")`}}
         >
-            <video autoPlay loop muted className="background-video bg-fixed h-[800px] w-full ">
+            <video autoPlay loop muted className="background-video h-fit w-full ">
                 <source src={bgvideo} type="video/mp4" />
             </video>
             <div className="hero-overlay bg-opacity-60"></div>
@@ -25,11 +24,7 @@ const CategoryHero = ({bgvideo, heading, details}) => {
                 <div className="max-w-md">
                     <h1 className="mb-5 text-5xl font-bold">{heading}</h1>
                     <p className="mb-5">{details}</p>
-                    <button onClick={togglePlay}>{isPlaying ? <FontAwesomeIcon className="bg-black" icon="Fa-solid fa-stop" /> : <FontAwesomeIcon icon="fa-solid fa-play" />}
-                    </button>
-                    <FontAwesomeIcon icon="Fa-solid fa-stop"></FontAwesomeIcon>
-
-
+                    <button onClick={togglePlay}>{isPlaying ? "pause" : "play"}</button>
                 </div>
             </div>
         </div>

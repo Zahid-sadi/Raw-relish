@@ -2,8 +2,8 @@ import './About.css'
 import aboutpic from "../../../assets/about-pic1.jpg";
 const About = () => {
     return (
-        <div className=" hero h-max w-full bg-fixed ">
-            <img src={aboutpic} alt="" className="w-full h-full bg-fixed " />
+        <div className=" hero h-max w-full">
+            <img src={aboutpic} alt="" className="w-full h-full " />
             <div className="hero-overlay bg-opacity-70  "></div>
 
             <div className="text-center text-neutral-content grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 place-content-center place-items-center gap-5 ">

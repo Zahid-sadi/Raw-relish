@@ -1,5 +1,5 @@
 import {Helmet} from "react-helmet";
-import FoodDisplay from "../../../Shared/FoodItems/OfferedFood/FoodDisplay";
+import FoodDisplay from "../../../Shared/FoodItems/FoodDisplay/FoodDisplay";
 
 const ItemsCategory = ({items,categoryHeadline, categoryDetails}) => {
     console.log(items)

@@ -17,23 +17,20 @@ const Review = () => {
 
     },[])
     return (
-        <section className="flex  h-96 w-full mx-auto bg-[url('/img/hero-pattern.svg')] ">
-          <div className="w-1/2 h-96 bg-orange-700 mx-auto -mt-10">
-            <h3 className="text-white text-4xl font-bold text-center uppercase my-10 p-10  ">the peoples are told about  us and our food tradition </h3>
-
-          </div>
+        <section className="flex  h-96  mx-auto"  style={{backgroundImage: 'url(../../../assets/restaurant-food.jpg)'}}>
+         
           <Swiper
             direction={'vertical'}
             mousewheel={true}
             autoplay={{
-                delay: 2500,
+                delay: 3000,
                 disableOnInteraction: false,
               }}
             pagination={{
               clickable: true,
             }}
             modules={[Autoplay, Pagination,]}
-            className="mySwiper -mb-10 h-96 w-1/2 mx-auto p-10 bg-slate-600"
+            className="mySwiper   mx-auto p-10 bg-slate-600"
           >
             {
                 reviews.map(review => <SwiperSlide key ={review._id}
