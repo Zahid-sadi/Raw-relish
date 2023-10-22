@@ -19,7 +19,9 @@ const FoodMenu = () => {
 
     return (
         <section>
-            <CategoryHero imageUrl={imgBanner} heading={"todays ______________"}></CategoryHero>,
+            <CategoryHero imageUrl={imgBanner} heading={"Today's ________Offer"}
+            details ={" this is category hero there is some new food for offer for today's  "}
+            ></CategoryHero>,
 
             <div className=" h-min p-10 flex">
                 <div className="w-1/2 items-center justify-center p-60  ">

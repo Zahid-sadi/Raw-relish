@@ -7,8 +7,8 @@ const About = () => {
             <div className="hero-overlay bg-opacity-70  "></div>
 
             <div className="text-center text-neutral-content grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 place-content-center place-items-center gap-5 ">
-                <div className=" custom-hov p-5 bg-orange-600 md:">
-                <h4 className="text-5xl font-bold p-24  bg-black">WHO ARE WE </h4>
+                <div className=" custom-hov  bg-slate-600 md:">
+                <h4 className="text-5xl font-bold p-24  bg-black">WHO ARE WE.... </h4>
                     <p className="text-start font-serif p-5">
                         
                         1...... Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo magni, modi itaque illum
@@ -21,8 +21,8 @@ const About = () => {
                         repudiandae? Ipsum neque et sed vel!
                     </p>
                 </div>
-                <div className="custom-hov p-5 bg-black">
-                <h4 className="text-5xl text-center font-bold bg-orange-600 p-24">WHY FROM US </h4>
+                <div className="custom-hov  bg-black">
+                <h4 className="text-5xl text-center font-bold bg-slate-500 p-24">WHY FROM US </h4>
 
                     <p className=" text-start font-serif p-5 ">
                         2..... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, aperiam? Eaque
@@ -35,8 +35,8 @@ const About = () => {
                     </p>
 
                 </div>
-                <div className="custom-hov p-5 bg-slate-500  ">
-                    <h4 className="text-5xl font-bold  bg-slate-800 p-20 ">WHAT IS OUR STRENGTH</h4> 
+                <div className="custom-hov  bg-slate-500  ">
+                    <h4 className="text-5xl font-bold  bg-slate-800 p-24 text-center ">WHAT IS OUR STRENGTH</h4> 
                   
                     <p className="text-start font-sans p-5">
                         3.................. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur sit rerum
