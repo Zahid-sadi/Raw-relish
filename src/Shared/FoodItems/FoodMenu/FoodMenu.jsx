@@ -1,25 +1,20 @@
-import React, {useEffect, useState} from "react";
-import OfferedFood from "../OfferedFood/OfferedFood";
 import CategoryHero from "../../CategoryHero/CategoryHero";
-import imgBanner from '../../../assets/smoke-cook.jpg';
+import imgBanner from '../../../assets/Restaurant food cinematic video advertisement (Bangladesh).mp4';
+import useItems from "../../../Hooks/useItems";
+import FoodDisplay from "../OfferedFood/FoodDisplay";
 
 const FoodMenu = () => {
-    const [menu, setMenu] = useState([]);
 
-    useEffect(() => {
-        fetch("menu.json")
-        .then((res) => res.json())
-        .then((data) => {
-            const offeredItems = data.filter((item) => item.category === "offered");
-            setMenu(offeredItems);
-        });
-    }, []);
+    
+    const [menu] = useItems([]);
+    const offeredItems = menu.filter(item => item.category === "offered" )
+    console.log(offeredItems, "from foodmenu");
 
-    // console.log("Menu Item state", menu);
+  
 
     return (
         <section>
-            <CategoryHero imageUrl={imgBanner} heading={"Today's ________Offer"}
+            <CategoryHero bgvideo={imgBanner} heading={"Today's ________Offer"}
             details ={" this is category hero there is some new food for offer for today's  "}
             ></CategoryHero>,
 
@@ -38,8 +33,8 @@ const FoodMenu = () => {
                 </div>
                 <div className=" w-fit   p-10  grid grid-flow-row md:grid-cols-2 sm:grid-cols-1">
                     {
-                        menu.map((offeredItem) => (
-                            <OfferedFood key={offeredItem._id} offeredItem={offeredItem}></OfferedFood>
+                        offeredItems.map((offeredItem) => (
+                            <FoodDisplay key={offeredItem._id} offeredItem={offeredItem}></FoodDisplay>
                         ))}
                 </div>
             </div>

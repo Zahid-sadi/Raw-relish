@@ -1,22 +1,11 @@
-import logo from '../../assets/logo3.png'
+import { Link } from 'react-router-dom';
+import logo from '../../assets/logo1.png'
 const Navbar = () => {
     const navItem = (<>
            <li>
-                            <a>Item 1</a>
-                        </li>
-                        <li>
-                            <a>Parent</a>
-                            <ul className="p-2">
-                                <li>
-                                    <a>Submenu 1</a>
-                                </li>
-                                <li>
-                                    <a>Submenu 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a>Item 3</a>
+                            <Link to="/items">Items</Link>
+                      
+                      
                         </li>
     </>);
 
@@ -31,31 +20,13 @@ const Navbar = () => {
                  {navItem}
                     </ul>
                 </div>
-                <img className=' h-16 w-16 p-2 mx-2' src={logo} alt="logo of raw relish" />
-                <a className="text-2xl font-extrabold text-yellow-700">Raw Relish</a>
+                <Link to="/"> <img className=' h-16 w-16 p-2 mx-2' src={logo} alt="logo of raw relish" /></Link>
+               
+                <Link to="/" className="text-2xl font-extrabold text-yellow-700">Raw Relish</Link>
             </div>
             <div className="navbar-center hidden lg:flex ">
-                <ul className="menu menu-horizontal px-1 underline">
-                    <li>
-                        <a>Item 1</a>
-                    </li>
-                    <li tabIndex={0}>
-                        <details>
-                            <summary>Parent</summary>
-                            <ul className="p-2">
-                                <li>
-                                    <a>Submenu 1</a>
-                                </li>
-                                <li>
-                                    <a>Submenu 2</a>
-                                </li>
-                            </ul>
-                        </details>
-                    </li>
-
-                    <li>
-                        <a>Item 3</a>
-                    </li>
+                <ul className="menu menu-horizontal px-1">
+                   {navItem}
                 </ul>
             </div>
             <div className="navbar-end">

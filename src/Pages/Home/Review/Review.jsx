@@ -19,7 +19,7 @@ const Review = () => {
     return (
         <section className="flex  h-96 w-full mx-auto bg-[url('/img/hero-pattern.svg')] ">
           <div className="w-1/2 h-96 bg-orange-700 mx-auto -mt-10">
-            <h3 className="text-white text-4xl font-bold text-center uppercase my-10 p-10  ">the peoples are giving feedback to us to cook and our food tradition </h3>
+            <h3 className="text-white text-4xl font-bold text-center uppercase my-10 p-10  ">the peoples are told about  us and our food tradition </h3>
 
           </div>
           <Swiper
