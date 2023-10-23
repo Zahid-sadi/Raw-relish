@@ -34,14 +34,14 @@ const Category = () => {
             className="mySwiper h-96 m-5 "
           >
             <SwiperSlide><img src={img1}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>RAW SPECIAL</h3> </SwiperSlide>
-            <SwiperSlide><img src={img2}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>FORUITS WITH DESART</h3> </SwiperSlide>
-            <SwiperSlide><img src={img3}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>RAW FROUTS</h3> </SwiperSlide>
-            <SwiperSlide><img src={img4}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>WITH RAW HUNNY..</h3> </SwiperSlide>
+            <SwiperSlide><img src={img2}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>FORUITS WITH DESERT</h3> </SwiperSlide>
+            <SwiperSlide><img src={img3}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>RAW FRUITS</h3> </SwiperSlide>
+            <SwiperSlide><img src={img4}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>WITH RAW HONEY..</h3> </SwiperSlide>
             <SwiperSlide><img src={img5}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>RAW NATURAL</h3> </SwiperSlide>
             <SwiperSlide><img src={img6}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>NATURAL MIX F.F</h3> </SwiperSlide>
             <SwiperSlide><img src={img7}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>RAW SAFE SPICY </h3> </SwiperSlide>
             <SwiperSlide><img src={img8}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>RAW JUICE</h3> </SwiperSlide>
-            <SwiperSlide><img src={img9}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>RAW MIC TRENDY</h3> </SwiperSlide>
+            <SwiperSlide><img src={img9}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>RAW MIX TRENDY</h3> </SwiperSlide>
             <SwiperSlide><img src={img10} className='h-full w-full'  alt="" /> <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>RAW PICKLE MIX</h3>  </SwiperSlide>
           </Swiper>
         </div>

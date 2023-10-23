@@ -8,7 +8,7 @@ const FoodMenu = () => {
     
     const [menu] = useItems([]);
     const offeredItems = menu.filter(item => item.category === "offered" )
-    console.log(offeredItems, "from foodmenu");
+    // console.log(offeredItems, "from foodmenu");
 
   
 

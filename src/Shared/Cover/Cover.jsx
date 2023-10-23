@@ -1,15 +1,15 @@
 
-const Cover = ({coverphoto, coverHeadile, coverDetails}) => {
+const Cover = ({coverPhoto, coverHeadline, coverDetails}) => {
 
     return (
         <div
-            className="hero min-h-screen bg-fixed"
-            style={{backgroundImage: `url(${coverphoto})`}}
+            className="hero min-h-screen bg-fixed object-cover"
+            style={{backgroundImage: `url(${coverPhoto})`}}
         >
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
-                    <h1 className="mb-5 text-5xl font-bold">{coverHeadile}</h1>
+                    <h1 className="mb-5 text-5xl font-bold">{coverHeadline}</h1>
                     <p className="mb-5">
                       {coverDetails}
                     </p>
