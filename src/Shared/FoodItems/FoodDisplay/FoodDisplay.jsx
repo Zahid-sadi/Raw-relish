@@ -1,9 +1,8 @@
 import React, {useState} from "react";
-import './FoodDisplay.css'
 
-const FoodDisplay = ({offeredItem}) => {
-    console.log("From Offered Food", offeredItem);
-    const {name, image, price, recipe, newPrice} = offeredItem;
+const FoodDisplay = ({item}) => {
+    // console.log("From Offered Food", offeredItem);
+    const {name, image, price, recipe, newPrice} = item;
     // console.log(name, image, price, recipe);
 
     const [isHovered, setIsHovered] = useState(false);
@@ -30,15 +29,7 @@ const FoodDisplay = ({offeredItem}) => {
 
         </div>
 
-        // <div className="">
-        //     <img src={image} alt="Offered Item" className="offer" />
-        //     {/* <div className="  flex flex-col justify-center items-center bg-black bg-opacity-80 text-white p-4">
-        //         <h2 className="text-2xl">{name}</h2>
-        //         <p className="">{recipe}</p>
-        //         <p className="line-through  text-red-500 ">Before $ {price} </p>
-        //         <p className="text-yellow-500"> Now : $ {newPrice}</p>
-        //     </div> */}
-        // </div>
+     
     );
 };
 

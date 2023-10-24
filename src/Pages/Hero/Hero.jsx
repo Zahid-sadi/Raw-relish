@@ -1,4 +1,3 @@
-import React from 'react';
 import './Hero.css'
 import img1 from '../../assets/bl-spooon.jpg'
 // import oilDropImage from '../../assets/restaurant-food.jpg'

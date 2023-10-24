@@ -1,4 +1,3 @@
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -15,11 +14,11 @@ import img8 from '../../assets/food8.jpg'
 import img9 from '../../assets/food9.jpeg'
 import img10 from '../../assets/food10.jpg'
 
-const Category = () => {
+const CategorySlide = () => {
     return (
-        <div className='md:2 sm:1'>
+        <div className=''>
           <Swiper
-          cssMode={true}
+          // cssMode={true}
           navigation={true}
           loop={true}
           pagination={true}
@@ -31,7 +30,7 @@ const Category = () => {
             spaceBetween={30}
           
           
-            className="mySwiper h-96 m-5 "
+            className="mySwiper h-96 md:2 sm:1 "
           >
             <SwiperSlide><img src={img1}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>RAW SPECIAL</h3> </SwiperSlide>
             <SwiperSlide><img src={img2}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>FORUITS WITH DESERT</h3> </SwiperSlide>
@@ -48,4 +47,4 @@ const Category = () => {
       );
 };
 
-export default Category;
+export default CategorySlide;

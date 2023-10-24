@@ -1,6 +1,7 @@
-import FoodCard from '../../../Shared/FoodCard/FoodCard';
+import FoodCard from '../../FoodCard/FoodCard';
 
 const FoodMap = ({items}) => {
+    // console.log(items);
     return (
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 mx-auto'>
             {

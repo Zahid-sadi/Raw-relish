@@ -1,7 +1,8 @@
 import {Helmet} from "react-helmet";
 import FoodDisplay from "../../../Shared/FoodItems/FoodDisplay/FoodDisplay";
+import { Link } from "react-router-dom";
 
-const ItemsCategory = ({items,categoryHeadline, categoryDetails}) => {
+const MenuItemsCategory = ({items,categoryHeadline, categoryDetails}) => {
     console.log(items)
     return (
         <div>
@@ -16,11 +17,12 @@ const ItemsCategory = ({items,categoryHeadline, categoryDetails}) => {
                     <p className="text-white p-10 ">
                   {categoryDetails}
                     </p>
+                    <button className="btn btn-outline btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg text-indigo-400 p-5"> <Link to="/order">Order Now</Link></button>
                 </div>
                 <div className=" w-fit   p-10  grid grid-flow-row md:grid-cols-2 sm:grid-cols-1">
                     {
-                        items.map((offeredItem) => (
-                            <FoodDisplay key={offeredItem._id} offeredItem={offeredItem}></FoodDisplay>
+                        items.map((item) => (
+                            <FoodDisplay key={item._id} item={item}></FoodDisplay>
                         ))}
                 </div>
             </div>
@@ -29,4 +31,4 @@ const ItemsCategory = ({items,categoryHeadline, categoryDetails}) => {
     );
 };
 
-export default ItemsCategory;
+export default MenuItemsCategory;

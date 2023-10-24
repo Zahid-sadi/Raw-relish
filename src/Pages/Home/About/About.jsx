@@ -8,7 +8,7 @@ const About = () => {
 
             <div className="text-center text-neutral-content grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 place-content-center place-items-center gap-5 ">
                 <div className=" custom-hov  bg-slate-600 md:">
-                <h4 className="text-5xl font-bold p-24  bg-black">WHO ARE WE.... </h4>
+                <h4 className="text-5xl font-bold p-24  bg-black">WHO WE ARE.... </h4>
                     <p className="text-start font-serif p-5">
                         
                         1...... Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo magni, modi itaque illum

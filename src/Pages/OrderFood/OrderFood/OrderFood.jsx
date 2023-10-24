@@ -9,6 +9,8 @@ import useItems from "../../../Hooks/useItems";
 const OrderFood = () => {
     const [tabIndex, setTabIndex] = useState(0);
     const [menu] = useItems([]);
+    // console.log(menu);
+    // console.log(spicy);
 
     const spicy = menu.filter((item) => item.category === "spicy");
     const rawSpecial = menu.filter((item) => item.category === "raw-special");

@@ -1,9 +1,9 @@
 import Hero from '../../Hero/Hero';
-import Category from '../../Category/Category';
+import Category from '../../CategorySlide/CategorySlide';
 import About from '../About/About';
-import FoodMenu from '../../../Shared/FoodItems/FoodMenu/FoodMenu';
 import Review from '../Review/Review';
 import { Helmet } from 'react-helmet';
+import OfferedFood from '../../../Shared/FoodItems/OfferedFood/OfferedFood';
 
 const Home = () => {
     return (
@@ -12,7 +12,7 @@ const Home = () => {
             <Hero></Hero>
             <Category></Category>
             <About></About>
-            <FoodMenu></FoodMenu>
+            <OfferedFood></OfferedFood>
             <Review></Review>
            
             
