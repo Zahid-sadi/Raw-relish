@@ -7,12 +7,12 @@ const useItems = () => {
 
 
     useEffect(() => {
-        fetch("menu.json")
+        fetch("http://localhost:3000/items")
         .then((res) => res.json())
         .then((data) => {
             setMenu(data);
             setLoading(false)
-    console.log(data ,'from menu');
+    // console.log(data ,'from menu');
 
         });
     }, []);

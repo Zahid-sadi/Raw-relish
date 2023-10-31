@@ -2,31 +2,26 @@ import {Helmet} from "react-helmet";
 import FoodDisplay from "../../../Shared/FoodItems/FoodDisplay/FoodDisplay";
 import { Link } from "react-router-dom";
 
-const MenuItemsCategory = ({items,categoryHeadline, categoryDetails}) => {
-    console.log(items)
+const MenuItemsCategory = ({items, categoryHeadline, categoryDetails}) => {
+    console.log(items);
     return (
-        <div>
-            <Helmet>
-                <title>Raw Relish ItemsCategory</title>
-            </Helmet>
-            <div className=" h-min p-10 flex">
-                <div className="w-1/2 items-center justify-center p-60  ">
-                    <h3 className=" text-4xl font-bold text-white text-center uppercase p-10  shadow-sm shadow-white ">
-                        __________{categoryHeadline}__________
-                    </h3>
-                    <p className="text-white p-10 ">
-                  {categoryDetails}
+       
+        <div className="hero min-h-screen ">
+            {/* <Helmet><title>Food Items Menu</title></Helmet> */}
+            <div className="hero-content w-4/5 flex-col lg:flex-row-reverse">
+                <div className="text-center w-1/2">
+                    <h1 className="text-5xl font-bold text-white border-spacing-1 border-white">________{categoryHeadline}__________</h1>
+                    <p className="p-6 text-white">
+                       {categoryDetails}
                     </p>
-                    <button className="btn btn-outline btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg text-indigo-400 p-5"> <Link to="/order">Order Now</Link></button>
+                    <Link className="text-white " to={`/order/${categoryHeadline}`}>Take</Link>
                 </div>
-                <div className=" w-fit   p-10  grid grid-flow-row md:grid-cols-2 sm:grid-cols-1">
+                <div className="card flex-shrink-0   w-1/2 max-w-sm grid grid-flow-row md:grid-cols-2 sm:grid-cols-1">
                     {
-                        items.map((item) => (
-                            <FoodDisplay key={item._id} item={item}></FoodDisplay>
-                        ))}
+                        items.map(item => <FoodDisplay key={item._id} item={item}></FoodDisplay>)
+                    }
                 </div>
             </div>
-            
         </div>
     );
 };

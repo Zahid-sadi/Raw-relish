@@ -19,7 +19,7 @@ const OfferedFood = () => {
             
             <MenuItemsCategory 
                  items={offered}
-                 categoryHeadline="Today's offer "
+                 categoryHeadline="offered"
                  categoryDetails="offer khao chapar sobde birokto koro char pash"
              ></MenuItemsCategory>
         </section>

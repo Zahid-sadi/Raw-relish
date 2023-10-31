@@ -5,13 +5,19 @@ import {Tab, Tabs, TabList, TabPanel} from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import FoodMap from "../FoodMap/FoodMap";
 import useItems from "../../../Hooks/useItems";
+import { useParams } from "react-router";
 
 const OrderFood = () => {
-    const [tabIndex, setTabIndex] = useState(0);
+    const categories = [ 'offered' ,'rawSpecial', 'spicy', 'dessert', 'foodbread', 'grilled', 'pickles', 'honey', 'fruits', 'juice',  'all'];
+    const {category}= useParams();
+    const initialIndex = categories.indexOf(category)
+      
+    const [tabIndex, setTabIndex] = useState(initialIndex);
     const [menu] = useItems([]);
     // console.log(menu);
     // console.log(spicy);
 
+    const offered = menu.filter((item) => item.category === "offered");
     const spicy = menu.filter((item) => item.category === "spicy");
     const rawSpecial = menu.filter((item) => item.category === "raw-special");
     const honey = menu.filter((item) => item.category === "honey");
@@ -24,14 +30,15 @@ const OrderFood = () => {
 
     return (
         <div>
-            <Cover coverPhoto={coverImage} coverHeadline="Order us " coverDetails="we ensure your demand"></Cover>
+            <Cover coverPhoto={coverImage} coverHeadline="Order Us " coverDetails="we ensure your demand"></Cover>
 
             <div className=" bg-slate-200 mx-auto ">
                 <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                     <div className=" text-yellow-400 bg-slate-600 mx-10">
                         <TabList>
+                            <Tab>Today's offer</Tab>
                             <Tab>Raw Special</Tab>
-                            <Tab>Spicy</Tab>
+                            <Tab>spicy</Tab>
                             <Tab>Dessert</Tab>
                             <Tab>R.S Bread </Tab>
                             <Tab>grilled</Tab>
@@ -43,6 +50,9 @@ const OrderFood = () => {
                         </TabList>
                     </div>
 
+                    <TabPanel>
+                        <FoodMap items={offered}></FoodMap>
+                    </TabPanel>
                     <TabPanel>
                         <FoodMap items={rawSpecial}></FoodMap>
                     </TabPanel>

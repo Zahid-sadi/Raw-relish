@@ -33,7 +33,7 @@ const CategorySlide = () => {
             className="mySwiper h-96 md:2 sm:1 "
           >
             <SwiperSlide><img src={img1}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>RAW SPECIAL</h3> </SwiperSlide>
-            <SwiperSlide><img src={img2}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>FORUITS WITH DESERT</h3> </SwiperSlide>
+            <SwiperSlide><img src={img2}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>FRUTES WITH DESERT</h3> </SwiperSlide>
             <SwiperSlide><img src={img3}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>RAW FRUITS</h3> </SwiperSlide>
             <SwiperSlide><img src={img4}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>WITH RAW HONEY..</h3> </SwiperSlide>
             <SwiperSlide><img src={img5}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>RAW NATURAL</h3> </SwiperSlide>
