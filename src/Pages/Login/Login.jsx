@@ -1,12 +1,12 @@
-import { loadCaptchaEnginge, LoadCanvasTemplate, LoadCanvasTemplateNoReload, validateCaptcha } from 'react-simple-captcha';
+import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
 
 import {Form, Link} from "react-router-dom";
 import img from "../../assets/loginbg2.jpg";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 const Login = () => {
 
+    const [isDisable, setDisable] = useState(true)
 
-    
     useEffect(()=>{
         loadCaptchaEnginge(6); 
     },[])
@@ -19,6 +19,18 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
     };
+
+    const handleCaptcha = event =>{
+        event.preventDefault()
+        const user_captcha_value = event.target.value;
+        // console.log(user_captcha_value);
+        if(validateCaptcha(user_captcha_value)== true){
+            setDisable(false)
+        }
+        else{
+            setDisable(true)
+        }
+    }
 
     return (
         <div
@@ -48,7 +60,7 @@ const Login = () => {
                             required
                         />
                         <label className="label">
-                            <Link href="#" className="label-text-alt link link-hover text-blue-400">
+                            <Link to="" className="label-text-alt link link-hover text-blue-400">
                                 Forgot password?
                             </Link>
                         </label>
@@ -56,6 +68,7 @@ const Login = () => {
                         <LoadCanvasTemplate />
                         </label>
                         <input 
+                        onMouseOut={handleCaptcha}
                         type="text" 
                         name="captcha" 
                         placeholder="type here the captcha"
@@ -63,6 +76,7 @@ const Login = () => {
 
                          />
                         <input
+                            disabled={ isDisable }
                             type="submit"
                             name="submit"
                             placeholder="submit"
