@@ -2,8 +2,16 @@ import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-s
 
 import {Form, Link} from "react-router-dom";
 import img from "../../assets/loginbg2.jpg";
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { AuthContext } from '../../Providers/AuthProvider';
+
+
+
+
+
 const Login = () => {
+
+    const {logIn, setLoading } = useContext(AuthContext)
 
     const [isDisable, setDisable] = useState(true)
 
@@ -17,7 +25,14 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+        // console.log(email, password);
+
+        logIn(email, password)
+        .then(result =>{
+            const user = result.user;
+            setLoading(false)
+            console.log(user);
+        })
     };
 
     const handleCaptcha = event =>{
@@ -84,6 +99,7 @@ const Login = () => {
                             value="Login"
                         />
                     </form>
+                    <Link className='text-yellow-400 font-light' to="/signUp">Please Make An Account</Link>
                 </div>
             </div>
         </div>
