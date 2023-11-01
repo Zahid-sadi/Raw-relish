@@ -1,51 +1,49 @@
-import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
+import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from "react-simple-captcha";
 
-import {Form, Link} from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from "../../assets/loginbg2.jpg";
-import { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../../Providers/AuthProvider';
-
-
-
-
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
+    const [ isDisable, setDisable ] = useState(true);
+    const { logIn } = useContext(AuthContext);
 
-    const {logIn, setLoading } = useContext(AuthContext)
+    const navigate = useNavigate();
+    const location = useLocation();
 
-    const [isDisable, setDisable] = useState(true)
+    const from = location.state?.from.pathname || "/";
 
-    useEffect(()=>{
-        loadCaptchaEnginge(6); 
-    },[])
-
+    useEffect(() => {
+        loadCaptchaEnginge(6);
+    }, []);
 
     const handleLogin = (event) => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        // console.log(email, password);
+        console.log(email, password);
 
         logIn(email, password)
-        .then(result =>{
+            .then((result) => {
             const user = result.user;
-            setLoading(false)
-            console.log(user);
-        })
+            // setLoading(false);
+            // console.log(user);
+            navigate(from, { replace: true });
+        });
     };
 
-    const handleCaptcha = event =>{
-        event.preventDefault()
+    const handleCaptcha = (event) => {
+        event.preventDefault();
         const user_captcha_value = event.target.value;
         // console.log(user_captcha_value);
-        if(validateCaptcha(user_captcha_value)== true){
-            setDisable(false)
+        if (validateCaptcha(user_captcha_value) == true) {
+            setDisable(false);
+        } else {
+            setDisable(true);
         }
-        else{
-            setDisable(true)
-        }
-    }
+    };
 
     return (
         <div
@@ -80,18 +78,17 @@ const Login = () => {
                             </Link>
                         </label>
                         <label>
-                        <LoadCanvasTemplate />
+                            <LoadCanvasTemplate />
                         </label>
-                        <input 
-                        onMouseOut={handleCaptcha}
-                        type="text" 
-                        name="captcha" 
-                        placeholder="type here the captcha"
-                        className="p-2 lg:w-72 bg-transparent border-b-2 border-yellow-400 "
-
-                         />
                         <input
-                            disabled={ isDisable }
+                            onMouseOut={handleCaptcha}
+                            type="text"
+                            name="captcha"
+                            placeholder="type here the captcha"
+                            className="text-center p-2 lg:w-72 bg-transparent border-b-2 border-yellow-400 "
+                        />
+                        <input
+                            disabled={isDisable}
                             type="submit"
                             name="submit"
                             placeholder="submit"
@@ -99,7 +96,12 @@ const Login = () => {
                             value="Login"
                         />
                     </form>
-                    <Link className='text-yellow-400 font-light' to="/signUp">Please Make An Account</Link>
+                    <Link
+                        className="p-1 border rounded bg-gradient-to-r from-yellow-400 to-orange-400  text-white "
+                        to="/signUp"
+                    >
+                        Please Make An Account
+                    </Link>
                 </div>
             </div>
         </div>

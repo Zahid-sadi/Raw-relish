@@ -1,19 +1,31 @@
-import {useState} from "react";
+import { useState } from "react";
 import Cover from "../../../Shared/Cover/Cover";
 import coverImage from "../../../assets/smoke-cook.jpg";
-import {Tab, Tabs, TabList, TabPanel} from "react-tabs";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import FoodMap from "../FoodMap/FoodMap";
 import useItems from "../../../Hooks/useItems";
 import { useParams } from "react-router";
 
 const OrderFood = () => {
-    const categories = [ 'offered' ,'rawSpecial', 'spicy', 'dessert', 'foodbread', 'grilled', 'pickles', 'honey', 'fruits', 'juice',  'all'];
-    const {category}= useParams();
-    const initialIndex = categories.indexOf(category)
-      
-    const [tabIndex, setTabIndex] = useState(initialIndex);
-    const [menu] = useItems([]);
+    const categories = [
+        "offered",
+        "rawSpecial",
+        "spicy",
+        "dessert",
+        "foodbread",
+        "grilled",
+        "pickles",
+        "honey",
+        "fruits",
+        "juice",
+        "all",
+    ];
+    const { category } = useParams();
+    const initialIndex = categories.indexOf(category);
+
+    const [ tabIndex, setTabIndex ] = useState(initialIndex);
+    const [ menu ] = useItems([]);
     // console.log(menu);
     // console.log(spicy);
 
@@ -32,13 +44,13 @@ const OrderFood = () => {
         <div>
             <Cover coverPhoto={coverImage} coverHeadline="Order Us " coverDetails="we ensure your demand"></Cover>
 
-            <div className=" bg-slate-200 mx-auto ">
+            <div className=" mx-auto p-10  bg-gradient-to-b from-slate-900 to-slate-600  text-black ">
                 <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-                    <div className=" text-yellow-400 bg-slate-600 mx-10">
-                        <TabList>
+                    <div className=" text-yellow-400 p-8 font-bold  text-center">
+                        <TabList >
                             <Tab>Today's offer</Tab>
                             <Tab>Raw Special</Tab>
-                            <Tab>spicy</Tab>
+                            <Tab>Spicy</Tab>
                             <Tab>Dessert</Tab>
                             <Tab>R.S Bread </Tab>
                             <Tab>grilled</Tab>

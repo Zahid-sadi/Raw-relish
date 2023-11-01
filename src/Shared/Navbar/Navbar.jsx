@@ -1,11 +1,38 @@
-import {Link} from "react-router-dom";
-import logo from "../../assets/logo1.png";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import logo from "../../assets/logo3.png";
+
+// import {toast} from "react-hot-toast";
+import { AuthContext } from "../../Providers/AuthProvider";
+
 const Navbar = () => {
-    const navItem = (
+    const { user, logOut } = useContext(AuthContext);
+
+    const logOutHandler = () => {
+        logOut()
+        .then(() => {
+            // toast("SignOut successfully");
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    };
+
+    const navItems = (
         <>
             <li>
                 <Link to="/">Home</Link>
+            </li>
+            <li>
+                <Link to="/about">About</Link>
+            </li>
+            <li>
+                <Link to="/review">Reviews</Link>
+            </li>
+            <li>
                 <Link to="/items">Items</Link>
+            </li>
+            <li>
                 <Link to="/order">Food Order</Link>
             </li>
         </>
@@ -13,75 +40,58 @@ const Navbar = () => {
 
     return (
         <div className="navbar bg-opacity-40 fixed text-yellow-300 z-10">
-            <div className="navbar-start ">
-                <div className="dropdown underline">
-                    <label tabIndex={0} className="btn btn-ghost lg:hidden"></label>
-                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
-                            {navItem}
-                        </ul>
+            <div className="navbar-start">
+                <div className="dropdown">
+                    <label tabIndex={0} className="btn btn-ghost lg:hidden">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M4 6h16M4 12h8m-8 6h16"
+                            />
+                        </svg>
+                    </label>
+                    <ul
+                        tabIndex={0}
+                        className="menu menu-compact dropdown-content mt-3 p-2  rounded-box w-52 text-yellow-500  "
+                    >
+                        {navItems}
+                    </ul>
                 </div>
-                
                 <Link to="/">
                     {" "}
                     <img className=" h-16 w-16 p-2 mx-2" src={logo} alt="logo of raw relish" />
                 </Link>
-
-                <Link to="/" className="text-2xl font-extrabold text-yellow-700">
+                <Link to="/" className="text-2xl font-extrabold text-yellow-500">
                     Raw Relish
                 </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                        {navItem}
-                    </ul>
+                <ul className="menu menu-horizontal px-1 ">{navItems}</ul>
+            </div>
+            <div className="navbar-end ">
+                <div className="me-5 ">
+                    {user?.uid ? <p className="text-orange-400 font-bold mx-auto">{user.displayName} </p> : ""}
                 </div>
-            <div className="navbar-end">
-            <Link to="/login">Login</Link>
+                {user?.uid ? (
+                    <Link onClick={logOutHandler} to="/login" className="btn bg-yellow-400 rounded-s-full">
+                        Log out
+                    </Link>
+                ) : (
+                    <Link to="/login" className="btn bg-yellow-400 border rounded-s-full">
+                        Log in
+                    </Link>
+                )}
             </div>
         </div>
     );
 };
 
 export default Navbar;
-
-
-
-
-
-<div className="navbar bg-base-100">
-  <div className="navbar-start">
-    <div className="dropdown">
-     
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
-      </ul>
-    </div>
-    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
-  </div>
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li tabIndex={0}>
-        <details>
-          <summary>Parent</summary>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li>
-    </ul>
-  </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
-  </div>
-</div>

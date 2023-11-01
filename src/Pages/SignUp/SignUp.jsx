@@ -36,16 +36,14 @@ const SignUp = () => {
 
     return (
         <div
-            className="hero min-h-screen"
-            // style={{backgroundImage: {img}}}
-        >
+            className="hero min-h-screen">
             <img src={img} alt="" className="w-full h-screen" />
 
             <div className="hero-overlay bg-opacity-40"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
                     <form onSubmit={handleSignUp} className="card-body">
-                        <h4 className="text-white font-bold text-4xl p-4 m-2">Login</h4>
+                        <h4 className="text-white font-bold text-4xl p-4 m-2">SignUp</h4>
                         <input
                             type="text"
                             name="name"
@@ -74,7 +72,7 @@ const SignUp = () => {
                             name="submit"
                             placeholder="submit"
                             className="my-2 btn btn-outline border-b-4 border-slate-900"
-                            value="Login"
+                            value="SignUp"
                         />
                     </form>
                     <Link className='text-yellow-400 font-light' to="/login">Already Have An Account</Link>
