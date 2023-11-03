@@ -10,12 +10,7 @@ const OfferedFood = () => {
 
     return (
         <section>
-            <CategoryHero
-                bgvideo={imgBanner}
-                heading={"Today's ________Offer"}
-                details={" this is category hero there is some new food for offer for today's  "}
-            ></CategoryHero>
-            ,
+          
             
             <MenuItemsCategory 
                  items={offered}

@@ -7,7 +7,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    console.log("User From Navbar", user);
+    // console.log("User From Navbar", user);
 
     const logOutHandler = () => {
         logOut()
@@ -40,7 +40,7 @@ const Navbar = () => {
     );
 
     return (
-        <div className="navbar bg-opacity-60 underline-offset-8 fixed text-yellow-300 z-10">
+        <div className="navbar bg-opacity-60 bg-black border border-b-2 border-t-0 border-x-0  fixed text-yellow-300 z-10">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
