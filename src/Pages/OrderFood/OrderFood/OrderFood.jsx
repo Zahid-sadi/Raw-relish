@@ -24,7 +24,7 @@ const OrderFood = () => {
     const { category } = useParams();
     const initialIndex = categories.indexOf(category);
 
-    const [ tabIndex, setTabIndex ] = useState(0);
+    const [ tabIndex, setTabIndex ] = useState(initialIndex);
     const [ menu ] = useItems([]);
     // console.log(menu);
     // console.log(spicy);

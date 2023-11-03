@@ -17,12 +17,13 @@ const CategoryHero = ({ videoSource, autoplay, controls, headline }) => {
   
     return (
       <div className="w-full">
-        <h2>{headline}</h2>
+        <h2 className='text-white'>{headline}</h2>
         <video
-        className='w-full bg-fixed'
+        className='w-full'
         muted
           ref={videoRef}
           src={videoSource}
+          loop={true}
           autoPlay
           controls
         />

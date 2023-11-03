@@ -68,6 +68,10 @@ const MenuItems = () => {
 
            <CategoryHero videoSource ={video2} heading="dessert items "
            details=" spicy khao chapar sobde birokto koro char pash"></CategoryHero>
+           <MenuItemsCategory items={dessert} bgPhoto={img10} categoryHeadline="dessert" categoryDetails="dessert khao aaaahaaaaaaaaaaa koro char pash"></MenuItemsCategory>
+
+           <CategoryHero videoSource ={video2} heading="dessert items "
+           details=" spicy khao chapar sobde birokto koro char pash"></CategoryHero>
            <MenuItemsCategory items={grilled} bgPhoto={img10} categoryHeadline="grilled" categoryDetails="dessert khao aaaahaaaaaaaaaaa koro char pash"></MenuItemsCategory>
 
            <CategoryHero videoSource ={video2} heading="dessert items "

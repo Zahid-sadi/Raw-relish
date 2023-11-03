@@ -12,8 +12,8 @@ const MenuItemsCategory = ({items, categoryHeadline, categoryDetails, bgPhoto}) 
         style={{backgroundImage: `url(${bgPhoto})`}}>
             <Helmet><title>Food Items Menu</title></Helmet>
             
-            <div className=" w-full lg:flex flex-row p-20">
-                <div className="text-center w-1/2 flex flex-col items-center  justify-center mb-4 p-10 ">
+            <div className=" w-full lg:flex flex-row p-20  ">
+                <div className="text-center w-1/2  flex flex-col items-center  justify-center mb-4 p-10 ">
                     <h1 className="md:text-2xl lg:text-7xl font-bold text-white border-spacing-1 border-white  uppercase">_____{categoryHeadline}_____</h1>
                     <p className="p-6 text-white">
                        {categoryDetails}
