@@ -23,7 +23,7 @@ const Login = () => {
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+        // console.log(email, password);
 
         logIn(email, password)
             .then((result) => {
@@ -97,7 +97,7 @@ const Login = () => {
                         />
                     </form>
                     <Link
-                        className="p-1 border rounded bg-gradient-to-r from-yellow-400 to-orange-400  text-white "
+                        className="px-5 bg-gradient-to-r from-yellow-400 to-orange-400  text-black "
                         to="/signUp"
                     >
                         Please Make An Account

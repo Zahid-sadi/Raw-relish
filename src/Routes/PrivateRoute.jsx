@@ -7,7 +7,7 @@ const PrivateRoute = ({ children }) => {
 
     const { user, loading } = useContext(AuthContext);
     if (loading) {
-        return <p>loading..............................</p>;
+        return <p className=" bg-slate-900 h-full w-full text-center font-bold text-yellow-400 m-72">loading..............................</p>;
     }
 
     if (user) {
@@ -18,3 +18,4 @@ const PrivateRoute = ({ children }) => {
 };
 
 export default PrivateRoute;
+

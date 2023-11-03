@@ -24,7 +24,7 @@ const OrderFood = () => {
     const { category } = useParams();
     const initialIndex = categories.indexOf(category);
 
-    const [ tabIndex, setTabIndex ] = useState(initialIndex);
+    const [ tabIndex, setTabIndex ] = useState(0);
     const [ menu ] = useItems([]);
     // console.log(menu);
     // console.log(spicy);
@@ -44,7 +44,7 @@ const OrderFood = () => {
         <div>
             <Cover coverPhoto={coverImage} coverHeadline="Order Us " coverDetails="we ensure your demand"></Cover>
 
-            <div className=" mx-auto p-10  bg-gradient-to-b from-slate-900 to-slate-600  text-black ">
+            <div className=" h-fit p-10  bg-gradient-to-b from-slate-900 to-slate-700  text-black ">
                 <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                     <div className=" text-yellow-400 p-8 font-bold  text-center">
                         <TabList >

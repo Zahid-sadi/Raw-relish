@@ -3,7 +3,7 @@ import FoodDisplay from "../../../Shared/FoodItems/FoodDisplay/FoodDisplay";
 import { Link } from "react-router-dom";
 
 const MenuItemsCategory = ({items, categoryHeadline, categoryDetails}) => {
-    console.log(items);
+    // console.log(items);
     return (
        
         <div className="hero min-h-screen ">

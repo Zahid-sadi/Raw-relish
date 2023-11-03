@@ -1,9 +1,11 @@
-import React from "react";
-
+import logo from "../../assets/logo3.png";
 const Footer = () => {
     return (
         <footer className="footer p-10 bg-slate-900  text-orange-400 ">
-            <header className="font-bold text-lg text-yellow-700">Raw Relish</header>
+            <div className="flex flex-col">
+            <img className="h-16 w-16 p-2 mx-2" src={logo} alt="logo of raw relish" />
+            <header className="font-bold text-lg text-yellow-500">Raw Relish</header>
+            </div>
             <nav>
                 <header className="footer-title">Services</header>
                 <a className="link link-hover">Branding</a>
