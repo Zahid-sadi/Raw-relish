@@ -16,9 +16,8 @@ import img10 from '../../assets/food10.jpg'
 
 const CategorySlide = () => {
     return (
-        <div className=''>
+        <div className='p-5 m-2 '>
           <Swiper
-          // cssMode={true}
           navigation={true}
           loop={true}
           pagination={true}
@@ -27,10 +26,11 @@ const CategorySlide = () => {
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
           
             slidesPerView={3}
+            
             spaceBetween={30}
           
           
-            className="mySwiper h-96 md:2 sm:1 "
+            className="mySwiper h-96  "
           >
             <SwiperSlide><img src={img1}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>RAW SPECIAL</h3> </SwiperSlide>
             <SwiperSlide><img src={img2}  className='h-full w-full' alt="" />  <h3 className='text-slate-300 font-semibold  -mt-16 text-center lg:text-4xl md:text-lg sm:text-sm '>FRUTES WITH DESERT</h3> </SwiperSlide>

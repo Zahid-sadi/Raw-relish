@@ -1,14 +1,14 @@
 import './About.css'
-import aboutpic from "../../../assets/about-pic1.jpg";
+import aboutPhoto from "../../../assets/abut.jpg";
 const About = () => {
     return (
-        <div className=" hero h-max w-full">
-            <img src={aboutpic} alt="" className="w-full h-full " />
-            <div className="hero-overlay bg-opacity-70  "></div>
+        <div className=" hero h-max w-full ">
+            <img src={aboutPhoto} alt="" className="w-full h-full overflow-hidden" />
+            <div className="hero-overlay bg-opacity-20  "></div>
 
             <div className="text-center text-neutral-content grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 place-content-center place-items-center gap-5 ">
-                <div className=" custom-hov  bg-slate-600 md:">
-                <h4 className="text-5xl font-bold p-24  bg-black">WHO WE ARE.... </h4>
+                <div className=" custom-hov  bg-slate-600 border-2 border-yellow-800">
+                <h4 className="text-5xl font-bold p-24  bg-black ">WHO WE ARE.... </h4>
                     <p className="text-start font-serif p-5">
                         
                         1...... Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo magni, modi itaque illum
@@ -21,7 +21,7 @@ const About = () => {
                         repudiandae? Ipsum neque et sed vel!
                     </p>
                 </div>
-                <div className="custom-hov  bg-black">
+                <div className="custom-hov  bg-black border-2 border-yellow-800">
                 <h4 className="text-5xl text-center font-bold bg-slate-500 p-24">WHY FROM US </h4>
 
                     <p className=" text-start font-serif p-5 ">
@@ -35,7 +35,7 @@ const About = () => {
                     </p>
 
                 </div>
-                <div className="custom-hov  bg-slate-500  ">
+                <div className="custom-hov  bg-slate-500 border-2 border-yellow-800 ">
                     <h4 className="text-5xl font-bold  bg-slate-800 p-24 text-center ">WHAT IS OUR STRENGTH</h4> 
                   
                     <p className="text-start font-sans p-5">
