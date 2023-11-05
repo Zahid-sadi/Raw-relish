@@ -28,11 +28,11 @@ const FoodCard = ({item}) => {
         <figure>
             <img className="h-96 w-full hover:scale-125 duration-700 " src={image} alt="foodItems" />
         </figure>
-        <div className="card-body">
-            <h2 className="card-title">{name}______________<small className="text-yellow-400 bg-slate-700 rounded-full p-2">$ {price} </small> </h2>
+        <div className="card-body bg-slate-950 text-gray-300   rounded-b-lg">
+            <h2 className="card-title text-gray-100 capitalize">{name} <small className="text-yellow-700 p-1">_____________ $ {price} </small> </h2>
             <p>{recipe}</p>
             <div className="card-actions justify-end">
-                <button onClick={()=>{handleToCart(item)}} className="btn btn-outline">Take on table</button>
+                <button onClick={()=>{handleToCart(item)}} className="btn btn-outline text-yellow-700">Take on table</button>
             </div>
         </div>
     </div>

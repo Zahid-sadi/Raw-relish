@@ -21,7 +21,7 @@ const MenuItemsCategory = ({items, categoryHeadline, categoryDetails, bgPhoto}) 
                     </p>
                     <Link className="btn btn-outline btn-info md:btn-md lg:btn-wide " to={`/order/${categoryHeadline}`}>More...</Link>
                 </div>
-                <div className="w-1/2 grid grid-flow-row md:grid-cols-2 sm:grid-cols-1">
+                <div className="w-1/2 grid grid-flow-row md:grid-cols-2 sm:grid-cols-1 gap-5 ">
                     {
                         itemShow.map(item => <FoodDisplay key={item._id} item={item}></FoodDisplay>)
                     }

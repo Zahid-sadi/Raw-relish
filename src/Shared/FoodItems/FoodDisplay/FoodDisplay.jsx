@@ -6,7 +6,7 @@ const FoodDisplay = ({ item }) => {
     // console.log(name, image, price, recipe);
 
     return (
-        <div className="group h-72 w-full border-2 border-yellow-900 relative overflow-hidden">
+        <div style={{borderRadius: ' 350px  250px 250px 0'}} className="group h-72 w-full border-2 border-yellow-900 relative overflow-hidden">
             <div>
                 <img src={image} alt="Offered Item" className="w-full h-72 overflow-hidden" />
             </div>
