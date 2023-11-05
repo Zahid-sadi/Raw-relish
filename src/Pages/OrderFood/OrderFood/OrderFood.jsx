@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Cover from "../../../Shared/Cover/Cover";
-import coverImage from "../../../assets/smoke-cook.jpg";
+import coverImage from "../../../assets/bl-spooon.jpg";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import FoodMap from "../FoodMap/FoodMap";

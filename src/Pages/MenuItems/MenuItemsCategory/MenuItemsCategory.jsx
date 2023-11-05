@@ -8,8 +8,9 @@ const MenuItemsCategory = ({items, categoryHeadline, categoryDetails, bgPhoto}) 
     const itemShow = items.slice(0,4)
     return (
        
-        <div   className="hero min-h-screen bg-fixed object-cover"
-        style={{backgroundImage: `url(${bgPhoto})`}}>
+        <div   className="hero min-h-screen bg-fixed object-cover "
+            style={{ backgroundImage: `url(${bgPhoto})` }}>
+            
             <Helmet><title>Food Items Menu</title></Helmet>
             
             <div className=" w-full lg:flex flex-row p-20  ">
@@ -18,9 +19,9 @@ const MenuItemsCategory = ({items, categoryHeadline, categoryDetails, bgPhoto}) 
                     <p className="p-6 text-white">
                        {categoryDetails}
                     </p>
-                    <Link className="btn btn-outline btn-info md:btn-md lg:btn-wide " to={`/order/${categoryHeadline}`}>More  Items</Link>
+                    <Link className="btn btn-outline btn-info md:btn-md lg:btn-wide " to={`/order/${categoryHeadline}`}>More...</Link>
                 </div>
-                <div className="w-1/2  grid grid-flow-row md:grid-cols-2 sm:grid-cols-1">
+                <div className="w-1/2 grid grid-flow-row md:grid-cols-2 sm:grid-cols-1">
                     {
                         itemShow.map(item => <FoodDisplay key={item._id} item={item}></FoodDisplay>)
                     }

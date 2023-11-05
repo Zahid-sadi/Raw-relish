@@ -5,24 +5,19 @@ const FoodDisplay = ({ item }) => {
     const { name, image, price, recipe, newPrice } = item;
     // console.log(name, image, price, recipe);
 
-  const [isHovered, setIsHovered] = useState(false);
-  
-
     return (
-        <div
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            className="h-72 w-full border-2 border-orange-600 flex flex-col justify-center align-items-center"
-        >
-        <img  src={image} alt="Offered Item" className="w-full h-full overflow-hidden  " />
-        
-            {isHovered && (
-                <div className=" bg-black bg-opacity-80 text-white p-4">
-                    <h2 className="text-2xl">{name}</h2>
-                    <p className="">{recipe.slice(0,30)}</p>
-                    <p className=" text-yellow-500 "> price $ {price} </p>
+        <div className="group h-72 w-full border-2 border-yellow-900 relative overflow-hidden">
+            <div>
+                <img src={image} alt="Offered Item" className="w-full h-72 overflow-hidden" />
+            </div>
+
+            <div className=" bg-black bg-opacity-80   absolute hidden  text-white p-4  w-full h-full top-0   group-hover:block ">
+                <div className="h-full w-full p-4 text-center flex flex-col justify-center content-center items-center ">
+                    <h2 className="text-3xl m-3 text-gray-200">__{name}__</h2>
+                    <p className="">{recipe}</p>
+                    <p className=" text-yellow-500 p-2 "> price $ {price} </p>
                 </div>
-            )}
+            </div>
         </div>
     );
 };

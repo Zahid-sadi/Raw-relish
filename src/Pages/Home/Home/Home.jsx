@@ -7,7 +7,7 @@ import OfferedFood from '../../../Shared/FoodItems/OfferedFood/OfferedFood';
 
 const Home = () => {
     return (
-        <div className='bg-slate-800 '>
+        <div className='bg-slate-900'>
             <Helmet> <title>Raw Relish Home</title> </Helmet>
             <Hero></Hero>
             <Category></Category>

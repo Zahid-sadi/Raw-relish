@@ -1,37 +1,21 @@
 import React, { useRef, useState } from 'react';
 
-const CategoryHero = ({ videoSource, autoplay, controls, headline }) => {
-    const videoRef = useRef(null);
-    const [isPlaying, setIsPlaying] = useState(autoplay);
+const CategoryHero = ({ videoSource, heading }) => {
+  // console.log(heading);
   
-    const togglePlay = () => {
-      if (videoRef.current) {
-        if (isPlaying) {
-          videoRef.current.pause();
-        } else {
-          videoRef.current.play();
-        }
-        setIsPlaying(!isPlaying);
-      }
-    };
   
     return (
-      <div className="w-full">
-        <h2 className='text-white'>{headline}</h2>
+      <div className="w-full h-fit p-20 pb-0  bg-gradient-to-r from-slate-900 to-black">
+        <h2 className='text-white h-20 mt-10 text-center font-bold text-4xl'>__{heading}__</h2>
         <video
-        className='w-full'
+        className='w-screen object-cover h-[600px] border-2 border-b-0 border-yellow-900 '
         muted
-          ref={videoRef}
           src={videoSource}
           loop={true}
           autoPlay
-          controls
+        
         />
-        {controls && (
-          <button onClick={togglePlay}>
-            {isPlaying ? 'Pause' : 'Play'}
-          </button>
-        )}
+        
       </div>
     );
 };

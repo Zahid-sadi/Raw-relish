@@ -1,16 +1,38 @@
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { useNavigate } from "react-router";
 
 const FoodCard = ({item}) => {
-    const {name, image, recipe, price} = item;
+    const { name, image, recipe, price } = item;
+    const { user } = useContext(AuthContext)
+    const navigate = useNavigate()
+    
+    const handleToCart = item => {
+        console.log(item);
+        if (user) {
+            fetch('http://localhost:3000/cart')
+                .then(res => res.json())
+                .then(data => {
+                    if (data.insertedId) {
+                    <h3></h3>
+                }
+            })
+           
+        }
+        else {
+            navigate('/login')
+            }
+    }
     return (
         <div className="card card-compact bg-base-100 shadow-xl">
         <figure>
-            <img className="h-96 w-full " src={image} alt="foodItems" />
+            <img className="h-96 w-full hover:scale-125 duration-700 " src={image} alt="foodItems" />
         </figure>
         <div className="card-body">
             <h2 className="card-title">{name}______________<small className="text-yellow-400 bg-slate-700 rounded-full p-2">$ {price} </small> </h2>
             <p>{recipe}</p>
             <div className="card-actions justify-end">
-                <button className="btn btn-outline">Take on table</button>
+                <button onClick={()=>{handleToCart(item)}} className="btn btn-outline">Take on table</button>
             </div>
         </div>
     </div>
