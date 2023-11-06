@@ -21,9 +21,9 @@ const CategorySlide = () => {
           navigation={true}
           loop={true}
           pagination={true}
-          mousewheel={true}
+          // mousewheel={true}
           keyboard={true}
-          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+          modules={[Navigation, Pagination, Keyboard]}
           
             slidesPerView={3}
             

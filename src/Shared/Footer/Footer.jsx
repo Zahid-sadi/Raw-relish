@@ -19,16 +19,16 @@ const Footer = () => {
             <nav>
                 <div className="grid grid-flow-col gap-10 h-12">
                 <Link>
-                <Link className="h-12 w-20">
-                        <TfiTwitterAlt></TfiTwitterAlt>
+                <Link className="">
+                        <TfiTwitterAlt className="h-12 w-12"></TfiTwitterAlt>
                 </Link>
                 </Link>
-                    <Link className="h-12 w-2">
-                        <FaYoutube></FaYoutube>
+                    <Link className="">
+                        <FaYoutube className="h-12 w-12"></FaYoutube>
                 </Link>
                 <Link>
-                <Link className="h-12 w-20">
-                        <FaFacebookF></FaFacebookF>
+                <Link className="">
+                        <FaFacebookF className="h-12 w-12"></FaFacebookF>
                 </Link>
                 </Link>
                 </div>

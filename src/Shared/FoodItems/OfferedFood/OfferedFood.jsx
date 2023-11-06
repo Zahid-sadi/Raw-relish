@@ -1,5 +1,3 @@
-import CategoryHero from "../../CategoryHero/CategoryHero";
-import imgBanner from "../../../assets/Restaurant food cinematic video advertisement (Bangladesh).mp4";
 import useItems from "../../../Hooks/useItems";
 import MenuItemsCategory from "../../../Pages/MenuItems/MenuItemsCategory/MenuItemsCategory";
 

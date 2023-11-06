@@ -5,10 +5,13 @@ import logo from "../../assets/logo3.png";
 
 // import {toast} from "react-hot-toast";
 import { AuthContext } from "../../Providers/AuthProvider";
+import useCart from "../../Hooks/useCart";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
     // console.log("User From Navbar", user);
+    const [ data ] = useCart()
+    console.log(data);
 
     const logOutHandler = () => {
         logOut()
@@ -39,7 +42,7 @@ const Navbar = () => {
             </li>
             <li>
                 {/* <FaShoppingCart> <Link to="/cart"></Link></FaShoppingCart> */}
-                <Link><FaCartArrowDown className=" h-5 w-fit "></FaCartArrowDown><p className="text-yellow-600 text-lg">0</p></Link>
+                <Link><FaCartArrowDown className=" h-5 w-fit "></FaCartArrowDown><p className="text-yellow-600 text-lg">{data?.length || 0}</p></Link>
                
             </li>
         </>
