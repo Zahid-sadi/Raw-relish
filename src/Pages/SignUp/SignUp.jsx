@@ -1,10 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import img from "../../assets/sigUpbg.jpg";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const SignUp = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);
+    const navigate = useNavigate()
 
     const handleSignUp = (event) => {
         event.preventDefault();
@@ -18,19 +19,33 @@ const SignUp = () => {
 
         createUser(email, password)
             .then((result) => {
-                const user = result.user;
-            console.log(user);
-            // const userInfo = {
-            //     displayName: name,
-            // };
+            const user = result.user;
+            // console.log(user);
+
             updateUserProfile(name)
-                .then(() => {
-                    console.log('user info from Signup', user);
+            .then(() => {
+
+                const saveUser = { name : name , email: email}
+                fetch("http://localhost:3000/users", {
+                    method: 'POST',
+                    headers: {
+                        
+                        'content-type':'application/json'
+                    }, 
+                    body: JSON.stringify(saveUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.insertedId) {
+                        alert('user saved')
+                    }
+                })
             })
             .catch((error) => {
                 console.log(error);
             });
-            console.log("profile updated");
+                navigate("/")
+            // console.log("profile updated");
         });
     };
 
