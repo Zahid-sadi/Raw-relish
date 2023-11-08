@@ -46,7 +46,7 @@ const OrderFood = () => {
 
             <div className=" h-fit p-10  bg-gradient-to-b from-slate-900 to-slate-700  text-black ">
                 <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
-                    <div className=" text-yellow-400 p-8 font-bold  text-center">
+                    <div className=" text-yellow-600 p-8 font-bold  text-center">
                         <TabList >
                             <Tab>Today's offer</Tab>
                             <Tab>Raw Special</Tab>

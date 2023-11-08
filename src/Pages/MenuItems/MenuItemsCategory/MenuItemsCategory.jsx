@@ -12,7 +12,7 @@ const MenuItemsCategory = ({items, categoryHeadline, categoryDetails, bgPhoto}) 
             
             <Helmet><title>Food Items Menu</title></Helmet>
             
-            <div className=" w-full lg:flex flex-row p-20  ">
+            <div  className=" w-full lg:flex flex-row p-20  ">
                 <div className="text-center w-1/2  flex flex-col items-center  justify-center p-10 ">
                     <h1 className="md:text-2xl lg:text-7xl font-bold text-white border-spacing-1 border-white p-5 uppercase">_____{categoryHeadline}_____</h1>
                     <p className="p-6 text-white">
