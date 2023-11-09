@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from "../../assets/loginbg2.jpg";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
 
 const Login = () => {
     const [ isDisable, setDisable ] = useState(true);
@@ -25,10 +26,8 @@ const Login = () => {
         const password = form.password.value;
         // console.log(email, password);
 
-        logIn(email, password)
-            .then((result) => {
+        logIn(email, password).then((result) => {
             const user = result.user;
-            // setLoading(false);
             // console.log(user);
             navigate(from, { replace: true });
         });
@@ -53,9 +52,12 @@ const Login = () => {
             <img src={img} alt="" className="w-full h-full " />
 
             <div className="hero-overlay bg-opacity-40"></div>
+
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
                     <form onSubmit={handleLogin} className="card-body">
+                        <SocialLogin></SocialLogin>
+
                         <h4 className="text-white font-bold text-4xl p-4 m-2">Login</h4>
                         <input
                             type="email"
@@ -96,10 +98,7 @@ const Login = () => {
                             value="Login"
                         />
                     </form>
-                    <Link
-                        className="px-5 bg-gradient-to-r from-yellow-400 to-orange-400  text-black "
-                        to="/signUp"
-                    >
+                    <Link className="px-5 bg-gradient-to-r from-yellow-400 to-orange-400  text-black " to="/signUp">
                         Please Make An Account
                     </Link>
                 </div>

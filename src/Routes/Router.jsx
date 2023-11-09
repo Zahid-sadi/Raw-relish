@@ -10,6 +10,7 @@ import About from "../Pages/Home/About/About";
 import Review from "../Pages/Home/Review/Review";
 import DashboardLayout from "../Layout/DashboardLayout";
 import MyCart from "../Pages/Dashboard/MyCart/MyCart";
+import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 
 export const router = createBrowserRouter([
     {
@@ -61,7 +62,11 @@ export const router = createBrowserRouter([
             {
                 path: 'mycart',
                 element:<MyCart></MyCart>
-            }
+            },
+            {
+                path: 'allusers',
+                element:<AllUsers></AllUsers>
+            },
         ]
         
     }
