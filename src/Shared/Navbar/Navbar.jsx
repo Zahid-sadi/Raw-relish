@@ -10,8 +10,8 @@ import useCart from "../../Hooks/useCart";
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
     // console.log("User From Navbar", user);
-    const [ data ] = useCart()
-    console.log(data);
+    const [ cart ] = useCart()
+    console.log("from navbar",cart);
 
     const logOutHandler = () => {
         logOut()
@@ -41,7 +41,7 @@ const Navbar = () => {
                 <Link to="/order">Food Order</Link>
             </li>
             <li>
-                <Link to='dashboard/mycart'><FaCartArrowDown className=" h-5 w-fit "></FaCartArrowDown><p className="text-yellow-600 text-lg">{data?.length || 0}</p></Link>
+                <Link to='dashboard/mycart'><FaCartArrowDown className=" h-5 w-fit "></FaCartArrowDown><p className="text-yellow-600 text-lg">{cart?.length || 0}</p></Link>
                
             </li>
         </>

@@ -14,9 +14,9 @@ const SocialLogin = () => {
     const handleToGoogleSignUp = () => {
         googleLogin()
         .then((result) => {
-            const logedUser = result.user;
-            console.log(logedUser);
-            const saveUser = { name :logedUser.displayName , email:logedUser.email}
+            const loggedUser = result.user;
+            console.log('from social login ',loggedUser );
+            const saveUser = { name :loggedUser.displayName , email:loggedUser.email}
 
             fetch("http://localhost:3000/users", {
                 method: 'POST',
@@ -38,7 +38,7 @@ const SocialLogin = () => {
             )
         })
         .catch((error) => {
-            console.log(error);
+            console.log('error from handle to google signUp function',error);
         });
 
     };

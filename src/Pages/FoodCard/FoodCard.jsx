@@ -8,10 +8,10 @@ const FoodCard = ({ item }) => {
     const { user } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
-    const [ data, refetch ] = useCart();
+    const [ , refetch ] = useCart();
 
     const handleToCart = (item) => {
-        console.log(item);
+        console.log("from handleToCart of foodCard", item);
         if (user && user.email) {
             const orderItem = { itemId: _id, name, price, image, email: user.email };
 
@@ -25,34 +25,34 @@ const FoodCard = ({ item }) => {
             .then((res) => res.json())
             .then((data) => {
                 if (data.insertedId) {
-                    <h3></h3>;
+                    refetch();
                 }
             });
-            refetch();
         } else {
             navigate("/login", { state: { from: location } });
         }
     };
     return (
-        <div className="card card-compact bg-base-100 shadow-xl">
+        <div className="group card card-compact  h-[560px] ">
             <figure>
                 <img
-                    className="h-96 w-full hover:scale-125 duration-700 overflow-hidden "
+                    className="h-96 w-full group-hover:scale-125 delay-100 duration-700 overflow-hidden shadow-2xl "
                     src={image}
                     alt="foodItems"
                 />
             </figure>
-            <div className="card-body  bg-slate-950 text-neutral-content  rounded-b-lg">
-                <h2 className="card-title pl-5  text-yellow-600 capitalize">
-                    {name} <small className="text-yellow-600 p-1"> _____________ $ {price} </small>{" "}
+            <div className="card-body h-44 text-neutral-content  rounded-b-lg group-hover:bg-slate-950 transition delay-300 duration-700">
+                <h2 className="card-title pl-5  text-yellow-600 capitalize group-hover:text-yellow-400">
+                    {name}{" "}
+                    <p className="text-yellow-600 p-1 group-hover:text-yellow-400 text-end px-5  ">$ {price} </p>{" "}
                 </h2>
-                <p className="px-5">{recipe}</p>
+                <p className="px-5 group-hover:text-blue-300 text-center">{recipe}</p>
                 <div className="card-actions justify-end">
                     <button
-                        onClick={() => {
+                        onClick={() => { 
                             handleToCart(item);
                         }}
-                        className="btn btn-outline text-blue-400"
+                        className="btn btn-outline text-blue-400 group-hover:text-yellow-400 hidden group-hover:block transition delay-500 duration-700"
                     >
                         Take on table
                     </button>

@@ -23,8 +23,10 @@ const OrderFood = () => {
     ];
     const { category } = useParams();
     const initialIndex = categories.indexOf(category);
-
     const [ tabIndex, setTabIndex ] = useState(initialIndex);
+
+   
+
     const [ menu ] = useItems([]);
     // console.log(menu);
     // console.log(spicy);
@@ -47,7 +49,7 @@ const OrderFood = () => {
             <div className=" h-fit p-10  bg-gradient-to-b from-slate-900 to-slate-700  text-black ">
                 <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                     <div className=" text-yellow-600 p-8 font-bold  text-center">
-                        <TabList >
+                        <TabList>
                             <Tab>Today's offer</Tab>
                             <Tab>Raw Special</Tab>
                             <Tab>Spicy</Tab>

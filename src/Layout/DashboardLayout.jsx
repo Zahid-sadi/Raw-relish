@@ -50,7 +50,7 @@ const DashboardLayout = () => {
                             </li>
                             <div className="divider"> and</div>
                             <li>
-                                <NavLink to=" ">
+                                <NavLink to="/">
                                     <ImHome2></ImHome2> Home 
                                 </NavLink>
                             </li>

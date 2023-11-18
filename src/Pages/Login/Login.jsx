@@ -8,7 +8,7 @@ import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
 
 const Login = () => {
     const [ isDisable, setDisable ] = useState(true);
-    const { logIn } = useContext(AuthContext);
+    const {  logIn } = useContext(AuthContext);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -28,6 +28,7 @@ const Login = () => {
 
         logIn(email, password).then((result) => {
             const user = result.user;
+
             // console.log(user);
             navigate(from, { replace: true });
         });

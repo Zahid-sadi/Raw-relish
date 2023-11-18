@@ -50,16 +50,18 @@ const MyCart = () => {
     }
 
     return (
-        <div>
-            <div className="flex justify-around ">
+        
+        <div className="w-full p-5 bg-yellow-600 h-full">
+             <div className="flex justify-around content-center items-center bg-yellow-700 h-20 w-full text-2xl text-white font-bold ">
                 <h3>toatl item {data.length}</h3>
                 <h3>toatl price {roundPrice}</h3>
                 <button className="btn-warning btn-sm rounded-lg">Pay</button>
             </div>
+           
             <div className="overflow-x-auto">
-                <table className="table">
+                <table className="table ">
                     <thead>
-                        <tr>
+                        <tr className="text-lg font-medium">
                             <th>#</th>
                             <th>Food</th>
                             <th>Name</th>
