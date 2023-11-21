@@ -1,8 +1,11 @@
 import './About.css'
 import aboutPhoto from "../../../assets/abut.jpg";
+// import aboutPhoto1 from "../../../assets/curveBg.png";
+
+
 const About = () => {
     return (
-        <div className=" hero h-max w-full ">
+        <div className=" hero h-max w-full bg-slate-950 ">
             <img src={aboutPhoto} alt="" className="w-full h-full overflow-hidden" />
             <div className="hero-overlay bg-opacity-20  "></div>
 

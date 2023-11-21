@@ -3,9 +3,12 @@ import logo from "../../assets/logo3.png";
 import { FaYoutube, FaFacebookF } from "react-icons/fa";
 import { TfiTwitterAlt } from "react-icons/tfi";
 
+// import footerBgImg from "../../assets/curve2Bg.png";
+
 const Footer = () => {
     return (
         <footer className="footer footer-center p-10 bg-slate-950 text-primary-content">
+
             <aside>
                 <div className="flex flex-col p-5 m-5 ">
                     <img className="h-36 w-36 p-2 mx-2" src={logo} alt="logo of raw relish" />

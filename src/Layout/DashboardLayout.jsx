@@ -3,9 +3,13 @@ import { NavLink } from "react-router-dom";
 import { FaHome, FaShoppingCart, FaStore, FaUsers, FaWallet } from "react-icons/fa";
 import { ImBook, ImHome, ImHome2, ImList, ImMenu, ImMobile, ImSpoonKnife } from "react-icons/im";
 import useCart from "../Hooks/useCart";
+import useAdmin from "../Hooks/useAdmin";
 const DashboardLayout = () => {
     const [data] = useCart();
-    const isAdmin = true;
+    // const isAdmin = true;
+
+    const [isAdmin] = useAdmin();
+    
 
     return (
         <div className="drawer lg:drawer-open">
@@ -23,7 +27,7 @@ const DashboardLayout = () => {
                         <>
                             <li>
                                 <NavLink  to=" ">
-                                    <ImHome></ImHome> AdminHome
+                                    <ImHome></ImHome> Admin Home
                                 </NavLink>
                             </li>
                           
@@ -80,17 +84,17 @@ const DashboardLayout = () => {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink>
+                                <NavLink to=" ">
                                     <FaWallet></FaWallet> My Wallet
                                 </NavLink>
                             </li>
 
                             <li>
-                                <NavLink>
+                                <NavLink to=" ">
                                     <FaWallet></FaWallet> My Wallet
                                 </NavLink>
                                 <li></li>
-                                <NavLink>
+                                <NavLink to =" ">
                                     <FaWallet></FaWallet> My Wallet
                                 </NavLink>
                             </li>
@@ -101,7 +105,7 @@ const DashboardLayout = () => {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink>
+                                <NavLink to="/">
                                     <FaHome></FaHome>Home
                                 </NavLink>
                             </li>

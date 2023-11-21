@@ -3,9 +3,9 @@ import useCart from "../../../Hooks/useCart";
 import Swal from "sweetalert2";
 
 const MyCart = () => {
-    const [ data, refetch ] = useCart();
-    console.log(data);
-    const totalPrice = data?.reduce((total, item) => total + item.price, 0);
+    const [ cart, refetch ] = useCart();
+    console.log({cart});
+    const totalPrice = cart?.reduce((total, item) => total + item.price, 0);
     const roundPrice = Math.round(totalPrice).toFixed(2);
 
     const handleToDelete = (item) => {
@@ -53,8 +53,8 @@ const MyCart = () => {
         
         <div className="w-full p-5 bg-yellow-600 h-full">
              <div className="flex justify-around content-center items-center bg-yellow-700 h-20 w-full text-2xl text-white font-bold ">
-                <h3>toatl item {data.length}</h3>
-                <h3>toatl price {roundPrice}</h3>
+                <h3>Total item {cart.length}</h3>
+                <h3>Total price {roundPrice}</h3>
                 <button className="btn-warning btn-sm rounded-lg">Pay</button>
             </div>
            
@@ -71,7 +71,7 @@ const MyCart = () => {
                     </thead>
                     <tbody>
                         {
-                            data.map((dataRaw, index) => (
+                            cart.map((dataRaw, index) => (
                             <tr key={dataRaw._id}>
                                 <td>{index + 1}</td>
                                 <td>

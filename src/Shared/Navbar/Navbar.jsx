@@ -11,7 +11,7 @@ const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
     // console.log("User From Navbar", user);
     const [ cart ] = useCart()
-    console.log("from navbar",cart);
+    // console.log("from navbar", cart);
 
     const logOutHandler = () => {
         logOut()

@@ -56,12 +56,12 @@ export const router = createBrowserRouter([
         ],
     },
     {
-        path: 'dashboard',
+        path: '/dashboard',
         element: <DashboardLayout></DashboardLayout>,
         children: [
             {
                 path: 'mycart',
-                element:<MyCart></MyCart>
+                element:<PrivateRoute><MyCart></MyCart></PrivateRoute>
             },
             {
                 path: 'allusers',

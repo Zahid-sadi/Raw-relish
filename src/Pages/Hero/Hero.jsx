@@ -7,13 +7,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import img1 from "../../assets/bl-spooon.jpg";
-import img2 from "../../assets/food1.jpg"
-import img3 from "../../assets/food2.jpg"
-import img6 from "../../assets/food5.jpg"
-import img7 from "../../assets/food6.jpeg"
-
-
-
+import img2 from "../../assets/food1.jpg";
+import img3 from "../../assets/fruits1.jpg";
+import img4 from "../../assets/food3.jpg";
+import img5 from "../../assets/food6.jpeg";
 
 const Hero = () => {
     return (
@@ -29,157 +26,44 @@ const Hero = () => {
                 loop={true}
                 pagination={{
                     clickable: true,
+                    
                 }}
                 modules={[ EffectFade, Navigation, Pagination, Autoplay ]}
                 className="mySwiper w-full"
             >
                 <SwiperSlide>
-                <div className="hero h-full w-full m-0  ">
-                        <img
-                            className="h-screen w-screen "
-                            src={img1}
-                            alt=""
-                        />
+                    <div className="hero h-[1000px] w-full   ">
+                        <img className="h-full w-full overflow-hidden" src={img1} alt="" />
 
-                        <div className="  grid md:grid-cols-1 lg:grid-cols-2  ">
-                            <div>
-                                <h2 className="text-7xl text-center p-10 text-white  font-extrabold  italic -mt-44  font-serif">
-                                    Safe Food
-                                </h2>
-                            </div>
-                         
-                        </div>
+                        <h3 className="text-5xl font-bold  text-white border rounded-lg p-20 bg-transparent">Safe food</h3>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <div className="hero h-full w-full m-0  ">
-                        <img
-                            className="h-screen w-screen "
-                            src={img2}
-                            alt=""
-                        />
+                    <div className="hero h-[1000px] w-full   ">
+                        <img className="h-full w-full overflow-hidden" src={img2} alt="" />
 
-                        <div className="  grid md:grid-cols-1 lg:grid-cols-2  ">
-                            <div>
-                                <h2 className="text-7xl text-center p-10 text-white  font-extrabold  italic -mt-44  font-serif">
-                                    Instant Making
-                                </h2>
-                            </div>
-                            
-                        </div>
+                        <h3 className="text-5xl font-bold  text-white border rounded-lg  p-20 bg-transparent  ">raw ingredients</h3>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <div className="hero h-full w-full m-0  ">
-                        <img
-                            className="h-screen w-screen "
-                            src={img1}
-                            alt=""
-                        />
+                    <div className="hero h-[1000px] w-full   ">
+                        <img className="h-full w-full overflow-hidden" src={img3} alt="" />
 
-                        <div className="  grid md:grid-cols-1 lg:grid-cols-2  ">
-                            <div>
-                                <h2 className="text-7xl text-center p-10 text-white  font-extrabold  italic -mt-44  font-serif">
-                                    Artificial color free 
-                                </h2>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </SwiperSlide>
-                
-                <SwiperSlide>
-                <div className="hero h-full w-full m-0  ">
-                        <img
-                            className="h-screen w-screen "
-                            src={img2}
-                            alt=""
-                        />
-
-                        <div className="  grid md:grid-cols-1 lg:grid-cols-2  ">
-                            <div>
-                                <h2 className="text-7xl text-center p-10 text-white  font-extrabold  italic -mt-44  font-serif">
-                                    Organic Food
-                                </h2>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </SwiperSlide>
-                
-                <SwiperSlide>
-                <div className="hero h-full w-full m-0  ">
-                        <img
-                            className="h-screen w-screen "
-                            src={img3}
-                            alt=""
-                        />
-
-                        <div className="  grid md:grid-cols-1 lg:grid-cols-2  ">
-                            <div>
-                                <h2 className="text-7xl text-center p-10 text-white  font-extrabold  italic -mt-44  font-serif">
-                                    Organic Food
-                                </h2>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </SwiperSlide>
-                
-                <SwiperSlide>
-                <div className="hero h-[900px] w-full m-0  ">
-                        <img
-                            className="h-screen w-screen "
-                            src={img1}
-                            alt=""
-                        />
-
-                        <div className="  grid md:grid-cols-1 lg:grid-cols-2  ">
-                            <div>
-                                <h2 className="text-7xl text-center p-10 text-white  font-extrabold  italic -mt-44  font-serif">
-                                    Organic Food
-                                </h2>
-                            </div>
-                           
-                        </div>
-                    </div>
-                </SwiperSlide>
-            
-              
-                <SwiperSlide>
-                <div className="hero h-[900px] w-full m-0  ">
-                        <img
-                            className="h-screen w-screen "
-                            src={img6}
-                            alt=""
-                        />
-
-                        <div className="  grid md:grid-cols-1 lg:grid-cols-2  ">
-                            <div>
-                                <h2 className="text-7xl text-center p-10 text-white  font-extrabold  italic -mt-44  font-serif">
-                                    Traditional Food
-                                </h2>
-                            </div>
-                           
-                        </div>
+                        <h3 className="text-5xl font-bold  text-white border rounded-lg  p-20 bg-transparent  ">Fre From Formalin</h3>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                <div className="hero h-[900px] w-full m-0  ">
-                        <img
-                            className="h-screen w-screen "
-                            src={img7}
-                            alt=""
-                        />
+                    <div className="hero h-[1000px] w-full   ">
+                        <img className="h-full w-full overflow-hidden" src={img4} alt="" />
 
-                        <div className="  grid md:grid-cols-1 lg:grid-cols-2  ">
-                            <div>
-                                <h2 className="text-7xl text-center p-10 text-white  font-extrabold  italic -mt-44  font-serif">
-                                    Traditional Food
-                                </h2>
-                            </div>
-                           
-                        </div>
+                        <h3 className="text-5xl font-bold  text-white border rounded-lg  p-20 bg-transparent  ">Reasonable price</h3>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="hero h-[1000px] w-full   ">
+                        <img className="h-full w-full overflow-hidden" src={img5} alt="" />
+
+                        <h3 className="text-5xl font-bold  text-white border rounded-lg  p-20 bg-transparent  ">Healthy food</h3>
                     </div>
                 </SwiperSlide>
             </Swiper>

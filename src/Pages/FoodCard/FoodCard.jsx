@@ -33,7 +33,7 @@ const FoodCard = ({ item }) => {
         }
     };
     return (
-        <div className="group card card-compact  h-[560px] ">
+        <div className="group card card-compact sm:text-sm   h-[570px] ">
             <figure>
                 <img
                     className="h-96 w-full group-hover:scale-125 delay-100 duration-700 overflow-hidden shadow-2xl "
@@ -41,10 +41,10 @@ const FoodCard = ({ item }) => {
                     alt="foodItems"
                 />
             </figure>
-            <div className="card-body h-44 text-neutral-content  rounded-b-lg group-hover:bg-slate-950 transition delay-300 duration-700">
+            <div className="card-body h-fit text-neutral-content  rounded-b-lg md:h-fit sm:h-fit  group-hover:bg-slate-950 transition delay-300 duration-700">
                 <h2 className="card-title pl-5  text-yellow-600 capitalize group-hover:text-yellow-400">
                     {name}{" "}
-                    <p className="text-yellow-600 p-1 group-hover:text-yellow-400 text-end px-5  ">$ {price} </p>{" "}
+                    <p className="text-yellow-600 p-1  group-hover:text-yellow-400 text-end px-5  ">$ {price} </p>{" "}
                 </h2>
                 <p className="px-5 group-hover:text-blue-300 text-center">{recipe}</p>
                 <div className="card-actions justify-end">
@@ -52,7 +52,7 @@ const FoodCard = ({ item }) => {
                         onClick={() => { 
                             handleToCart(item);
                         }}
-                        className="btn btn-outline text-blue-400 group-hover:text-yellow-400 hidden group-hover:block transition delay-500 duration-700"
+                        className="btn btn-outline  text-blue-400 group-hover:text-yellow-400 hidden group-hover:block transition delay-500 duration-700"
                     >
                         Take on table
                     </button>

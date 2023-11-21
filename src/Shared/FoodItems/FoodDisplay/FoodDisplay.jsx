@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 
 const FoodDisplay = ({ item }) => {
     // console.log("From Offered Food", offeredItem);
