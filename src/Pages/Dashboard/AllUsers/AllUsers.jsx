@@ -1,14 +1,18 @@
 import { useQuery } from "@tanstack/react-query";
 import { FaTrashAlt } from "react-icons/fa";
 import { GrUserAdmin } from "react-icons/gr";
+import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 
 const AllUsers = () => {
+    const [axiosSecure] = useAxiosSecure();
+
     const { data: users = [], refetch } = useQuery({
         queryKey: [ "users" ],
         queryFn: async () => {
-            const response = await fetch("http://localhost:3000/users");
-            return response.json();
-        },
+            const response = await axiosSecure.get("/users");
+            return response.data;
+
+        }
     });
 
     const handleToMakeAdmin = user => {
