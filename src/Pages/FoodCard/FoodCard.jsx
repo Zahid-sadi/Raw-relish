@@ -11,7 +11,7 @@ const FoodCard = ({ item }) => {
     const [ , refetch ] = useCart();
 
     const handleToCart = (item) => {
-        console.log("from handleToCart of foodCard", item);
+        // console.log("from handleToCart of foodCard", item);
         if (user && user.email) {
             const orderItem = { itemId: _id, name, price, image, email: user.email };
 
@@ -33,7 +33,7 @@ const FoodCard = ({ item }) => {
         }
     };
     return (
-        <div className="group card card-compact sm:text-sm   h-[570px] ">
+        <div className="group card card-compact shadow-xl  sm:text-sm   h-[520px] ">
             <figure>
                 <img
                     className="h-96 w-full group-hover:scale-125 delay-100 duration-700 overflow-hidden shadow-2xl "
@@ -46,13 +46,13 @@ const FoodCard = ({ item }) => {
                     {name}{" "}
                     <p className="text-yellow-600 p-1  group-hover:text-yellow-400 text-end px-5  ">$ {price} </p>{" "}
                 </h2>
-                <p className="px-5 group-hover:text-blue-300 text-center">{recipe}</p>
+                <p className="px-5 text-sm group-hover:text-blue-300 group-hover:hidden text-center">{recipe}</p>
                 <div className="card-actions justify-end">
                     <button
                         onClick={() => { 
                             handleToCart(item);
                         }}
-                        className="btn btn-outline  text-blue-400 group-hover:text-yellow-400 hidden group-hover:block transition delay-500 duration-700"
+                        className="btn btn-outline  group-hover:text-yellow-400 focus:bg-green-950 w-full hidden group-hover:block transition delay-500 duration-700"
                     >
                         Take on table
                     </button>

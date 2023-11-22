@@ -7,7 +7,7 @@ import { TfiTwitterAlt } from "react-icons/tfi";
 
 const Footer = () => {
     return (
-        <footer className="footer footer-center p-10 bg-slate-950 text-primary-content">
+        <footer className=" footer footer-center p-10 bg-gradient-to-r from-cyan-900 to-slate-950 text-primary-content">
 
             <aside>
                 <div className="flex flex-col p-5 m-5 ">
@@ -17,16 +17,16 @@ const Footer = () => {
                 <p className="font-bold p-5 ">Raw Relish food Industry Ltd. Providing reliable Food since born</p>
             </aside>
             <nav>
-                <div className="grid grid-flow-col gap-10">
-                    <Link className="">
-                        <TfiTwitterAlt className="h-12 w-12"></TfiTwitterAlt>
+                <div className=" grid grid-flow-col gap-10">
+                    <Link className="hover:bg-black p-3 rounded-3xl">
+                        <TfiTwitterAlt className="  h-12 w-12  rounded-3xl"></TfiTwitterAlt>
                     </Link>
 
-                    <Link className="">
+                    <Link className="hover:bg-red-700 p-3 rounded-3xl">
                         <FaYoutube className="h-12 w-12"></FaYoutube>
                     </Link>
 
-                    <Link className="">
+                    <Link className="hover:bg-blue-500 p-3 rounded-3xl">
                         <FaFacebookF className="h-12 w-12"></FaFacebookF>
                     </Link>
                 </div>

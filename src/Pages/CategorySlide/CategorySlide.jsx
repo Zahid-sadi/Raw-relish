@@ -16,7 +16,7 @@ import img10 from '../../assets/food10.jpg'
 
 const CategorySlide = () => {
     return (
-        <div className='p-5 m-2 '>
+        <div className='p-5'>
           <Swiper
           navigation={true}
           loop={true}

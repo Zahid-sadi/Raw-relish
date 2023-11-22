@@ -4,7 +4,9 @@ import Footer from '../Shared/Footer/Footer';
 
 const MainLayout = () => {
     return (
-        <div>
+        <div className='bg-gradient-to-l from-lime-950 to-blue-950 '
+        
+        >
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
