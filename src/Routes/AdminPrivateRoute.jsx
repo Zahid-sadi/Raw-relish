@@ -11,7 +11,7 @@ const AdminPrivateRoute = ({ children }) => {
 
     const { user, loading } = useContext(AuthContext);
     const [isAdmin, isAdminLoading] = useAdmin();
-    
+
     if (loading || isAdminLoading) {
         return <div className=" bg-slate-900 h-full w-full text-center font-bold text-yellow-400 -mb-72">loading..............................</div>;
     }
@@ -19,7 +19,7 @@ const AdminPrivateRoute = ({ children }) => {
     if (user && isAdmin) {
         return children;
     } else {
-        return <Navigate to="/login" state={{ from: location }} replace></Navigate>;
+        return <Navigate to="/" state={{ from: location }} replace></Navigate>;
     }
     
 };

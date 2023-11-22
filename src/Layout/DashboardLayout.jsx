@@ -26,7 +26,7 @@ const DashboardLayout = () => {
                     {isAdmin ? (
                         <>
                             <li>
-                                <NavLink  to=" ">
+                                <NavLink  to="/dashboard/mycart ">
                                     <ImHome></ImHome> Admin Home
                                 </NavLink>
                             </li>
@@ -38,7 +38,7 @@ const DashboardLayout = () => {
                             </li>
 
                             <li>
-                                <NavLink  to=" ">
+                                <NavLink  to="/dashboard/addItem">
                                     <ImSpoonKnife></ImSpoonKnife> Add items
                                 </NavLink>
                             </li>

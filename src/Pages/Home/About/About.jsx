@@ -9,7 +9,7 @@ const About = () => {
             <img src={aboutPhoto} alt="" className="w-full h-full overflow-hidden" />
             <div className="hero-overlay bg-opacity-20  "></div>
 
-            <div className="text-center text-neutral-content grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 place-content-center place-items-center gap-5 ">
+            <div className="text-center text-neutral-content grid lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 place-content-center place-items-center gap-5 ">
                 <div className=" custom-hov  bg-slate-600 border-2 border-yellow-800">
                 <h4 className="text-5xl font-bold p-24  bg-black ">WHO WE ARE.... </h4>
                     <p className="text-start font-serif p-5">
