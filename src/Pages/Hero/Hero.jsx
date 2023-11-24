@@ -35,21 +35,21 @@ const Hero = () => {
                     <div className="hero h-[1000px] w-full   ">
                         <img className="h-full w-full overflow-hidden" src={img1} alt="" />
 
-                        <h3 className="text-5xl font-bold  text-white border rounded-lg p-20 bg-transparent">Safe food</h3>
+                        <h3 className="text-5xl font-bold  text-white  border-4 rounded-lg  p-20 bg-transparent">Safe food</h3>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="hero h-[1000px] w-full   ">
                         <img className="h-full w-full overflow-hidden" src={img2} alt="" />
 
-                        <h3 className="text-5xl font-bold  text-white border rounded-lg  p-20 bg-transparent  ">raw ingredients</h3>
+                        <h3 className="text-5xl font-bold  text-white  rounded-lg border-4  p-20 bg-transparent border-bg-gradient-to-b from-blue-950 to-lime-950 ">raw ingredients</h3>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className="hero h-[1000px] w-full   ">
                         <img className="h-full w-full overflow-hidden" src={img3} alt="" />
 
-                        <h3 className="text-5xl font-bold  text-white border rounded-lg  p-20 bg-transparent  ">Fre From Formalin</h3>
+                        <h3 className="text-5xl font-bold  text-white border rounded-lg  p-20 bg-transparent  ">Free From Formalin</h3>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>

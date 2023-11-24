@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 const MyCart = () => {
     const [ cart, refetch  ] = useCart();
-    console.log({ cart });
+    // console.log({'myCart': cart });
     const totalPrice = cart?.reduce((total, item) => total + item.price, 0);
     const roundPrice = Math.round(totalPrice).toFixed(2);
     

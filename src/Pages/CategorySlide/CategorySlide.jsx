@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper/modules';
+import { Keyboard,  Navigation, Pagination } from 'swiper/modules';
 
 import img1 from '../../assets/food1.jpg'
 import img2 from '../../assets/food2.jpg'

@@ -12,12 +12,12 @@ const Review = () => {
         .then((data) => setReviews(data));
     }, []);
     return (
-        <section className=" bg-slate- h-fit w-full flex flex-row   p-12 my-5  ">
+        <section className=" h-fit w-full flex flex-col lg:flex-row   p-12 my-5  ">
                <div className="w-1/2 h-full">
-                <img  className="h-96 w-full " src={imgBg} alt="" />
+                <img  className="h-[450px] w-full " src={imgBg} alt="" />
             </div>
           
-            <div className="w-1/2 h-96 ">
+            <div className="w-1/2 h-[450px] ">
                 <Swiper
                     direction={"vertical"}
                     mousewheel={true}
