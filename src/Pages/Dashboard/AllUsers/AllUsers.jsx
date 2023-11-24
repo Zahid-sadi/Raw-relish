@@ -34,11 +34,11 @@ const AllUsers = () => {
 
     return (
         <div className="w-full p-10">
-            <h3 className="font-bold text-3xl bg-yellow-500 text-back p-5 text-center">Total User: {users.length}</h3>
+            <h3 className="font-bold text-yellow-900 text-3xl bg-yellow-500 text-back p-5 text-center">Total User: {users.length}</h3>
             <div className="overflow-x-auto">
                 <table className="table table-zebra">
                     <thead>
-                        <tr>
+                        <tr >
                             <th>#</th>
                             <th>Name</th>
                             <th>Email</th>
@@ -46,7 +46,7 @@ const AllUsers = () => {
                             <th>Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="bg-white">
                         {users.map((user, index) => (
                             <tr key={user._id}>
                                 <td>{index + 1}</td>

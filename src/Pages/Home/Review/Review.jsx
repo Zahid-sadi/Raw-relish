@@ -12,7 +12,7 @@ const Review = () => {
         .then((data) => setReviews(data));
     }, []);
     return (
-        <section className=" h-fit w-full flex flex-col lg:flex-row   p-12 my-5  ">
+        <section className=" h-fit w-full flex flex-col lg:flex-row   p-12  m-0 ">
                <div className="w-1/2 h-full">
                 <img  className="h-[450px] w-full " src={imgBg} alt="" />
             </div>

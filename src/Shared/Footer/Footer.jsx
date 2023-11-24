@@ -7,7 +7,7 @@ import { TfiTwitterAlt } from "react-icons/tfi";
 
 const Footer = () => {
     return (
-        <footer className=" footer footer-center p-10 bg-gradient-to-bl from-blue-950 to-lime-950 text-primary-content">
+        <footer className="  footer footer-center p-10 bg-gradient-to-bl from-blue-950 to-lime-950 text-primary-content">
             <aside>
                 <div className="flex flex-col p-5 ">
                     <img className="h-36 w-36 p-2 m-5" src={logo} alt="logo of raw relish" />
@@ -32,13 +32,13 @@ const Footer = () => {
             </nav>
             {/* <h5 className="text-xl text-bold text-yellow-700">Coming</h5> */}
             <div className="flex w-60 rounded-lg gap-5">
-                <Link className="py-3 bg-black px-5 w-32 rounded-xl">
-                    <p className="p-2">Download</p>
+                <Link className="p-3 bg-black px-5 w-32 rounded-xl">
+                    <p className="pb-1">Download</p>
                     <FaGooglePlay className="h-12 w-16 "></FaGooglePlay>
                 </Link>
-                <Link className=" py-3 bg-black px-5 w-32 rounded-xl ">
-                    <p className="p-2">Download</p>
-                    <FaApple className="h-12 w-16"></FaApple>
+                <Link className=" p-3 bg-black px-5 w-32 rounded-xl ">
+                    <p className="pb-1">Download</p>
+                    <FaApple className="h-12 w-16 p-"></FaApple>
                 </Link>
             </div>
             <p className=" text-white rounded-3xl ">Copyright © 2024 - All right reserved</p>

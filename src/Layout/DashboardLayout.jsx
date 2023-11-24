@@ -4,25 +4,29 @@ import { FaHome, FaShoppingCart, FaStore, FaUsers, FaWallet } from "react-icons/
 import { ImBook, ImHome, ImHome2, ImList, ImMenu, ImMobile, ImSpoonKnife } from "react-icons/im";
 import useCart from "../Hooks/useCart";
 import useAdmin from "../Hooks/useAdmin";
+
+
+
+
 const DashboardLayout = () => {
     const [data] = useCart();
-    // const isAdmin = true;
 
     const [isAdmin] = useAdmin();
     
 
     return (
-        <div className="drawer lg:drawer-open">
+        <div className="drawer lg:drawer-open bg-gradient-to-l from-lime-950 to-slate-950 ">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+            <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">
+                    Open menu
+            </label>
             <div className="drawer-content  flex flex-col items-center justify-center">
                 <Outlet></Outlet>
-                <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">
-                    Open menu
-                </label>
+               
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                <ul className="menu  bg-yellow-700 w-80 min-h-full">
+                <ul className="menu  p-16 border border-white font-semibold text-blue-700   bg-gradient-to-b from-lime-950 to-slate-900 0 w-80 min-h-full">
                     {isAdmin ? (
                         <>
                             <li>
@@ -43,7 +47,7 @@ const DashboardLayout = () => {
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink  to=" ">
+                                <NavLink  to="/dashboard/manageitem ">
                                     <ImList></ImList> Manage Items
                                 </NavLink>
                             </li>
@@ -52,7 +56,7 @@ const DashboardLayout = () => {
                                     <ImBook></ImBook> Manage Items
                                 </NavLink>
                             </li>
-                            <div className="divider"> and</div>
+                            <div className=" text-green-700 text-center "> _________and_________</div>
                             <li>
                                 <NavLink to="/">
                                     <ImHome2></ImHome2> Home 

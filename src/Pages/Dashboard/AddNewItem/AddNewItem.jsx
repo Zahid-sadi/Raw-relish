@@ -1,11 +1,12 @@
 import { useForm } from "react-hook-form";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import { ImSpoonKnife } from "react-icons/im";
 
 const imgHostingKey = import.meta.env.VITE_imageId;
 
 const AddNewItem = () => {
     const [ axiosSecure ] = useAxiosSecure();
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const imgHostingUrl = `https://api.imgbb.com/1/upload?key=${imgHostingKey}`;
 
     const onSubmit = (data) => {
@@ -24,6 +25,7 @@ const AddNewItem = () => {
                 const newlyAddedItem = { name, image: imgURL, price: parseFloat(price), category, recipe };
                 axiosSecure.post("/items", newlyAddedItem).then((data) => {
                     if (data.data.insertedId) {
+                        reset();
                         // Toast()
                     }
                 });
@@ -33,10 +35,11 @@ const AddNewItem = () => {
 
     return (
         <div className="w-full px-10">
+            <h3 className="text-blue-700 text-center font-bold text-4xl p-10 ">Add new item for new menu</h3>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control w-full mb-4">
                     <label className="label">
-                        <span className="label-text font-bold">Recipe Name*</span>
+                        <span className="label-text font-bold text-yellow-700">Recipe Name*</span>
                     </label>
                     <input
                         type="text"
@@ -48,7 +51,7 @@ const AddNewItem = () => {
                 <div className="flex my-4">
                     <div className="form-control w-full ">
                         <label className="label">
-                            <span className="label-text font-bold">Category*</span>
+                            <span className="label-text font-bold text-yellow-700">Category*</span>
                         </label>
                         <select
                             defaultValue="Select One"
@@ -60,14 +63,14 @@ const AddNewItem = () => {
                             <option>Offered</option>
                             <option>Juice</option>
                             <option>Grilled</option>
-                            <option>Fruits</option>
+                            <option>Raw Fruits</option>
                             <option>FoodBread</option>
-                            <option>With Honey</option>
+                            <option>honey</option>
                         </select>
                     </div>
                     <div className="form-control w-full ml-4">
                         <label className="label ">
-                            <span className="label-text font-bold">Price*</span>
+                            <span className="label-text font-bold text-yellow-700">Price*</span>
                         </label>
                         <input
                             type="Number"
@@ -79,7 +82,7 @@ const AddNewItem = () => {
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text  font-bold ">Recipe Details</span>
+                        <span className="label-text  font-bold text-yellow-700 ">Recipe Details</span>
                     </label>
                     <textarea
                         {...register("recipe", { required: true })}
@@ -88,18 +91,21 @@ const AddNewItem = () => {
                     ></textarea>
                 </div>
                 <div className="flex">
-                <div className="form-control my-3 w-2/3">
-                    <label className="label">
-                        <span className="label-text font-bold">Item Image*</span>
-                    </label>
-                    <input
-                        type="file"
-                        {...register("image", { required: true })}
-                        className="file-input file-input-bordered mr-2 "
-                    />
+                    <div className="form-control my-3 w-2/3">
+                        <label className="label">
+                            <span className="label-text font-bold text-yellow-700">Item Image*</span>
+                        </label>
+                        <input
+                            type="file"
+                            {...register("image", { required: true })}
+                            className="file-input file-input-bordered mr-2 "
+                        />
+                    </div>
+                    <div className="btn  text-green-900 font-bold mt-12 w-1/3">
+                    <input  type="submit" value="Add Item" />
+                    <ImSpoonKnife className="text-green-800 h-12 w-5"></ImSpoonKnife>
+                    </div>
                 </div>
-                    <input className="btn   mt-12 w-1/3" type="submit" value="Add Item" />
-               </div>
             </form>
         </div>
     );

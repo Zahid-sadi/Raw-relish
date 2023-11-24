@@ -4,7 +4,7 @@ import MenuItemsCategory from "../../../Pages/MenuItems/MenuItemsCategory/MenuIt
 const OfferedFood = () => {
     const [menu] = useItems([]);
     const offered = menu.filter((item) => item.category === "offered");
-    // console.log(offeredItems, "from offeredFood");
+    console.log(offered, "from offeredFood");
 
     return (
         <section>
