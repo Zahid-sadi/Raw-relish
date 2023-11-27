@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { FaTrashAlt } from "react-icons/fa";
 import { GrUserAdmin } from "react-icons/gr";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import { toast } from "react-toastify";
 
 const AllUsers = () => {
     const [axiosSecure] = useAxiosSecure();
@@ -29,16 +30,27 @@ const AllUsers = () => {
     }
 
     const handleToDelete = (user) => {
+        fetch(`http://localhost:3000/users/admin/${user._id}`, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.deletedCount > 0) {
+                    refetch()
+                    toast.success('an admin deleted')
+            }
+        })
         
     };
 
     return (
         <div className="w-full p-10">
-            <h3 className="font-bold text-yellow-900 text-3xl bg-yellow-500 text-back p-5 text-center">Total User: {users.length}</h3>
+            <h3 className="font-bold text-black text-3xl bg-yellow-500 text-back p-5 text-center  capitalize  ">TOTAL USER : {users.length}</h3>
             <div className="overflow-x-auto">
                 <table className="table table-zebra">
                     <thead>
-                        <tr >
+                        <tr className="text-blue-400 font-bold text-lg" >
                             <th>#</th>
                             <th>Name</th>
                             <th>Email</th>

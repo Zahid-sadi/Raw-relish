@@ -15,7 +15,7 @@ const Review = () => {
 
     return (
         <section className=" h-fit w-full flex flex-col lg:flex-row   p-12  m-0 ">
-            <div className="w-1/2 h-[450px] ">
+            <div className="w-1/2 h-[500px] ">
                 <Swiper
                     direction={"horizontal"}
                     mousewheel={true}
@@ -29,13 +29,13 @@ const Review = () => {
                 >
                     {reviews.map((review) => (
                         <SwiperSlide key={review._id}>
-                          <img  style={{ borderRadius: "30px 50px 400px 50px" }} className="h-full w-full p-5 bg-white " src={review.image} alt="" />
+                          <img  style={{ borderRadius: "40px 0px 00px 400px" }} className="h-full w-full p-4 bg-white " src={review.image} alt="" />
                         </SwiperSlide>
                     ))}
                 </Swiper>
             </div>
           
-             <div className="w-1/2 h-[450px] ">
+             <div className="w-1/2 h-[500px] ">
                 <Swiper
                     direction={"vertical"}
                     mousewheel={true}
@@ -53,10 +53,10 @@ const Review = () => {
                     className="mySwiper  h-full   bg-transparent"
                 >
                     {reviews.map((review) => (
-                        <SwiperSlide key={review._id}>
-                            <div className="h-full p-10   flex flex-col justify-center items-center  ">
+                        <SwiperSlide  key={review._id}>
+                            <div  style={{ borderRadius: "0px 400px 40px 0px" }}  className="h-full p-10 bg-transparent border  flex flex-col justify-center items-center  ">
                                 <h4 className="text-3xl font-bold text-white p-5">{review.name} </h4>
-                                <p className="text-white py-5">{review.details}</p>
+                                <p className="text-white -ml-12 p-10">{review.details}</p>
                             </div>
                         </SwiperSlide>
                     ))}

@@ -5,6 +5,7 @@ import img from "../../assets/loginbg2.jpg";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
+import { toast } from "react-toastify";
 
 const Login = () => {
     const [ isDisable, setDisable ] = useState(true);
@@ -30,6 +31,7 @@ const Login = () => {
             const user = result.user;
 
             // console.log(user);
+            toast.success('login successfully')
             navigate(from, { replace: true });
         });
     };
@@ -48,7 +50,6 @@ const Login = () => {
     return (
         <div
             className="hero min-h-screen"
-            // style={{backgroundImage: {img}}}
         >
             <img src={img} alt="" className="w-full h-full " />
 

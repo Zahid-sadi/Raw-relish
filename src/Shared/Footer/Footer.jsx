@@ -3,7 +3,6 @@ import logo from "../../assets/logo3.png";
 import { FaYoutube, FaFacebookF, FaGooglePlay, FaApple } from "react-icons/fa";
 import { TfiTwitterAlt } from "react-icons/tfi";
 
-// import footerBgImg from "../../assets/curve2Bg.png";
 
 const Footer = () => {
     return (
@@ -30,18 +29,23 @@ const Footer = () => {
                     </Link>
                 </div>
             </nav>
-            {/* <h5 className="text-xl text-bold text-yellow-700">Coming</h5> */}
             <div className="flex w-fit rounded-lg gap-5">
-                <div className=" w-fit p-2 flex flex-row items-center justify-center p-3 bg-black px-5 w-32 rounded-xl">
-                    <p className="p-2 font-semibold">Download</p>
-
+                <div className="w-fit flex flex-row items-center justify-center p-3 bg-black px-5  rounded-xl">
+                <div className="text-yellow-500">
+                    <p className=" font-semibold">Download</p>
+                    <p className=" font-semibold">From play store</p>
+                   </div>
                     <Link className="">
                         <FaGooglePlay className="h-12 w-16 "></FaGooglePlay>
                     </Link>
                 </div>
 
-                <div className=" w-fit p-2 flex flex-row items-center justify-center p-3 bg-black px-5 w-32 rounded-xl">
-                    <p className="p-2 font-semibold">Download</p>
+                <div className="w-fit flex flex-row items-center justify-center p-3 bg-black px-5  rounded-xl">
+                    <div className="text-yellow-500">
+                    <p className=" font-semibold">Download</p>
+                    <p className=" font-semibold">From apple store</p>
+                   </div>
+                    
 
                     <Link className="">
                         <FaApple className="h-12 w-16"></FaApple>

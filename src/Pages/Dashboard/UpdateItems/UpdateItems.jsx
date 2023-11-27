@@ -48,7 +48,7 @@ const UpdateItems = () => {
             console.log(data);
                 if (data.success) {
               navigate('/dashboard/manage/item')
-            toast.success(data.message);
+            toast.success('item updated successfully');
           } else {
             // toast.err(data.error)
           }
@@ -61,12 +61,12 @@ const UpdateItems = () => {
         <div className="w-full px-10">
             <div className="flex content-center justify-center items-center mt-5">
                 
-                <div className="text-yellow-700 text-center font-bold text-4xl p-4 ">
+                <div className="text-blue-400 text-center font-bold text-4xl p-4 ">
                 <h3>UPDATE  OF</h3>
                 <h5>{item.name}</h5>
                 </div>
               
-                <img className=" h-36  " src={item.image} alt="" /></div> 
+                <img className=" h-36  rounded-2xl " src={item.image} alt="" /></div> 
             
             <form onSubmit={handleSubmit}>
                 <div className="form-control w-full mb-4">
@@ -133,6 +133,7 @@ const UpdateItems = () => {
                         <input
                             type="file"
                             name="image"
+                            placeholder="use image link"
                             className="file-input file-input-bordered mr-2 "
                         />
                     </div>

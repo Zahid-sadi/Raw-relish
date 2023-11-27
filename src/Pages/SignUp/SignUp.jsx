@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import img from "../../assets/sigUpbg.jpg";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);
@@ -37,7 +38,8 @@ const SignUp = () => {
                     .then(res => res.json())
                     .then(data => {
                         if (data.insertedId) {
-                        alert('user saved')
+                            console.log(data.insertedId);
+                        toast.success('new user created')
                     }
                 })
             })
