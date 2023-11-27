@@ -22,6 +22,7 @@ const useCart = () => {
             // console.log('response from useCart axios', response);
         
             return response.data;
+            
         
         },
         

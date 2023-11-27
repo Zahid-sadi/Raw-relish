@@ -41,7 +41,7 @@ const Navbar = () => {
                 <Link to="/order">Food Order</Link>
             </li>
             <li>
-                <Link to='dashboard/mycart'><FaCartArrowDown className=" h-5 w-fit "></FaCartArrowDown><p className="text-yellow-600 text-lg">{cart?.length || 0}</p></Link>
+                <Link to='dashboard/my/cart'><FaCartArrowDown className=" h-5 w-fit "></FaCartArrowDown><p className="text-yellow-600 text-lg">{cart?.length || 0}</p></Link>
                
             </li>
         </>

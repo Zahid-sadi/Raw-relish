@@ -9,7 +9,7 @@ import useAdmin from "../Hooks/useAdmin";
 
 
 const DashboardLayout = () => {
-    const [data] = useCart();
+    const [cart] = useCart();
 
     const [isAdmin] = useAdmin();
     
@@ -30,24 +30,24 @@ const DashboardLayout = () => {
                     {isAdmin ? (
                         <>
                             <li>
-                                <NavLink  to="/dashboard/mycart ">
+                                <NavLink  to="/dashboard/my/cart ">
                                     <ImHome></ImHome> Admin Home
                                 </NavLink>
                             </li>
                           
                             <li>
-                                <NavLink  to="/dashboard/allusers">
+                                <NavLink  to="/dashboard/all/users">
                                     <FaUsers></FaUsers> Manage Users
                                 </NavLink>
                             </li>
 
                             <li>
-                                <NavLink  to="/dashboard/addItem">
+                                <NavLink  to="/dashboard/add/item">
                                     <ImSpoonKnife></ImSpoonKnife> Add items
                                 </NavLink>
                             </li>
                             <li>
-                                <NavLink  to="/dashboard/manageitem ">
+                                <NavLink  to="/dashboard/manage/item ">
                                     <ImList></ImList> Manage Items
                                 </NavLink>
                             </li>
@@ -84,7 +84,7 @@ const DashboardLayout = () => {
                             <li className="">
                                 <NavLink to="/dashboard/mycart">
                                     <FaShoppingCart></FaShoppingCart> My cart{" "}
-                                    <span className=" badge  badge-info">+{data?.length || 0}</span>
+                                    <span className=" badge  badge-info">+{cart?.length || 0}</span>
                                 </NavLink>
                             </li>
                             <li>

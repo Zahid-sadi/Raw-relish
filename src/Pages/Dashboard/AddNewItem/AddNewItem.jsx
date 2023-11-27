@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { ImSpoonKnife } from "react-icons/im";
+import { useNavigate } from "react-router";
 
 const imgHostingKey = import.meta.env.VITE_imageId;
 
@@ -8,6 +9,7 @@ const AddNewItem = () => {
     const [ axiosSecure ] = useAxiosSecure();
     const { register, handleSubmit, reset } = useForm();
     const imgHostingUrl = `https://api.imgbb.com/1/upload?key=${imgHostingKey}`;
+    const navigate = useNavigate()
 
     const onSubmit = (data) => {
         const formData = new FormData();
@@ -26,6 +28,7 @@ const AddNewItem = () => {
                 axiosSecure.post("/items", newlyAddedItem).then((data) => {
                     if (data.data.insertedId) {
                         reset();
+                        navigate('/dashboard/manage/item')
                         // Toast()
                     }
                 });
@@ -59,13 +62,17 @@ const AddNewItem = () => {
                             className="select select-bordered"
                         >
                             <option disabled>Select Category</option>
-                            <option>Raw</option>
+                            <option>raw-special</option>
                             <option>Offered</option>
                             <option>Juice</option>
                             <option>Grilled</option>
                             <option>Raw Fruits</option>
                             <option>FoodBread</option>
+                            <option>spicy</option>
                             <option>honey</option>
+                            <option>pickles</option>
+                            <option>dessert</option>
+                            <option>grilled</option>
                         </select>
                     </div>
                     <div className="form-control w-full ml-4">

@@ -18,7 +18,7 @@ const Footer = () => {
             <nav>
                 <div className=" flex  gap-10">
                     <Link className="hover:bg-black p-3 rounded-xl">
-                        <TfiTwitterAlt  className="  h-12 w-12 "></TfiTwitterAlt>
+                        <TfiTwitterAlt className="  h-12 w-12 "></TfiTwitterAlt>
                     </Link>
 
                     <Link className="hover:bg-red-700 p-3 rounded-xl">
@@ -31,15 +31,22 @@ const Footer = () => {
                 </div>
             </nav>
             {/* <h5 className="text-xl text-bold text-yellow-700">Coming</h5> */}
-            <div className="flex w-60 rounded-lg gap-5">
-                <Link className="p-3 bg-black px-5 w-32 rounded-xl">
-                    <p className="pb-1">Download</p>
-                    <FaGooglePlay className="h-12 w-16 "></FaGooglePlay>
-                </Link>
-                <Link className=" p-3 bg-black px-5 w-32 rounded-xl ">
-                    <p className="pb-1">Download</p>
-                    <FaApple className="h-12 w-16 p-"></FaApple>
-                </Link>
+            <div className="flex w-fit rounded-lg gap-5">
+                <div className=" w-fit p-2 flex flex-row items-center justify-center p-3 bg-black px-5 w-32 rounded-xl">
+                    <p className="p-2 font-semibold">Download</p>
+
+                    <Link className="">
+                        <FaGooglePlay className="h-12 w-16 "></FaGooglePlay>
+                    </Link>
+                </div>
+
+                <div className=" w-fit p-2 flex flex-row items-center justify-center p-3 bg-black px-5 w-32 rounded-xl">
+                    <p className="p-2 font-semibold">Download</p>
+
+                    <Link className="">
+                        <FaApple className="h-12 w-16"></FaApple>
+                    </Link>
+                </div>
             </div>
             <p className=" text-white rounded-3xl ">Copyright © 2024 - All right reserved</p>
         </footer>

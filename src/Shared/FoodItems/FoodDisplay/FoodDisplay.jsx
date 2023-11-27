@@ -1,9 +1,12 @@
+import { useState } from "react";
 
 const FoodDisplay = ({ item }) => {
     // console.log("From Offered Food", offeredItem);
     const { name, image, price, recipe, newPrice } = item;
 
-   
+    const [color, setColor] =useState()
+
+  
     // console.log(name, image, price, recipe);
 
     return (

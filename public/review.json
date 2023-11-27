@@ -1,32 +1,52 @@
 [
     {
       "_id": "65327a846a327969f59af560",
-      "name": "Sheri Brennan",
+      "name": "Mr X",
+      "image":"https://www.stryx.com/cdn/shop/articles/man-looking-attractive.jpg?v=1666662774",
       "details": "In ipsum officia ullamco ad. Aliqua ipsum nostrud pariatur proident dolor. Proident id fugiat voluptate ex irure magna laboris pariatur commodo commodo cillum ex do aliquip. Amet labore ad minim labore tempor enim fugiat culpa dolore. Est aute eu ea pariatur magna reprehenderit sint occaecat pariatur incididunt.\r\n"
     },
     {
       "_id": "65327a84fd72f50595440485",
-      "name": "Pace York",
+      "name": "Hitler",
+      "image":"https://www.telegraph.co.uk/content/dam/world-news/2022/06/05/TELEMMGLPICT000109909155_1_trans_NvBQzQNjv4Bq_XM_CUYwpJ0lNsWAyVV6rkPp9yiuksSVOpvx-IRowmU.jpeg",
       "details": "Pariatur aute nostrud eu deserunt exercitation eu ipsum voluptate pariatur consectetur. Ea do veniam nisi veniam velit. Velit Lorem mollit quis consequat.\r\n"
     },
+
     {
       "_id": "65327a84a70847320e321d0f",
-      "name": "Sandra Pope",
+      "name": "Erdogan",
+      "image":"https://news.cgtn.com/news/2023-05-29/Erdogan-wins-T-rkiye-s-presidential-election-1kbXn7rQEE0/img/81cafec5ee25484cabc44dfd3444574c/81cafec5ee25484cabc44dfd3444574c.jpeg",
       "details": "Quis cillum ad excepteur in dolor. Aute amet aliquip enim laboris commodo exercitation et. Incididunt laborum ut et veniam nulla veniam enim. Voluptate ad aliquip ex enim ex excepteur amet cillum Lorem cillum laborum. Laboris aute Lorem mollit amet. Aliquip cillum nulla id incididunt magna ad sint enim incididunt ullamco do culpa irure sit. Commodo veniam laborum minim elit.\r\n"
     },
     {
+      "_id": "65327a84c896146b2dc11536",
+      "name": "Biden",
+      "image":"https://wwmt.com/resources/media2/16x9/full/1015/center/80/30a4528e-e934-43f7-856f-02b5196ed767-large16x9_Bideninblue.jpeg",
+      "details": "Irure nulla magna deserunt incididunt. Tempor consequat laboris veniam ullamco et magna dolor aliqua sunt labore elit proident. Mollit pariatur sunt pariatur aliquip ea mollit quis do nostrud nisi esse quis. Aute velit id aliqua ut enim culpa quis tempor occaecat. Labore laborum quis culpa ad enim.\r\n"
+    },
+    {
       "_id": "65327a84cc88ce63d8c13bfa",
-      "name": "Maryellen Kramer",
+      "name": "Imran Khan",
+      "image":"https://d.newsweek.com/en/full/2244906/imran-khan-exclusive-homepage.jpg?w=1600&h=1600&l=49&t=45&q=88&f=7edd592c4a705fab765d813ef3b4b134",
       "details": "Dolor adipisicing Lorem deserunt irure. Velit sunt proident Lorem id velit sint nulla veniam aliquip reprehenderit eu laborum. Proident ullamco Lorem ea ad ullamco do dolore aute nisi dolor veniam ea Lorem. Nostrud deserunt cillum reprehenderit amet irure amet duis officia. Veniam ullamco Lorem laborum nulla commodo cupidatat mollit eiusmod laborum. Quis officia est consectetur fugiat nostrud amet aliquip cillum labore.\r\n"
     },
     {
       "_id": "65327a84893c320a77dcbfca",
-      "name": "Jannie Morse",
+      "name": "Putin",
+      "image":"https://wallpapercave.com/wp/wp3090372.jpg",
       "details": "Pariatur et mollit minim do Lorem nisi culpa pariatur aliqua laboris. Est sit sit sit proident eiusmod excepteur enim velit consectetur ullamco consequat quis. Aliquip minim ex est deserunt excepteur elit sit occaecat dolore ipsum quis non consequat. Deserunt velit adipisicing enim qui. Nulla Lorem fugiat id exercitation irure labore ad.\r\n"
     },
     {
+      "_id": "65327a846a327969f59af560",
+      "name": "Donald Trump",
+      "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/President_Trump_2.jpg/625px-President_Trump_2.jpg",
+      "details": "In ipsum officia ullamco ad. Aliqua ipsum nostrud pariatur proident dolor. Proident id fugiat voluptate ex irure magna laboris pariatur commodo commodo cillum ex do aliquip. Amet labore ad minim labore tempor enim fugiat culpa dolore. Est aute eu ea pariatur magna reprehenderit sint occaecat pariatur incididunt.\r\n"
+    },
+    {
       "_id": "65327a84c896146b2dc11536",
-      "name": "Howard Blankenship",
+      "name": "Kim jong un",
+      "image":"https://w0.peakpx.com/wallpaper/129/964/HD-wallpaper-kim-jong-un-north-korea-leader-of-the-dprk-portrait.jpg",
       "details": "Irure nulla magna deserunt incididunt. Tempor consequat laboris veniam ullamco et magna dolor aliqua sunt labore elit proident. Mollit pariatur sunt pariatur aliquip ea mollit quis do nostrud nisi esse quis. Aute velit id aliqua ut enim culpa quis tempor occaecat. Labore laborum quis culpa ad enim.\r\n"
     }
+  
   ]
