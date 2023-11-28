@@ -45,7 +45,7 @@ const SocialLogin = () => {
     return (
         <div
             onClick={handleToGoogleSignUp}
-            className="btn btn-outline btn-wide  border-2 border-blue-400 text-2xl p-2 m-2 "
+            className="btn btn-outline btn-wide text-blue-500  border-2 border-blue-400 text-2xl p-2  "
         >
             <FaGoogle></FaGoogle>
         </div>

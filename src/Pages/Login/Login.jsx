@@ -1,7 +1,7 @@
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from "react-simple-captcha";
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import img from "../../assets/loginbg2.jpg";
+import img from "../../assets/imagr of login page.jpg";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
@@ -49,23 +49,26 @@ const Login = () => {
 
     return (
         <div
-            className="hero min-h-screen"
+            className="hero h-screen"
         >
-            <img src={img} alt="" className="w-full h-full " />
+            <img src={img} alt="" className="w-full h-screen " />
 
             <div className="hero-overlay bg-opacity-40"></div>
 
             <div className="hero-content text-center text-neutral-content">
                 <div className="max-w-md">
-                    <form onSubmit={handleLogin} className="card-body">
+                    <form onSubmit={handleLogin} className="card-body w-96 rounded-3xl  bg-black bg-opacity-40">
+                        <div className="mx-auto">
                         <SocialLogin></SocialLogin>
 
-                        <h4 className="text-white font-bold text-4xl p-4 m-2">Login</h4>
+                        </div>
+
+                        <h4 className="text-white font-bold text-4xl p-4 m-2">LOGIN</h4>
                         <input
                             type="email"
                             name="email"
                             placeholder="email"
-                            className="lg:w-72 p-2  bg-transparent border-b-2 border-yellow-400"
+                            className=" p-2  bg-transparent border-b-2 border-yellow-400"
                             required
                         />
 
@@ -73,7 +76,7 @@ const Login = () => {
                             type="password"
                             name="password"
                             placeholder="password"
-                            className="p-2 lg:w-72 bg-transparent border-b-2 border-yellow-400 "
+                            className="p-2  bg-transparent border-b-2 border-yellow-400 "
                             required
                         />
                         <label className="label">
@@ -82,27 +85,28 @@ const Login = () => {
                             </Link>
                         </label>
                         <label>
-                            <LoadCanvasTemplate />
+                            <LoadCanvasTemplate className=" bg-transparent text-blue-400 " />
                         </label>
                         <input
                             onMouseOut={handleCaptcha}
                             type="text"
                             name="captcha"
                             placeholder="type here the captcha"
-                            className="text-center p-2 lg:w-72 bg-transparent border-b-2 border-yellow-400 "
+                            className="text-center p-2  bg-transparent border-b-2 border-yellow-400 "
                         />
                         <input
                             disabled={isDisable}
                             type="submit"
                             name="submit"
                             placeholder="submit"
-                            className="btn btn-outline border-b-4 border-slate-900"
+                            className=" mt-4 btn btn-outline border-b-4 border-slate-900"
                             value="Login"
                         />
-                    </form>
-                    <Link className="px-5 bg-gradient-to-r from-yellow-400 to-orange-400  text-black " to="/signUp">
+                           <Link className="px-5 mt-5 bg-gradient-to-r from-yellow-400 to-orange-400  text-black " to="/signUp">
                         Please Make An Account
                     </Link>
+                    </form>
+                 
                 </div>
             </div>
         </div>
