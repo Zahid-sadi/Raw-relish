@@ -1,12 +1,13 @@
 import { FaTrash } from "react-icons/fa";
 import useCart from "../../../Hooks/useCart";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const MyCart = () => {
     const [ cart, refetch ] = useCart();
     // console.log({'myCart': cart });
     const totalPrice = cart?.reduce((total, item) => total + item.price, 0);
-    const roundPrice = Math.round(totalPrice).toFixed(2);
+    const parsePrice = parseFloat(totalPrice).toFixed(2);
 
     const handleToDelete = (item) => {
         // const proceed = window.confirm('its deleting')
@@ -53,8 +54,10 @@ const MyCart = () => {
             <div className="w-5/6 p-5 bg-yellow-600 h-full">
                 <div className="flex justify-around content-center items-center bg-yellow-700 h-20 w-full text-2xl text-white font-bold ">
                     <h3>Total item {cart.length}</h3>
-                    <h3>Total price {roundPrice}</h3>
-                    <button className="btn-warning btn-sm rounded-lg">Pay</button>
+                    <h3>Total price {parsePrice}</h3>
+                    <Link to="/dashboard/payment">
+                        <button className="btn-warning btn-sm rounded-lg">Pay</button>
+                    </Link>
                 </div>
 
                 <div className="overflow-x-auto">

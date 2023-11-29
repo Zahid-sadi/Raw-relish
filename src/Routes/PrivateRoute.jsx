@@ -2,13 +2,14 @@
 import { useContext } from "react";
 import { Navigate, useLocation } from "react-router";
 import { AuthContext } from "../Providers/AuthProvider";
+import Loading from "./Loading";
 
 const PrivateRoute = ({ children }) => {
     const location = useLocation();
 
     const { user, loading } = useContext(AuthContext);
     if (loading) {
-        return <div className=" bg-slate-900 h-full w-full text-center font-bold text-yellow-400 -mb-72">loading..............................</div>;
+        return <Loading></Loading>
     }
 
     if (user) {

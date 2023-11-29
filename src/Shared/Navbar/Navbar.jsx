@@ -52,7 +52,7 @@ const Navbar = () => {
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                        {/* <svg
+                        <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5"
                             fill="none"
@@ -65,11 +65,11 @@ const Navbar = () => {
                                 strokeWidth="2"
                                 d="M4 6h16M4 12h8m-8 6h16"
                             />
-                        </svg> */}
+                        </svg>
                     </label>
                     <ul
                         tabIndex={0}
-                        className="menu menu-compact dropdown-content mt-3 p-2  rounded-box w-52 text-yellow-500 underline hover:underline-offset-4   "
+                        className=" dropdown-content "
                     >
                         {navItems}
                     </ul>
@@ -85,7 +85,7 @@ const Navbar = () => {
                </div>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 ">{navItems}</ul>
+                <ul className="menu menu-horizontal px-1 text-white">{navItems}</ul>
             </div>
             <div className="navbar-end  ">
                 <div className="me-5 ">
