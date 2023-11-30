@@ -28,7 +28,7 @@ const MenuItems = () => {
     const fruits = menu.filter(item => item.category === "fruits" )
     const juice = menu.filter(item => item.category === "juice" )
     const pickles = menu.filter(item => item.category === "pickles" )
-    const foodbread = menu.filter(item => item.category === "foodbread" )
+    const food_Bread = menu.filter(item => item.category === "foodbread" )
     const dessert = menu.filter(item => item.category === "dessert" )
     const grilled = menu.filter(item => item.category === "grilled" )
     const offered = menu.filter(item => item.category === "offered" )
@@ -65,7 +65,7 @@ const MenuItems = () => {
 
            <CategoryHero videoSource ={video2} heading="How do we make special bread"
            details=" spicy khao chapar sobde birokto koro char pash"></CategoryHero>
-           <MenuItemsCategory items={foodbread} bgPhoto={img7} categoryHeadline="foodbread" categoryDetails="dessert khao  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia. koro char pash"></MenuItemsCategory>
+           <MenuItemsCategory items={food_Bread} bgPhoto={img7} categoryHeadline="food Bread" categoryDetails="dessert khao  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia. koro char pash"></MenuItemsCategory>
 
            <CategoryHero videoSource ={video2} heading="How do we make dessert "
            details=" spicy khao chapar sobde birokto koro char pash"></CategoryHero>

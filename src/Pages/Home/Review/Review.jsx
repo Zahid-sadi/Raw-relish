@@ -16,8 +16,8 @@ const Review = () => {
 
 
     return (
-        <section className=" h-fit w-full flex flex-col lg:flex-row   p-12  m-0 ">
-            <div className="w-1/2 h-[550px] mt-20 ">
+        <section className="flex flex-col lg:flex-row p-4 sm:p-8 md:p-12 lg:p-16 ">
+            <div className="w-full lg:w-1/2 h-[300px] lg:h-[550px] mt-8 lg:mt-0">
                 <Swiper
                     direction={"horizontal"}
                     mousewheel={true}
@@ -37,7 +37,7 @@ const Review = () => {
                 </Swiper>
             </div>
           
-             <div className="w-1/2 h-[550px] mt-20">
+             <div className="w-full lg:w-1/2 h-[300px] lg:h-[550px] mt-8 lg:mt-0">
                 <Swiper
                     direction={"vertical"}
                     mousewheel={true}
@@ -57,11 +57,12 @@ const Review = () => {
                     {reviews.map((review) => (
                         <SwiperSlide  key={review._id}>
                             <div style={{ borderRadius: "0px 40px 40px 0px" }} className="h-full p-10 bg-transparent border  flex flex-col justify-center items-center  ">
-                                <FaQuoteLeft className="h-12 w-16 items-center text-yellow-300"></FaQuoteLeft>
+                                <FaQuoteLeft className="h-12 w-16 mb-2 items-center text-yellow-300"></FaQuoteLeft>
                                 
 
-                                <h4 className="text-3xl font-bold text-white  p-5">{review.name} </h4>
-                                <p className="text-white  p-10">{review.details}</p>
+                                <h4 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 md:mb-4 lg:mb-6  text-white  p-5">{review.name} </h4>
+                                
+                                <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl">{review.details}</p>
                             </div>
                         </SwiperSlide>
                     ))}
