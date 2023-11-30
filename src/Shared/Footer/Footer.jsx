@@ -31,9 +31,9 @@ const Footer = () => {
                 </div>
             </nav>
 
-            <div className="flex flex-col sm:flex-row  mt-5">
+            <div className="flex flex-col gap-6  sm:flex-row m-5">
                 {/* <div className="mb-5 sm:mb-0 sm:mr-5"> */}
-                <div className=" w-56 flex items-center justify-center p-3 bg-black px-5  rounded-xl mb-4">
+                <div className=" w-56 h-20 flex items-center justify-center p-3 bg-black px-5  rounded-xl ">
                     <div className="text-yellow-500">
                         <p className=" font-semibold">Download</p>
                         <p className=" font-semibold">From play store</p>
@@ -45,14 +45,14 @@ const Footer = () => {
                 {/* </div> */}
 
               
-                    <div className=" w-56 flex items-center justify-center p-3 bg-black px-5  rounded-xl">
+                    <div className=" w-56 h-20 flex items-center justify-center p-3 bg-black px-5  rounded-xl ">
                         <div className="text-yellow-500">
                             <p className=" font-semibold">Download</p>
                             <p className=" font-semibold">From apple store</p>
                         </div>
 
                         <Link className="">
-                            <FaApple className="h-12 w-16"></FaApple>
+                            <FaApple className="h-14 w-16"></FaApple>
                         </Link>
                     </div>
               
