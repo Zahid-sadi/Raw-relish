@@ -3,19 +3,20 @@ import logo from "../../assets/logo3.png";
 import { FaYoutube, FaFacebookF, FaGooglePlay, FaApple } from "react-icons/fa";
 import { TfiTwitterAlt } from "react-icons/tfi";
 
-
 const Footer = () => {
     return (
         <footer className="  footer footer-center p-10 bg-gradient-to-bl from-blue-950 to-lime-950 text-primary-content">
-            <aside>
-                <div className="flex flex-col p-5 ">
-                    <img className="h-36 w-36 p-2 m-5" src={logo} alt="logo of raw relish" />
-                    <header className="font-bold text-4xl text-yellow-500">Raw Relish</header>
-                </div>
+            {/* <div className="flex flex-col "> */}
+            <div className="flex flex-col  items-center p-5">
+                <img className="h-36 w-36 p-2 m-5 -ml-1 " src={logo} alt="logo of raw relish" />
+                <header className="font-bold text-4xl text-yellow-500">Raw Relish</header>
+            </div>
+            <div className="">
                 <p className="font-bold">Raw Relish food Industry Ltd. Providing reliable Food since born</p>
-            </aside>
-            <nav>
-                <div className=" flex  gap-10">
+            </div>
+            {/* </div> */}
+            <nav className="mt-5">
+                <div className=" flex  gap-5">
                     <Link className="hover:bg-black p-3 rounded-xl">
                         <TfiTwitterAlt className="  h-12 w-12 "></TfiTwitterAlt>
                     </Link>
@@ -29,30 +30,34 @@ const Footer = () => {
                     </Link>
                 </div>
             </nav>
-            <div className="flex w-fit rounded-lg gap-5">
-                <div className="w-fit flex flex-row items-center justify-center p-3 bg-black px-5  rounded-xl">
-                <div className="text-yellow-500">
-                    <p className=" font-semibold">Download</p>
-                    <p className=" font-semibold">From play store</p>
-                   </div>
+
+            <div className="flex flex-col sm:flex-row  mt-5">
+                {/* <div className="mb-5 sm:mb-0 sm:mr-5"> */}
+                <div className=" w-56 flex items-center justify-center p-3 bg-black px-5  rounded-xl mb-4">
+                    <div className="text-yellow-500">
+                        <p className=" font-semibold">Download</p>
+                        <p className=" font-semibold">From play store</p>
+                    </div>
                     <Link className="">
                         <FaGooglePlay className="h-12 w-16 "></FaGooglePlay>
                     </Link>
                 </div>
+                {/* </div> */}
 
-                <div className="w-fit flex flex-row items-center justify-center p-3 bg-black px-5  rounded-xl">
-                    <div className="text-yellow-500">
-                    <p className=" font-semibold">Download</p>
-                    <p className=" font-semibold">From apple store</p>
-                   </div>
-                    
+              
+                    <div className=" w-56 flex items-center justify-center p-3 bg-black px-5  rounded-xl">
+                        <div className="text-yellow-500">
+                            <p className=" font-semibold">Download</p>
+                            <p className=" font-semibold">From apple store</p>
+                        </div>
 
-                    <Link className="">
-                        <FaApple className="h-12 w-16"></FaApple>
-                    </Link>
-                </div>
+                        <Link className="">
+                            <FaApple className="h-12 w-16"></FaApple>
+                        </Link>
+                    </div>
+              
             </div>
-            <p className=" text-white rounded-3xl ">Copyright © 2024 - All right reserved</p>
+            <p className=" text-white rounded-3xl text-center  ">Copyright © 2024 - All right reserved</p>
         </footer>
     );
 };

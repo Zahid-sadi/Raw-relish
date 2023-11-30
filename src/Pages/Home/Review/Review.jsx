@@ -17,7 +17,7 @@ const Review = () => {
 
     return (
         <section className="flex flex-col lg:flex-row p-4 sm:p-8 md:p-12 lg:p-16 ">
-            <div className="w-full lg:w-1/2 h-[300px] lg:h-[550px] mt-8 lg:mt-0">
+            <div className="w-full lg:w-1/2 h-[400px] lg:h-[550px] mt-10 lg:mt-24">
                 <Swiper
                     direction={"horizontal"}
                     mousewheel={true}
@@ -37,7 +37,7 @@ const Review = () => {
                 </Swiper>
             </div>
           
-             <div className="w-full lg:w-1/2 h-[300px] lg:h-[550px] mt-8 lg:mt-0">
+             <div className="w-full lg:w-1/2 h-[400px] lg:h-[550px] mt-8 lg:mt-24">
                 <Swiper
                     direction={"vertical"}
                     mousewheel={true}
