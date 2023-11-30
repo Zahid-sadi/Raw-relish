@@ -5,13 +5,13 @@ import aboutPhoto from "../../../assets/abut.jpg";
 
 const About = () => {
     return (
-        <div className=" hero h-max w-full bg-slate-950 ">
+        <div className=" hero h-max w-full bg-slate-950  ">
             <img src={aboutPhoto} alt="" className="w-full h-full overflow-hidden" />
             <div className="hero-overlay bg-opacity-20  "></div>
 
-            <div className="text-center text-neutral-content grid lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 place-content-center place-items-center gap-5 ">
-                <div className=" custom-hov  bg-slate-600 border-2 border-yellow-800">
-                <h4 className="text-5xl font-bold p-24  bg-black ">WHO WE ARE.... </h4>
+            <div className="text-center text-neutral-content grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 place-content-center place-items-center gap-5 my-12 ">
+                <div className="  custom-hov  bg-slate-600 border-2 border-yellow-800">
+                <h4 className="text-5xl font-bold  p-24 bg-black ">WHO WE ARE.... </h4>
                     <p className="text-start font-serif p-5">
                         
                         1...... Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo magni, modi itaque illum
@@ -25,7 +25,7 @@ const About = () => {
                     </p>
                 </div>
                 <div className="custom-hov  bg-black border-2 border-yellow-800">
-                <h4 className="text-5xl text-center font-bold bg-slate-500 p-24">WHY FROM US </h4>
+                <h4 className="text-4xl text-center font-bold bg-slate-500 p-24">WHY FROM US </h4>
 
                     <p className=" text-start font-serif p-5 ">
                         2..... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, aperiam? Eaque
@@ -39,7 +39,7 @@ const About = () => {
 
                 </div>
                 <div className="custom-hov  bg-slate-500 border-2 border-yellow-800 ">
-                    <h4 className="text-5xl font-bold  bg-slate-800 p-24 text-center ">WHAT IS OUR STRENGTH</h4> 
+                    <h4 className="text-4xl  font-bold  bg-slate-800 p-24 ">WHAT IS OUR STRENGTH</h4> 
                   
                     <p className="text-start font-sans p-5">
                         3.................. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur sit rerum
