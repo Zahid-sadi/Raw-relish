@@ -2,10 +2,12 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+// import './Checkout.css';
 
 
-const Checkout = ({ price }) => {
-    // console.log(price);
+
+const Checkout = ({cart, price }) => {
+    // console.log(cart);
     const stripe = useStripe();
     const elements = useElements();
     const [ info, setInfo ] = useState();
@@ -13,20 +15,22 @@ const Checkout = ({ price }) => {
     const { user } = useContext(AuthContext);
     // console.log(user);
     const [ processing, setProcessing ] = useState(false);
-    const [ clientSecret, setClientSecret ] = useState("");
+    const [clientSecret, setClientSecret] = useState("");
+    const [transactionId, setTransactionId] = useState('');
+
 
     useEffect(() => {
-        if (price > 0 ) {
+        
             axiosSecure.post("/create-payment-intent", { price })
                 .then((data) => {
-                // console.log(data);
-                setClientSecret(data.clientSecret);
+                console.log(data);
+                setClientSecret(data.data.clientSecret);
             });
-        }
+        
        
     }, [price, axiosSecure]);
     
-
+console.log('client secret', clientSecret);
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -42,7 +46,7 @@ const Checkout = ({ price }) => {
 
         console.log("card", card);
 
-        const { error, paymentMethod } = await stripe.createPaymentMethod({
+        const { error } = await stripe.createPaymentMethod({
             type: "card",
             card
         });
@@ -50,15 +54,17 @@ const Checkout = ({ price }) => {
 
 
         if (error) {
-            // console.log(error.message);
+            console.log('error',error.message);
             setInfo(error.message);
         } else {
-            console.log(paymentMethod);
+            // console.log(paymentMethod);
             setInfo("Everything is ok");
         }
-        setProcessing(true);
+         
+        // intent processing off 
+        // setProcessing(true);
 
-        const { error: confirmError } = await stripe.confirmCardPayment(clientSecret, {
+        const {paymentIntent, error: confirmError } = await stripe.confirmCardPayment(clientSecret, {
             payment_method: {
                 card: card,
                 billing_details: {
@@ -70,22 +76,52 @@ const Checkout = ({ price }) => {
         // setProcessing(false);
         if (confirmError) {
             console.log(confirmError);
+            console.log('payment intent', paymentIntent)
         }
+
+        // setProcessing(false)
+        else {
+            console.log('object');
+    if (paymentIntent.status === 'succeeded') {
+        setTransactionId(paymentIntent.id);
+        const payment = {
+            email: user?.email,
+            transactionId: paymentIntent.id,
+            price,
+            date: new Date(),
+            quantity: cart.length,
+            cartItems: cart.map(item => item._id),
+            menuItems: cart.map(item => item.itemId),
+            status: 'service pending',
+            itemNames: cart.map(item => item.name)
+        }
+        axiosSecure.post('/payment', payment)
+            .then(res => {
+                console.log(res.data);
+                if (res.data.result.insertedId) {
+                    // display confirm
+                }
+            })
+    }
+}
+      
 
         
     };
     return (
-        <div className="bg-white m-12 p-12">
-            <p className="text-lg font-medium text-blue-400 mb-5">{info}</p>
+        <div className="h-screen  w-full">
+            <p className="text-lg font-medium text-blue-400 text-center">{info}</p>
+            <p className="text-lg font-medium text-blue-400 text-center">{transactionId}</p>
             <form onSubmit={handleSubmit}>
-                <CardElement
+                <CardElement className=""
                     options={{
                         style: {
                             base: {
                                 fontSize: "16px",
                                 color: "#424770",
+                                
                                 "::placeholder": {
-                                    color: "#aab7c4",
+                                    color: "",
                                 },
                             },
                             invalid: {
@@ -95,9 +131,9 @@ const Checkout = ({ price }) => {
                     }}
                 />
                 <button
-                    className="btn btn-success btn-wd w-full text-lg font-bold my-5"
+                    className="btn btn-success btn-wd  text-lg font-bold my-5"
                     type="submit"
-                    disabled={!stripe || clientSecret || processing}
+                    disabled={!stripe }
                 >
                     Pay
                 </button>

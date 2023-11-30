@@ -37,7 +37,7 @@ const Review = () => {
                 </Swiper>
             </div>
           
-             <div className="w-1/2 h-[550px] mt-20 ">
+             <div className="w-1/2 h-[550px] mt-20">
                 <Swiper
                     direction={"vertical"}
                     mousewheel={true}

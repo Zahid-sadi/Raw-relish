@@ -12,7 +12,7 @@ const Payment = () => {
         <div className="h-screen w-full " >
             <h4 className="text-yellow-400 p-5 mt-5 text-lg font-bold  text-center">Payment</h4>
             <Elements stripe={stripePromise}>
-                <Checkout price={parsePrice}></Checkout>
+                <Checkout cart={cart} price={parsePrice}></Checkout>
             </Elements>
         </div>
     );
