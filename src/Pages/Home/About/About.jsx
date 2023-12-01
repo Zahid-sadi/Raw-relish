@@ -5,49 +5,35 @@ import aboutPhoto from "../../../assets/abut.jpg";
 
 const About = () => {
     return (
-        <div className=" hero h-max w-full bg-slate-950  ">
+        <div className=" hero h-fit w-full overflow-hidden ">
             <img src={aboutPhoto} alt="" className="w-full h-full overflow-hidden" />
-            <div className="hero-overlay bg-opacity-20  "></div>
+            <div className="hero-overlay bg-opacity-60  "></div>
 
             <div className="text-center text-neutral-content grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 place-content-center place-items-center gap-5 my-12 ">
-                <div className="  custom-hov  bg-slate-600 border-2 border-yellow-800">
-                <h4 className="text-5xl font-bold  p-24 bg-black ">WHO WE ARE.... </h4>
+                <div className="  custom-hov   border-2 border-yellow-600">
+                <h4 className="text-4xl font-bold  p-24 bg-transparent ">WHO WE ARE.... </h4>
                     <p className="text-start font-serif p-5">
-                        
-                        1...... Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo magni, modi itaque illum
-                        quaerat voluptatum voluptatibus quam minus, impedit fugit deleniti? Nisi dignissimos excepturi
-                        perspiciatis labore facere dolore explicabo mollitia saepe quaerat ducimus eligendi temporibus,
-                        iure quis culpa eos expedita? Laudantium enim illo corrupti culpa laboriosam aliquam! Nemo ab
-                        atque beatae est veniam corporis sequi blanditiis quasi voluptatibus eum voluptate iste, quos
-                        odit, labore, repellat unde dolor doloribus quo itaque natus! Doloribus ab magni ex tempora,
-                        provident illum mollitia quae. Error, reprehenderit. Debitis praesentium laborum eius
-                        repudiandae? Ipsum neque et sed vel!
+                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem quibusdam voluptate atque adipisci minima debitis cum, quis, explicabo eligendi molestiae magnam earum maxime esse saepe quaerat tempore magni illo consequuntur, aliquam non voluptas at officiis labore? Assumenda deleniti temporibus, eum similique iusto porro doloribus velit aperiam, quaerat possimus libero blanditiis.
+                       
                     </p>
                 </div>
-                <div className="custom-hov  bg-black border-2 border-yellow-800">
-                <h4 className="text-4xl text-center font-bold bg-slate-500 p-24">WHY FROM US </h4>
+                <div className="custom-hov border-2 border-yellow-600">
+                <h4 className="text-4xl text-center text- font-bold bg-transparent p-24">WHY FROM US </h4>
 
                     <p className=" text-start font-serif p-5 ">
-                        2..... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, aperiam? Eaque
-                        consectetur officia impedit accusantium amet, ea, itaque placeat nesciunt harum doloremque
-                        voluptates est facilis illo, facere consequuntur deleniti perferendis aliquam. Aperiam, dolorem
-                        nesciunt incidunt nobis unde vitae eligendi repellendus consequuntur quae maiores sequi, earum
-                        molestiae quod minus autem aspernatur, molestias animi. Blanditiis harum officiis eius modi unde
-                        cupiditate architecto! Dolor tempore quo perspiciatis, pariatur dicta dolore. Nihil, ut. Magni
-                        magnam, quidem omnis quas accunsamus.
+                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique commodi et aliquam nemo, nulla blanditiis veritatis minima unde vitae rerum tenetur distinctio excepturi id consequuntur veniam nihil. Vel eveniet ea, soluta adipisci porro repudiandae numquam blanditiis ipsum. Quisquam aspernatur ut nobis dicta autem inventore, eius quasi accusantium qui esse eveniet?
                     </p>
 
                 </div>
-                <div className="custom-hov  bg-slate-500 border-2 border-yellow-800 ">
-                    <h4 className="text-4xl  font-bold  bg-slate-800 p-24 ">WHAT IS OUR STRENGTH</h4> 
+                <div className="custom-hov  border-2 border-yellow-600 ">
+                    <h4 className="text-4xl -ml-7 font-bold  bg-transparent p-24 ">...OUR STRENGTH..</h4> 
                   
                     <p className="text-start font-sans p-5">
                         3.................. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur sit rerum
                         praesentium esse facere sint facilis soluta doloribus fugiat laborum, nobis maiores assumenda
                         laripsam dolore ex fuga labore necessitatibus nemo, reiciendis vitae. Reiciendis sapiente, cum
                         consequatur omnis distinctio modi facere pariatur recusandae incidunt cumque quas inventore
-                        quibusdam vitae? Incidunt nesciunt consectetur aperiam quibusdam ipsam dolores? Voluptatum, eum
-                        sed. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, facilis repellendus quaerat fugiat commodi harum cumque delenit.
+                      
                     </p>
                 </div>
             </div>

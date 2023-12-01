@@ -15,10 +15,10 @@ const FoodCard = ({ item }) => {
 
     const [ react, setReact ] = useState("text-white");
     const [ reactCount, setReactCount ] = useState(0);
-    let clickd = 1;
+    let clicked = 1;
 
     const handleToReact = () => {
-        if (clickd > 0) {
+        if (clicked > 0) {
             setReact("text-red-600");
             const addCount = reactCount + 1;
             setReactCount(addCount);
@@ -71,9 +71,9 @@ const FoodCard = ({ item }) => {
                 </div>
                 <h2 className="card-title text-md pl-5 my-2  text-yellow-600 capitalize group-hover:text-yellow-400 ">
                     {name}{" "}
-                    <p className="text-yellow-600 p-1  group-hover:text-yellow-400 text-end px-5  ">$ {price} </p>{" "}
+                    <p className="text-yellow-600 p-1 group-hover:text-yellow-400  text-end">$ {price} </p>{" "}
                 </h2>
-                <p className="px-5 text-sm group-hover:text-blue-300 group-hover:hidden text-center">{recipe}</p>
+                <p className="px-5 group-hover:text-blue-300 group-hover:hidden text-center">{recipe}</p>
                 <div className="card-actions justify-end">
                     <button
                         onClick={() => {

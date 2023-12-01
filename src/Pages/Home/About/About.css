@@ -1,6 +1,6 @@
 .custom-hov {
     width: 320px;
-    height: 290px;
+    height: 300px;
     -webkit-transition: width 3s;
     transition: height 3s;
     overflow: hidden;
@@ -10,7 +10,7 @@
 
 
 .custom-hov:hover {
-    height:800px;
+    height:650px;
     
     transition-timing-function: ease;
   }
