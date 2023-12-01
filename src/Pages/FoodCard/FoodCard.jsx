@@ -52,7 +52,7 @@ const FoodCard = ({ item }) => {
         }
     };
     return (
-        <div className="group card card-compact shadow-xl  sm:text-sm   h-[550px] ">
+        <div className="group card card-compact shadow-xl  sm:text-sm   h-[570px] ">
             <figure>
                 <img
                     className="h-96 w-full group-hover:scale-125 delay-100 duration-700 overflow-hidden shadow-2xl "
@@ -61,7 +61,7 @@ const FoodCard = ({ item }) => {
                 />
             </figure>
 
-            <div className="card-body h-fit hover:h-36 text-neutral-content  rounded-b-lg md:h-fit sm:h-fit  group-hover:bg-slate-950 transition delay-300 duration-700">
+            <div className="card-body   text-neutral-content  rounded-b-lg  group-hover:bg-slate-950 transition delay-300 duration-700">
                 <div
                     onClick={handleToReact}
                     className={` h-16 w-full  -mt-10 z-20 flex gap-5 items-center content-center  ${react}`}
@@ -69,7 +69,7 @@ const FoodCard = ({ item }) => {
                     <FaHeart className="h-16 w-16" />
                     <p className=" p-2 text-yellow-400 font-bold text-lg h-10">{reactCount}</p>
                 </div>
-                <h2 className="card-title pl-5  text-yellow-600 capitalize group-hover:text-yellow-400">
+                <h2 className="card-title text-md pl-5 my-2  text-yellow-600 capitalize group-hover:text-yellow-400 ">
                     {name}{" "}
                     <p className="text-yellow-600 p-1  group-hover:text-yellow-400 text-end px-5  ">$ {price} </p>{" "}
                 </h2>
@@ -79,7 +79,7 @@ const FoodCard = ({ item }) => {
                         onClick={() => {
                             handleToCart(item);
                         }}
-                        className="btn btn-outline  group-hover:text-yellow-400 focus:bg-green-950 w-full hidden group-hover:block transition delay-500 duration-700"
+                        className="btn btn-outline   group-hover:text-yellow-400 -mb-10 focus:bg-green-950 w-full  hidden group-hover:block transition delay-500 duration-700"
                     >
                         Take on table
                     </button>

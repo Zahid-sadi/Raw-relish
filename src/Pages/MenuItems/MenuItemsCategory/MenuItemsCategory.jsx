@@ -8,12 +8,12 @@ const MenuItemsCategory = ({ items, categoryHeadline, categoryDetails, bgPhoto }
     return (
         <div className="hero min-h-screen bg-fixed object-cover " style={{ backgroundImage: `url(${bgPhoto})` }}>
             <Helmet>
-                <title>Food Items Menu</title>
+                <title>Food Items </title>
             </Helmet>
 
             <div className=" w-full lg:flex flex-row md:flex-row  p-10  ">
-                <div className="md:w-1/2 lg:w-1/3 xl:w-1/2 text-center flex flex-col items-center md:items-start lg:items-center justify-center p-4 md:p-10 lg:p-20 ">
-                    <h1 className=" text-2xl md:text-4xl md:7xl  font-bold text-white border-spacing-1 border-white p-5 uppercase">
+                <div className="md:w-full lg:w-1/3 xl:w-1/2 text-center flex flex-col items-center  justify-center p-4 md:p-10 lg:p-20 ">
+                    <h1 className=" text-2xl md:text-4xl   font-bold text-white border-spacing-1 border-white p-5 uppercase">
                         _____{categoryHeadline}_____
                     </h1>
                     <p className="p-6 text-white">{categoryDetails}</p>
@@ -24,7 +24,7 @@ const MenuItemsCategory = ({ items, categoryHeadline, categoryDetails, bgPhoto }
                         More ....
                     </Link>
                 </div>
-                <div className="md:w-1/2 lg:w-2/3 xl:w-1/2 grid grid-flow-row md:grid-cols-2 gap-4 lg:gap-5 ">
+                <div className="md:w-full lg:w-2/3 xl:w-1/2 grid grid-flow-row md:grid-cols-2 gap-4 lg:gap-5 ">
                     {itemShow.map((item) => (
                         <FoodDisplay key={item._id} item={item}></FoodDisplay>
                     ))}

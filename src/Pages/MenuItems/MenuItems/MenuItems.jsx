@@ -36,7 +36,7 @@ const MenuItems = () => {
    
     return (
         <div className="">
-            <Helmet><title>Raw Relish Menu Items </title></Helmet>
+            <Helmet><title>Raw Relish Items list </title></Helmet>
 
             <CategoryHero videoSource ={video2} heading="Today's offer "
            details=" spicy khao chapar sobde birokto koro char pash"></CategoryHero>
