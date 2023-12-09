@@ -37,12 +37,12 @@ const AddNewItem = () => {
     };
 
     return (
-        <div className="w-full px-10">
-            <h3 className="text-blue-700 text-center font-bold text-4xl p-10 ">Add new item for new menu</h3>
+        <div className="w-full h-screen px-10">
+            <h3 className="text-green-500 text-center font-bold text-4xl p-10 ">Add new item for new menu</h3>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control w-full mb-4">
                     <label className="label">
-                        <span className="label-text font-bold text-yellow-700">Recipe Name*</span>
+                        <span className="label-text font-bold text-blue-500">Recipe Name*</span>
                     </label>
                     <input
                         type="text"
@@ -54,7 +54,7 @@ const AddNewItem = () => {
                 <div className="flex my-4">
                     <div className="form-control w-full ">
                         <label className="label">
-                            <span className="label-text font-bold text-yellow-700">Category*</span>
+                            <span className="label-text font-bold text-blue-500">Category*</span>
                         </label>
                         <select
                             defaultValue="Select One"
@@ -77,7 +77,7 @@ const AddNewItem = () => {
                     </div>
                     <div className="form-control w-full ml-4">
                         <label className="label ">
-                            <span className="label-text font-bold text-yellow-700">Price*</span>
+                            <span className="label-text font-bold text-blue-500">Price*</span>
                         </label>
                         <input
                             type="Number"
@@ -89,18 +89,18 @@ const AddNewItem = () => {
                 </div>
                 <div className="form-control">
                     <label className="label">
-                        <span className="label-text  font-bold text-yellow-700 ">Recipe Details</span>
+                        <span className="label-text  font-bold text-blue-500 ">Recipe Details</span>
                     </label>
                     <textarea
                         {...register("recipe", { required: true })}
-                        className="textarea textarea-bordered h-24"
-                        placeholder="Bio"
+                        className="textarea textarea-bordered h-40"
+                        placeholder="Details"
                     ></textarea>
                 </div>
                 <div className="flex">
                     <div className="form-control my-3 w-2/3">
                         <label className="label">
-                            <span className="label-text font-bold text-yellow-700">Item Image*</span>
+                            <span className="label-text font-bold text-blue-500">Item Image*</span>
                         </label>
                         <input
                             type="file"
@@ -108,9 +108,9 @@ const AddNewItem = () => {
                             className="file-input file-input-bordered mr-2 "
                         />
                     </div>
-                    <div className="btn  text-green-900 font-bold mt-12 w-1/3">
+                    <div className="btn  text-green-500 font-bold mt-12 w-1/3">
                     <input  type="submit" value="Add Item" />
-                    <ImSpoonKnife className="text-green-800 h-12 w-5"></ImSpoonKnife>
+                    <ImSpoonKnife className="text-green-500 h-12 w-5"></ImSpoonKnife>
                     </div>
                 </div>
             </form>

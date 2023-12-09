@@ -1,10 +1,4 @@
-import {
-    CardNumberElement,
-    CardExpiryElement,
-    CardCvcElement,
-    useElements,
-    useStripe,
-} from "@stripe/react-stripe-js";
+import { CardNumberElement, CardExpiryElement, CardCvcElement, useElements, useStripe } from "@stripe/react-stripe-js";
 
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
@@ -85,7 +79,6 @@ const Checkout = ({ cart, price }) => {
                         }
                     });
                 }
-                
             }
         } catch (error) {
             console.error("Unexpected error:", error);
@@ -94,9 +87,8 @@ const Checkout = ({ cart, price }) => {
     };
 
     return (
-        
         <div className="">
-           <p className="text-lg font-medium text-blue-400 text-center">{info}</p>
+            <p className="text-lg font-medium text-blue-400 text-center">{info}</p>
 
             <p className="text-lg font-medium text-blue-400 mb-4 text-center">Transaction ID : {transactionId}</p>
             <form onSubmit={handleSubmit} className="max-w-md mx-auto w-full">
@@ -187,9 +179,8 @@ const Checkout = ({ cart, price }) => {
                         placeholder="Enter ZIP Code"
                     />
                 </div>
-
-                <div className="flex w-full gap-4">
-                <div className="mb-4">
+                <div className="flex flex-col sm:flex-col md:flex-row lg:flex-row w-full gap-4">
+                    <div className="mb-4">
                         <label htmlFor="zip" className="block text-sm font-medium text-green-500">
                             contact
                         </label>
@@ -216,11 +207,11 @@ const Checkout = ({ cart, price }) => {
                     </div>
                 </div>
 
-
                 <button
                     className="bg-green-500 w-full text-white font-bold py-2 px-4 mt-5 rounded disabled:bg-gray-400 disabled:cursor-not-allowed"
                     type="submit"
-                    disabled={!stripe || !clientSecret || processing}                >
+                    disabled={!stripe || !clientSecret}
+                >
                     Pay
                 </button>
             </form>

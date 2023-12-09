@@ -11,21 +11,21 @@ const DashboardLayout = () => {
     const [ isAdmin ] = useAdmin();
 
     return (
-        <div className="drawer lg:drawer-open bg-gradient-to-l from-lime-950 to-slate-950 ">
+        <div className=" w-fit lg:w-full drawer lg:drawer-open bg-gradient-to-l from-lime-950 to-blue-900 ">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-            <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">
+            <label htmlFor="my-drawer-2" className="btn btn-primary m-2 btn-sm drawer-button lg:hidden">
                 Open menu
             </label>
-            <div className="drawer-content  flex flex-col items-center justify-center">
+            <div className="drawer-content">
                 <Outlet></Outlet>
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                <ul className="menu  p-16 border border-white font-semibold text-blue-700   bg-gradient-to-b from-lime-950 to-slate-900 0 w-80 min-h-full">
+                <ul className="menu  pt-24 px-10 font-semibold text-green-500   bg-gradient-to-b from-lime-950 to-blue-900 0 w-80 min-h-full">
                     {isAdmin ? (
                         <>
                             <li>
-                                <NavLink to="/dashboard/my/cart ">
+                                <NavLink to="/dashboard/adminHome ">
                                     <ImHome></ImHome> Admin Home
                                 </NavLink>
                             </li>
@@ -51,7 +51,7 @@ const DashboardLayout = () => {
                                     <ImBook></ImBook> Manage Items
                                 </NavLink>
                             </li>
-                            <div className=" text-green-700 text-center "> _________and_________</div>
+                            <div className="divider divide-accent ">and</div>
                             <li>
                                 <NavLink to="/">
                                     <ImHome2></ImHome2> Home

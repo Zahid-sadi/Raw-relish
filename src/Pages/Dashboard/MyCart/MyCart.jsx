@@ -48,22 +48,23 @@ const MyCart = () => {
     };
 
     return (
-        <>
-            <h4 className="m-5 p-10 text-blue-400 text-3xl text-center font-bold capitalize">Manage your item </h4>
+        <div>
+          
 
-            <div className="w-5/6 p-5 bg-yellow-600 h-full">
-                <div className="flex justify-around content-center items-center bg-yellow-700 h-20 w-full text-2xl text-white font-bold ">
+            <div className="w-full h-screen  p-5">
+            <h4 className=" m-5 p-10 text-green-500 text-xl md:text-2xl lg:text-3xl     text-center font-bold capitalize">Your Cart </h4>
+                <div className="flex  flex-col p-4 md:flex-row  justify-around content-center items-center bg-yellow-600 h-fit  text-lg md:text-2xl text-slate-700 font-bold ">
                     <h3>Total item {cart.length}</h3>
-                    <h3>Total price {parsePrice}</h3>
+                    <h3>Total Price {parsePrice}</h3>
                     <Link to="/dashboard/payment">
-                        <button className="btn-warning btn-sm rounded-lg">Pay</button>
+                        <button className="btn-warning btn-sm rounded-lg m-2 hover:bg-yellow-300">Pay</button>
                     </Link>
                 </div>
 
-                <div className="overflow-x-auto">
+                <div className="overflow-x-auto bg-yellow-500">
                     <table className="table ">
                         <thead>
-                            <tr className="text-lg font-medium">
+                            <tr className="text-lg  font-medium text-slate-700">
                                 <th>Item no</th>
                                 <th>Food</th>
                                 <th>Name</th>
@@ -71,7 +72,7 @@ const MyCart = () => {
                                 <th>action</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody className="">
                             {cart.map((dataRaw, index) => (
                                 <tr key={dataRaw._id}>
                                     <td>{index + 1}</td>
@@ -90,7 +91,7 @@ const MyCart = () => {
                                     <td>
                                         <button
                                             onClick={() => handleToDelete(dataRaw)}
-                                            className="btn btn-ghost btn-xs"
+                                            className="btn btn-md  text-red-500 hover:bg-black  hover:text-red-600"
                                         >
                                             <FaTrash></FaTrash>{" "}
                                         </button>
@@ -101,7 +102,7 @@ const MyCart = () => {
                     </table>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 

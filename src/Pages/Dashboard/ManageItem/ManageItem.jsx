@@ -45,7 +45,7 @@ const ManageItem = () => {
     }
 
     return (
-        <div className="w-5/6 p-10">
+        <div className="w-full p-10 ">
             <h4 className="m-5 p-10 text-blue-400 text-3xl text-center font-bold capitalize">Manage your item </h4>
             <p className="text-blue-500 font-semibold my-2">Total items is <span className="text-yellow-300 font-bold text-lg">{menu.length}</span> </p>
             <div className="overflow-x-auto  bg-yellow-500">

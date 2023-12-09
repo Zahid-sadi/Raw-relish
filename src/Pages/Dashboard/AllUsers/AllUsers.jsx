@@ -45,7 +45,7 @@ const AllUsers = () => {
     };
 
     return (
-        <div className="w-full p-10">
+        <div className="w-full h-screen p-10">
             <h3 className="font-bold text-black text-3xl bg-yellow-500 text-back p-5 text-center  capitalize  ">TOTAL USER : {users.length}</h3>
             <div className="overflow-x-auto">
                 <table className="table table-zebra">

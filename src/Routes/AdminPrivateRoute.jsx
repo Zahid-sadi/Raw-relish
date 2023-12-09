@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Navigate, useLocation } from "react-router";
 import { AuthContext } from "../Providers/AuthProvider";
 import useAdmin from "../Hooks/useAdmin";
+import Loading from "./Loading";
 
 
 
@@ -13,7 +14,7 @@ const AdminPrivateRoute = ({ children }) => {
     const [isAdmin, isAdminLoading] = useAdmin();
 
     if (loading || isAdminLoading) {
-        return <div className=" bg-slate-900 h-full w-full text-center font-bold text-yellow-400 -mb-72">loading..............................</div>;
+        return <Loading></Loading>;
     }
 
     if (user && isAdmin) {
