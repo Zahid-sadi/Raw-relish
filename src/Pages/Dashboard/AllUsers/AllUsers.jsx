@@ -5,52 +5,51 @@ import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import { toast } from "react-toastify";
 
 const AllUsers = () => {
-    const [axiosSecure] = useAxiosSecure();
+    const [ axiosSecure ] = useAxiosSecure();
 
     const { data: users = [], refetch } = useQuery({
         queryKey: [ "users" ],
         queryFn: async () => {
             const response = await axiosSecure.get("/users");
             return response.data;
-
-        }
+        },
     });
 
-    const handleToMakeAdmin = user => {
-        fetch(`http://localhost:3000/users/admin/${user._id}`, {
-             method: 'PATCH'
+    const handleToMakeAdmin = (user) => {
+        fetch(`https://raw-relish-server.vercel.app/users/admin/${user._id}`, {
+            method: "PATCH",
         })
-            .then(res => res.json())
-            .then(data => {
-                if (data.modification) {
-                    refetch()
+        .then((res) => res.json())
+        .then((data) => {
+            if (data.modification) {
+                refetch();
             }
-        })
-        
-    }
+        });
+    };
 
     const handleToDelete = (user) => {
-        fetch(`http://localhost:3000/users/admin/${user._id}`, {
-            method: 'DELETE'
+        fetch(`https://raw-relish-server.vercel.app/users/admin/${user._id}`, {
+            method: "DELETE",
         })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.deletedCount > 0) {
-                    refetch()
-                    toast.success('an admin deleted')
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+                refetch();
+                toast.success("an admin deleted");
             }
-        })
-        
+        });
     };
 
     return (
         <div className="w-full h-screen p-10">
-            <h3 className="font-bold text-black text-3xl bg-yellow-500 text-back p-5 text-center  capitalize  ">TOTAL USER : {users.length}</h3>
+            <h3 className="font-bold text-black text-3xl bg-yellow-500 text-back p-5 text-center  capitalize  ">
+                TOTAL USER : {users.length}
+            </h3>
             <div className="overflow-x-auto">
                 <table className="table table-zebra">
                     <thead>
-                        <tr className="text-blue-400 font-bold text-lg" >
+                        <tr className="text-blue-400 font-bold text-lg">
                             <th>#</th>
                             <th>Name</th>
                             <th>Email</th>
@@ -68,7 +67,7 @@ const AllUsers = () => {
                                     {user.role === "admin" ? (
                                         "admin"
                                     ) : (
-                                        <button onClick={()=>handleToMakeAdmin(user)}>
+                                        <button onClick={() => handleToMakeAdmin(user)}>
                                             <GrUserAdmin></GrUserAdmin>
                                         </button>
                                     )}

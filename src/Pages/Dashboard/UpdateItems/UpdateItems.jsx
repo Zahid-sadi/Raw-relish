@@ -5,69 +5,62 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { toast } from "react-toastify";
 
-
-
 const UpdateItems = () => {
-
-
-    const router = useParams()
-    const { id} = router;
+    const router = useParams();
+    const { id } = router;
     // console.log('router',router);
-    const [item, setItem] = useState({})
-    const navigate = useNavigate()
-    
-    
+    const [ item, setItem ] = useState({});
+    const navigate = useNavigate();
+
     useEffect(() => {
-        fetch(`http://localhost:3000/items/${id}`)
-            .then(res => res.json())
-        .then(data => setItem(data))
-     }, [id]);
-     
-    
-     const handleSubmit = (event) => {
-         event.preventDefault();
-         const form = event.target;
+        fetch(`https://raw-relish-server.vercel.app/items/${id}`)
+        .then((res) => res.json())
+        .then((data) => setItem(data));
+    }, [ id ]);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const form = event.target;
         const itemDetail = {
-          name: form.name.value,
-          category: form.price.value,
+            name: form.name.value,
+            category: form.price.value,
             price: form.price.value,
             recipe: form.recipe.value,
             image: form.image.value,
-          
-         }
-         console.log('form',itemDetail);
-    
-        fetch(`http://localhost:3000/items/${id}`, {
-          method: "PATCH",
-          headers: {
-            "content-type": "application/json"
-          },
-          body: JSON.stringify(itemDetail)
-        }).then(res => res.json())
-            .then(data => {
-            console.log(data);
-                if (data.success) {
-              navigate('/dashboard/manage/item')
-            toast.success('item updated successfully');
-          } else {
-            // toast.err(data.error)
-          }
-        })
-        .catch(err => toast.error(err.message))
-    }
+        };
+        console.log("form", itemDetail);
 
+        fetch(`https://raw-relish-server.vercel.app/items/${id}`, {
+            method: "PATCH",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(itemDetail),
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data);
+            if (data.success) {
+                navigate("/dashboard/manage/item");
+                toast.success("item updated successfully");
+            } else {
+                // toast.err(data.error)
+            }
+        })
+        .catch((err) => toast.error(err.message));
+    };
 
     return (
         <div className="w-full px-10">
             <div className="flex content-center justify-center items-center mt-5">
-                
                 <div className="text-blue-400 text-center font-bold text-4xl p-4 ">
-                <h3>UPDATE  OF</h3>
-                <h5>{item.name}</h5>
+                    <h3>UPDATE OF</h3>
+                    <h5>{item.name}</h5>
                 </div>
-              
-                <img className=" h-36  rounded-2xl " src={item.image} alt="" /></div> 
-            
+
+                <img className=" h-36  rounded-2xl " src={item.image} alt="" />
+            </div>
+
             <form onSubmit={handleSubmit}>
                 <div className="form-control w-full mb-4">
                     <label className="label">
@@ -86,11 +79,7 @@ const UpdateItems = () => {
                         <label className="label">
                             <span className="label-text font-bold text-yellow-600">Category*</span>
                         </label>
-                        <select
-                            defaultValue={item.category}
-                            name="category"
-                            className="select select-bordered"
-                        >
+                        <select defaultValue={item.category} name="category" className="select select-bordered">
                             <option disabled>Select Category</option>
                             <option>Raw</option>
                             <option>Offered</option>
@@ -138,14 +127,12 @@ const UpdateItems = () => {
                         />
                     </div>
                     <div className="btn  text-green-900 font-bold mt-12 w-1/3">
-                    <input className="text-lg font-extrabold "  type="submit" value="Add" />
-                    <ImSpoonKnife className="text-green-800  h-12 w-8"></ImSpoonKnife>
+                        <input className="text-lg font-extrabold " type="submit" value="Add" />
+                        <ImSpoonKnife className="text-green-800  h-12 w-8"></ImSpoonKnife>
                     </div>
                 </div>
             </form>
         </div>
-
-      
     );
 };
 

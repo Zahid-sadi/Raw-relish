@@ -7,7 +7,7 @@ import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
 
 const SignUp = () => {
     const { createUser, updateUserProfile } = useContext(AuthContext);
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const handleSignUp = (event) => {
         event.preventDefault();
@@ -19,35 +19,32 @@ const SignUp = () => {
 
         console.log(name, email, password);
 
-        createUser(email, password)
-            .then((result) => {
+        createUser(email, password).then((result) => {
             const user = result.user;
             // console.log(user);
 
             updateUserProfile(name)
             .then(() => {
-
-                const saveUser = { name : name , email: email}
-                fetch("http://localhost:3000/users", {
-                    method: 'POST',
+                const saveUser = { name: name, email: email };
+                fetch("https://raw-relish-server.vercel.app/users", {
+                    method: "POST",
                     headers: {
-                        
-                        'content-type':'application/json'
-                    }, 
-                    body: JSON.stringify(saveUser)
+                        "content-type": "application/json",
+                    },
+                    body: JSON.stringify(saveUser),
                 })
-                    .then(res => res.json())
-                    .then(data => {
-                        if (data.insertedId) {
-                            console.log(data.insertedId);
-                        toast.success('new user created')
+                .then((res) => res.json())
+                .then((data) => {
+                    if (data.insertedId) {
+                        console.log(data.insertedId);
+                        toast.success("new user created");
                     }
-                })
+                });
             })
             .catch((error) => {
                 console.log(error);
             });
-                navigate("/")
+            navigate("/");
             // console.log("profile updated");
         });
     };
@@ -60,9 +57,8 @@ const SignUp = () => {
             <div className="hero-content text-center text-neutral-content">
                 <div className="w-full">
                     <form onSubmit={handleSignUp} className="card-body rounded-3xl bg-black opacity  w-96">
-                    <div className="mx-auto">
-                        <SocialLogin></SocialLogin>
-
+                        <div className="mx-auto">
+                            <SocialLogin></SocialLogin>
                         </div>
                         <h4 className="text-white font-bold text-4xl p-4 m-2">SignUp</h4>
                         <input
@@ -95,11 +91,10 @@ const SignUp = () => {
                             className="my-2 btn btn-outline bg-green-950 text-white border-b-4 border-slate-900"
                             value="SignUp"
                         />
-                          <Link className="text-yellow-400 bg-gray-950 rounded-lg py-1 font-light" to="/login">
-                        Already Have An Account
-                    </Link>
+                        <Link className="text-yellow-400 bg-gray-950 rounded-lg py-1 font-light" to="/login">
+                            Already Have An Account
+                        </Link>
                     </form>
-                  
                 </div>
             </div>
         </div>

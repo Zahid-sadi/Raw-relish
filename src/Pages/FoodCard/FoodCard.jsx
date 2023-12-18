@@ -34,7 +34,7 @@ const FoodCard = ({ item }) => {
         if (user && user.email) {
             const orderItem = { itemId: _id, name, price, image, email: user.email };
 
-            fetch("http://localhost:3000/cart", {
+            fetch("https://raw-relish-server.vercel.app/cart", {
                 method: "POST",
                 headers: {
                     "content-type": "application/json",
@@ -70,8 +70,7 @@ const FoodCard = ({ item }) => {
                     <p className=" p-2 text-yellow-400 font-bold text-lg h-10">{reactCount}</p>
                 </div>
                 <h2 className="card-title text-md pl-5 my-2  text-yellow-600 capitalize group-hover:text-yellow-400 ">
-                    {name}{" "}
-                    <p className="text-yellow-600 p-1 group-hover:text-yellow-400  text-end">$ {price} </p>{" "}
+                    {name} <p className="text-yellow-600 p-1 group-hover:text-yellow-400  text-end">$ {price} </p>{" "}
                 </h2>
                 <p className="px-5 group-hover:text-blue-300 group-hover:hidden text-center">{recipe}</p>
                 <div className="card-actions justify-end">

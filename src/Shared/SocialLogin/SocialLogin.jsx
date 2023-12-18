@@ -15,32 +15,24 @@ const SocialLogin = () => {
         googleLogin()
         .then((result) => {
             const loggedUser = result.user;
-            console.log('from social login ',loggedUser );
-            const saveUser = { name :loggedUser.displayName , email:loggedUser.email}
+            console.log("from social login ", loggedUser);
+            const saveUser = { name: loggedUser.displayName, email: loggedUser.email };
 
-            fetch("http://localhost:3000/users", {
-                method: 'POST',
+            fetch("https://raw-relish-server.vercel.app/users", {
+                method: "POST",
                 headers: {
-                    
-                    'content-type':'application/json'
-                }, 
-                body: JSON.stringify(saveUser)
+                    "content-type": "application/json",
+                },
+                body: JSON.stringify(saveUser),
             })
-                .then(res => res.json())
-                .then(data => {
-
-
-                    navigate(from, { replace: true });
-                }
-
-
-                
-            )
+            .then((res) => res.json())
+            .then((data) => {
+                navigate(from, { replace: true });
+            });
         })
         .catch((error) => {
-            console.log('error from handle to google signUp function',error);
+            console.log("error from handle to google signUp function", error);
         });
-
     };
     return (
         <div

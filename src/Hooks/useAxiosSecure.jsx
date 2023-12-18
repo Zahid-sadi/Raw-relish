@@ -3,16 +3,13 @@ import { AuthContext } from "../Providers/AuthProvider";
 import { useNavigate } from "react-router";
 import axios from "axios";
 
-
 const axiosSecure = axios.create({
-    baseURL: "http://localhost:3000",
+    baseURL: "https://raw-relish-server.vercel.app",
 });
-
 
 const useAxiosSecure = () => {
     const { logOut } = useContext(AuthContext);
     const navigate = useNavigate();
-
 
     useEffect(() => {
         axiosSecure.interceptors.request.use((config) => {
@@ -34,7 +31,7 @@ const useAxiosSecure = () => {
                 return Promise.reject(error);
             }
         );
-    }, [ logOut, navigate]);
+    }, [ logOut, navigate ]);
     // console.log("useAxiosSecure", axiosSecure);
 
     return [ axiosSecure ];

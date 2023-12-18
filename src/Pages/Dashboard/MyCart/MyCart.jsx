@@ -21,7 +21,7 @@ const MyCart = () => {
             confirmButtonText: "Yes, delete it!",
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/cart/${item._id}`, {
+                fetch(`https://raw-relish-server.vercel.app/cart/${item._id}`, {
                     method: "DELETE",
                 })
                 .then((res) => {
@@ -49,10 +49,10 @@ const MyCart = () => {
 
     return (
         <div>
-          
-
             <div className="w-full h-screen  p-5">
-            <h4 className=" m-5 p-10 text-green-500 text-xl md:text-2xl lg:text-3xl     text-center font-bold capitalize">Your Cart </h4>
+                <h4 className=" m-5 p-10 text-green-500 text-xl md:text-2xl lg:text-3xl  shadow-2xl   text-center font-bold capitalize">
+                    Your Cart{" "}
+                </h4>
                 <div className="flex  flex-col p-4 md:flex-row  justify-around content-center items-center bg-yellow-600 h-fit  text-lg md:text-2xl text-slate-700 font-bold ">
                     <h3>Total item {cart.length}</h3>
                     <h3>Total Price {parsePrice}</h3>
