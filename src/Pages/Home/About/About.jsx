@@ -12,7 +12,7 @@ const About = () => {
 
             <div className="text-center text-neutral-content grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 place-content-center place-items-center gap-5 my-12 ">
                 <div className="  custom-hov   border-2 border-yellow-600">
-                <h4 className="text-4xl font-bold  p-24 bg-transparent ">WHO WE ARE.... </h4>
+                <h4 className="text-4xl font-bold  p-24 bg-transparent ">WHO WE ARE </h4>
                     <p className="text-justify  p-5">
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem quibusdam voluptate atque adipisci minima debitis cum, quis, explicabo eligendi molestiae magnam earum maxime esse saepe quaerat tempore magni illo consequuntur, aliquam non voluptas at officiis labore? Assumenda deleniti temporibus, eum .
                         
@@ -34,7 +34,7 @@ const About = () => {
 
                 </div>
                 <div className="custom-hov  border-2 border-yellow-600 ">
-                    <h4 className="text-4xl -ml-7 font-bold  bg-transparent p-24 ">...OUR STRENGTH..</h4> 
+                    <h4 className="text-4xl -ml-7 font-bold text-center  bg-transparent p-24 ">OUR STRENGTH</h4> 
                   
                     <p className="text-justify font-sans p-5">
                         3.................. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur sit rerum

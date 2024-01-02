@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo3.png";
-import { FaYoutube, FaFacebookF, FaGooglePlay, FaApple } from "react-icons/fa";
+import { FaYoutube, FaFacebookF, FaApple } from "react-icons/fa";
 import { TfiTwitterAlt } from "react-icons/tfi";
+import img from  '../../assets/goole.png'
 
 const Footer = () => {
     return (
@@ -12,7 +13,7 @@ const Footer = () => {
                 <header className="font-bold text-4xl text-yellow-500">Raw Relish</header>
             </div>
             <div className="">
-                <p className="font-bold">Raw Relish food Industry Ltd. Providing reliable Food since born</p>
+                <p className="font-semibold text-lg">Raw Relish food Industry Ltd. Providing reliable Food since born</p>
             </div>
             {/* </div> */}
             <nav className="mt-5">
@@ -34,21 +35,22 @@ const Footer = () => {
             <div className="flex flex-col gap-6  sm:flex-row m-5">
                 {/* <div className="mb-5 sm:mb-0 sm:mr-5"> */}
                 <div className=" w-56 h-20 flex items-center justify-center p-3 bg-black px-5  rounded-xl ">
-                    <div className="text-yellow-500">
-                        <p className=" font-semibold">Download</p>
-                        <p className=" font-semibold">From play store</p>
+                    <div className="text-gray-500">
+                        <p className="">Download</p>
+                        <p className=" ">From play store</p>
                     </div>
                     <Link className="">
-                        <FaGooglePlay className="h-12 w-16 "></FaGooglePlay>
+                        {/* <FaGooglePlay ></FaGooglePlay> */}
+                        <img className="h-14 w-16 mx-2 " src={img} alt="" />
                     </Link>
                 </div>
                 {/* </div> */}
 
               
                     <div className=" w-56 h-20 flex items-center justify-center p-3 bg-black px-5  rounded-xl ">
-                        <div className="text-yellow-500">
-                            <p className=" font-semibold">Download</p>
-                            <p className=" font-semibold">From apple store</p>
+                        <div className="text-gray-500">
+                            <p className=" ">Download</p>
+                            <p className="">From apple store</p>
                         </div>
 
                         <Link className="">
@@ -57,7 +59,7 @@ const Footer = () => {
                     </div>
               
             </div>
-            <p className=" text-white rounded-3xl text-center  ">Copyright © 2024 - All right reserved</p>
+            <p className=" text-gray-300 rounded-3xl text-center">Copyright © 2024 - All rights reserved</p>
         </footer>
     );
 };
