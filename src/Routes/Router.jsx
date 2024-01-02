@@ -18,6 +18,7 @@ import UpdateItems from "../Pages/Dashboard/UpdateItems/UpdateItems";
 import Payment from "../Pages/Dashboard/Payment/Payment";
 import UserHome from "../Pages/Dashboard/UserHome/UserHome";
 import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
+import DetailAbout from "../Pages/Home/About/DetailAbout/DetailAbout";
 
 export const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ export const router = createBrowserRouter([
             {
                 path: "/about",
                 element: <About></About>,
+            },
+            {
+                path: "/detail_about",
+                element: <DetailAbout></DetailAbout>,
             },
             {
                 path: "/review",
