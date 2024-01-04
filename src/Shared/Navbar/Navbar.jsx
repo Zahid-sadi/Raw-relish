@@ -12,8 +12,8 @@ import useAdmin from "../../Hooks/useAdmin";
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
     // console.log("User From Navbar", user);
-    const [cart] = useCart();
-    const [isAdmin] = useAdmin()
+    const [ cart ] = useCart();
+    const [ isAdmin ] = useAdmin();
     // console.log("from navbar", cart);
 
     const logOutHandler = () => {
@@ -44,22 +44,22 @@ const Navbar = () => {
             <li>
                 <Link to="/order">Food Order</Link>
             </li>
-            {
-                isAdmin ?  <li>
-                <Link to="/dashboard/adminHome">Dashboard</Link>
-            </li> :  <li>
-                <Link to="/dashboard/userHome">Dashboard</Link>
-            </li>
-            }
+            {isAdmin ? (
+                <li>
+                    <Link to="/dashboard/adminHome">Dashboard</Link>
+                </li>
+            ) : (
+                <li>
+                    <Link to="/dashboard/userHome">Dashboard</Link>
+                </li>
+            )}
             <li>
-                <Link to="dashboard/my/cart">
-                <div className="indicator">
-                    <FaCartArrowDown className=" h-5 w-5 "></FaCartArrowDown>
-                    {/* <p className="text-yellow-600 text-lg">{cart?.length || 0}</p> */}
-                   
-    
-        <span className="badge badge-xs badge-primary indicator-item">{cart?.length || 0}</span>
-      </div>                </Link>
+                <Link className="group " to="dashboard/my/cart">
+                    <div className="indicator group-hover:text-yellow-400">
+                        <FaCartArrowDown className=" h-7 w-6 "></FaCartArrowDown>
+                        <span className="badge badge-xs badge-primary group-hover:bg-yellow-400 group-hover:text-gray-700  indicator-item p-2">{cart?.length || 0}</span>
+                    </div>
+                </Link>
             </li>
         </>
     );
@@ -91,21 +91,21 @@ const Navbar = () => {
                 <div className="flex  items-center m-4 sm:m-2 lg:m-12">
                     <Link to="/">
                         <img
-                            className="h-20 w-20 sm:h-12 sm:w-12 md:h-16 md:w-16 lg:h-20 lg:w-20 ml-2 lg:ml-4"
+                            className="h-12 lg:h-20 w-fit sm:h-12 md:w-16 md:h-16 lg:w-20   ml-1 lg:ml-5"
                             src={logo}
                             alt="logo of raw relish"
                         />
                     </Link>
                     <Link
                         to="/"
-                        className="mx-2 sm:mx-1 lg:mx-4 text-lg sm:text-base md:text-xl lg:text-3xl font-extrabold text-yellow-500"
+                        className="mx-3 lg:mx-4  sm:text-base text-sm md:text-xl lg:text-3xl font-semibold md:font-bold lg:font-extrabold text-yellow-500"
                     >
                         Raw Relish
                     </Link>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 text-white">{navItems}</ul>
+                <ul className="menu menu-horizontal px-1 z-40 ">{navItems}</ul>
             </div>
             <div className="navbar-end  flex items-center">
                 <div className="me-2 sm:me-5 lg:me-8 ">

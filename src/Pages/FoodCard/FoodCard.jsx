@@ -20,11 +20,11 @@ const FoodCard = ({ item }) => {
     const handleToReact = () => {
         if (clicked > 0) {
             setReact("text-red-600");
-            const addCount = reactCount + 1;
+            let addCount = reactCount + 1;
             setReactCount(addCount);
         } else {
             setReact("text-pink-600");
-            const addCount = reactCount - 1;
+            let addCount = reactCount - 1;
             setReactCount(addCount);
         }
     };
@@ -52,7 +52,7 @@ const FoodCard = ({ item }) => {
         }
     };
     return (
-        <div className="group card card-compact shadow-xl  sm:text-sm   h-[570px] ">
+        <div className="group card card-compact shadow-xl  sm:text-sm   h-[570px] hover:shadow-lg hover:shadow-blue-950  ">
             <figure>
                 <img
                     className="h-96 w-full group-hover:scale-125 delay-100 duration-700 overflow-hidden shadow-2xl "

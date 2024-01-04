@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import FoodDisplay from "../../../Shared/FoodItems/FoodDisplay/FoodDisplay";
 import { Link } from "react-router-dom";
+import { CountdownCircleTimer } from "react-countdown-circle-timer";
 
 const MenuItemsCategory = ({ items, categoryHeadline, categoryDetails, bgPhoto }) => {
     // console.log(items);
@@ -16,6 +17,9 @@ const MenuItemsCategory = ({ items, categoryHeadline, categoryDetails, bgPhoto }
                     <h1 className=" text-2xl md:text-4xl lg:text-7xl font-bold text-white border-spacing-1 border-white p-5 uppercase">
                         _____{categoryHeadline}_____
                     </h1>
+
+                    
+                    
                     <p className="p-6 text-white">{categoryDetails}</p>
                     <Link
                         className=" my-2 p-5 btn btn-outline btn-info md:btn-md lg:btn-wide  "
@@ -31,7 +35,6 @@ const MenuItemsCategory = ({ items, categoryHeadline, categoryDetails, bgPhoto }
                 </div>
             </div>
         </div>
-        
     );
 };
 

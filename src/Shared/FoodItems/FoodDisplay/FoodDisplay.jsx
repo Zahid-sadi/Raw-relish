@@ -9,7 +9,7 @@ const FoodDisplay = ({ item }) => {
     // console.log(name, image, price, recipe);
 
     return (
-        <div className="group h-72  relative overflow-hidden hover:scale-110 duration-700  ">
+        <div className="group h-72  relative overflow-hidden hover:scale-110 duration-700 mx-1 ">
             <div>
                 <img src={image} alt="Offered Item" className="w-full h-72  object-cover " />
             </div>
