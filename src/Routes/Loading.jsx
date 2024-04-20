@@ -1,4 +1,4 @@
-import loadingImg from "../../src/assets/logo3.png";
+import loadingImg from "../../public/brand-logo.png";
 
 const Loading = () => {
     return (

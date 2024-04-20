@@ -10,53 +10,52 @@ import useAdmin from "../../Hooks/useAdmin";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    // console.log("User From Navbar", user);
-    const [ cart ] = useCart();
-    const [ isAdmin ] = useAdmin();
-    // console.log("from navbar", cart);
+    const [cart] = useCart();
+    const [isAdmin] = useAdmin();
+
+    const navStyle = "px-3 mx-3 hover:text-yellow-500 hover:rounded-lg hover:pb-3 hover:font-extrabold hover:bg-gradient to-green-950 from-black hover:shadow-md hover:shadow-yellow-400";
 
     const logOutHandler = () => {
         logOut()
-        .then(() => {
-            // toast("SignOut successfully");
-        })
-        .catch((error) => {
-            // console.log(error);
-            toast.error(error.message);
-        });
+            .then(() => {
+                toast("SignOut successfully");
+            })
+            .catch((error) => {
+                toast.error(error.message);
+            });
     };
 
     const navItems = (
         <>
             <li>
-                <Link to="/">Home</Link>
+                <Link className={navStyle} to="/">Home</Link>
             </li>
             <li>
-                <Link to="/about">About</Link>
+                <Link className={navStyle} to="/about">About</Link>
             </li>
             <li>
-                <Link to="/review">Reviews</Link>
+                <Link className={navStyle} to="/review">Reviews</Link>
             </li>
             <li>
-                <Link to="/items">Items</Link>
+                <Link className={navStyle} to="/items">Items</Link>
             </li>
             <li>
-                <Link to="/order">Food Order</Link>
+                <Link className={navStyle} to="/order">Food Order</Link>
             </li>
             {isAdmin ? (
                 <li>
-                    <Link to="/dashboard/adminHome">Dashboard</Link>
+                    <Link className={navStyle} to="/dashboard/adminHome">Dashboard</Link>
                 </li>
             ) : (
                 <li>
-                    <Link to="/dashboard/userHome">Dashboard</Link>
+                    <Link className={navStyle} to="/dashboard/userHome">Dashboard</Link>
                 </li>
             )}
             <li>
-                <Link className="group " to="dashboard/my/cart">
+                <Link className="group" to="dashboard/my/cart">
                     <div className="indicator group-hover:text-yellow-400">
-                        <FaCartArrowDown className=" h-7 w-6 "></FaCartArrowDown>
-                        <span className="badge badge-xs badge-primary group-hover:bg-yellow-400 group-hover:text-gray-700  indicator-item p-2">{cart?.length || 0}</span>
+                        <FaCartArrowDown className="h-7 w-6" />
+                        <span className="badge badge-xs badge-primary group-hover:bg-yellow-400 group-hover:text-gray-700 indicator-item p-2">{cart?.length || 0}</span>
                     </div>
                 </Link>
             </li>
@@ -64,9 +63,9 @@ const Navbar = () => {
     );
 
     return (
-        <div className="navbar mx-auto fixed h-28 bg-opacity-20 bg-black z-10 text-white  ">
-            <div className="navbar-start">
-                <div className=" dropdown lg:hidden sm:block md:block">
+        <div className="navbar mx-auto sticky top-0 h-28 bg-opacity-30 bg-black z-10 text-white justify-evenly items-center ">
+            <div className="flex items-center">
+                <div className="dropdown lg:hidden sm:block md:block">
                     <label tabIndex={0} className="btn btn-ghost">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -83,49 +82,42 @@ const Navbar = () => {
                             />
                         </svg>
                     </label>
-                    <ul tabIndex={0} className=" text-center dropdown-content text-yellow-400">
+                    <ul tabIndex={0} className="text-center dropdown-content text-yellow-400">
                         {navItems}
                     </ul>
                 </div>
-                <div className="flex  items-center m-4 sm:m-2 lg:m-12">
+                <div className="flex items-center">
                     <Link to="/">
                         <img
-                            className="h-12 lg:h-20 w-fit sm:h-12 md:w-16 md:h-16 lg:w-20   ml-1 lg:ml-5"
+                            className="h-12 md:h-16 lg:h-20 w-fit md:w-16 lg:w-20"
                             src={logo}
                             alt="logo of raw relish"
                         />
                     </Link>
                     <Link
                         to="/"
-                        className="mx-3 lg:mx-4  sm:text-base text-sm md:text-xl lg:text-3xl font-semibold md:font-bold lg:font-extrabold text-yellow-500"
+                        className="mx-3 lg:mx-4 sm:text-base text-sm md:text-xl lg:text-3xl font-semibold md:font-bold lg:font-extrabold text-yellow-500"
                     >
                         Raw Relish
                     </Link>
                 </div>
             </div>
-            <div className="navbar-center hidden lg:flex">
-                <ul className=" space-x-5 menu-horizontal px-1 z-40 text-yellow-400 ">{navItems}</ul>
+            <div className="hidden px-5 lg:flex">
+                <ul className=" menu-horizontal text-yellow-400">{navItems}</ul>
             </div>
-            <div className="navbar-end  flex items-center">
-                <div className="me-2 sm:me-5 lg:me-8 ">
-                    {user?.uid ? <p className="text-blue-400 font-bold mx-auto">{user.displayName} </p> : ""}
-                </div>
-                {user?.uid ? (
-                    <Link
-                        onClick={logOutHandler}
-                        to="/login"
-                        className="ml-2 sm:ml-10 btn bg-yellow-400 rounded-s-full hover:bg-green-900 "
-                    >
-                        Log out
-                    </Link>
-                ) : (
-                    <Link to="/login" className="ml-2 sm:ml-10 btn bg-yellow-400 rounded-s-full hover:bg-green-900 ">
-                        Log in
-                    </Link>
-                )}
+            <div className="flex items-center justify-center">
+                {user?.uid && <p className="text-blue-400 font-bold mx-auto">{user.displayName}</p>}
+                <Link
+                    onClick={logOutHandler}
+                    to={user?.uid ? "/login" : "/"}
+                    className="btn bg-yellow-400 rounded hover:bg-green-900"
+                >
+                    {user?.uid ? "Log out" : "Log in"}
+                </Link>
             </div>
         </div>
     );
 };
 
 export default Navbar;
+

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo3.png";
+import logo from "../../../public/brand-logo.png";
 import { FaYoutube, FaFacebookF, FaApple } from "react-icons/fa";
 import { TfiTwitterAlt } from "react-icons/tfi";
 import img from  '../../assets/goole.png'
@@ -8,8 +8,8 @@ const Footer = () => {
     return (
         <footer className="footer footer-center p-10 bg-gradient-to-bl from-blue-950 to-lime-950 text-primary-content">
             {/* <div className="flex flex-col "> */}
-            <div className="flex flex-col  items-center p-5">
-                <img className="h-36 w-36 p-2 m-5 -ml-1 " src={logo} alt="logo of raw relish" />
+            <div className="flex flex-col justify-center items-center p-5">
+                <img className="h-36 w-36 mx-auto p-2 my-5 " src={logo} alt="logo of raw relish" />
                 <header className="font-bold text-4xl text-yellow-500">Raw Relish</header>
             </div>
             <div className="">
@@ -35,7 +35,7 @@ const Footer = () => {
             <div className="flex flex-col gap-6  sm:flex-row m-5">
                 <Link>
                 <div className=" w-56 h-20 flex items-center justify-center p-3 bg-black px-5  rounded-xl ">
-                    <div className="text-yellow-100 font-medium">
+                    <div className="text-yellow-100 ">
                         <p className="">Download</p>
                         <p className=" ">From play store</p>
                     </div>
@@ -47,7 +47,7 @@ const Footer = () => {
                 <Link>
                 
                 <div className=" w-56 h-20 flex items-center justify-center p-3 bg-black px-5  rounded-xl ">
-                        <div className="text-yellow-100 font-semibold">
+                        <div className="text-yellow-100 ">
                             <p className=" ">Download</p>
                             <p className="">From apple store</p>
                         </div>
