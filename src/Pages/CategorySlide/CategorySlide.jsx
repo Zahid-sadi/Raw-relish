@@ -15,25 +15,46 @@ import img9 from "../../assets/food9.jpeg";
 import img10 from "../../assets/juice4.jpg";
 
 const CategorySlide = () => {
- 
-
     const settings = {
         infinite: true,
         slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToScroll: 5,
         autoplay: true,
-        speed: 5000,
-        autoplaySpeed: 2000,
+        speed: 15000,
+        autoplaySpeed: 3000,
         cssEase: "linear",
-        
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    initialSlide: 2,
+                },
+            },
+            {
+                breakpoint: "420px",
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
     };
 
-    return ( 
-        <div className=" h-[700px] w-4/5  mx-auto  p-20 text-white ">
+    return (
+        <div className=" h-[700px] w-4/5  mx-auto  p-20  ">
             <Slider {...settings} className="h-[450px]">
-                <div className="h-96 w-full">
-                    <img className="h-full w-full object-cover" src={img1} alt="" />
-                </div>
+               
+         
                 <div className="h-96 w-full">
                     <img className="h-full w-full object-cover" src={img2} alt="" />
                 </div>
@@ -43,7 +64,7 @@ const CategorySlide = () => {
                 <div className="h-96 w-full">
                     <img className="h-full w-full object-cover" src={img4} alt="" />
                 </div>
-            
+
                 <div className="h-96 w-full">
                     <img className="h-full w-full object-cover" src={img6} alt="" />
                 </div>
@@ -59,7 +80,6 @@ const CategorySlide = () => {
                 <div className="h-96 w-full">
                     <img className="h-full w-full object-cover" src={img10} alt="" />
                 </div>
-               
             </Slider>
         </div>
     );

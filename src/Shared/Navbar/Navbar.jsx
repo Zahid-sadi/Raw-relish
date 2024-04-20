@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { FaCartArrowDown } from "react-icons/fa";
 import logo from "../../assets/logo3.png";
 
-// import {toast} from "react-hot-toast";
 import { AuthContext } from "../../Providers/AuthProvider";
 import useCart from "../../Hooks/useCart";
 import { toast } from "react-toastify";
@@ -84,7 +83,7 @@ const Navbar = () => {
                             />
                         </svg>
                     </label>
-                    <ul tabIndex={0} className=" dropdown-content ">
+                    <ul tabIndex={0} className=" text-center dropdown-content text-yellow-400">
                         {navItems}
                     </ul>
                 </div>
@@ -105,7 +104,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu menu-horizontal px-1 z-40 ">{navItems}</ul>
+                <ul className=" space-x-5 menu-horizontal px-1 z-40 text-yellow-400 ">{navItems}</ul>
             </div>
             <div className="navbar-end  flex items-center">
                 <div className="me-2 sm:me-5 lg:me-8 ">

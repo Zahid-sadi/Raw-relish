@@ -1,7 +1,6 @@
 import { FcCustomerSupport } from "react-icons/fc";
 import { MdDeliveryDining } from "react-icons/md";
 import { TbChefHat } from "react-icons/tb";
-import { FaBowlFood } from "react-icons/fa6";
 import { IoFastFoodSharp } from "react-icons/io5";
 
 

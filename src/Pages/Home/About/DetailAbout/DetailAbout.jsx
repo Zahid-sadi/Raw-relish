@@ -10,7 +10,7 @@ import img from "../../../../assets/abut.jpg";
 import img2 from "../../../../assets/sigUpbg.jpg";
 import img3 from "../../../../assets/restaurent1.jpg";
 import img4 from "../../../../assets/food5 (2).jpg";
-import { TbChefHat, TbChefHatOff } from "react-icons/tb";
+import { TbChefHat } from "react-icons/tb";
 const DetailAbout = () => {
     return (
         <div className="h-fit">
@@ -112,7 +112,7 @@ const DetailAbout = () => {
                                 <p className=" text-gray-400">From varius country</p>
                             </div>
                             <div className="h-full  w-full p-2 text-center border border-l-0 border-t-0 border-r-8 lg:border-r-0 border-yellow-400 ">
-                                <h5 className="text-lg lg:text-xl font-semibold lg:font-bold text-blue-400 lg:text-sky-400">Safe Sourse</h5>
+                                <h5 className="text-lg lg:text-xl font-semibold lg:font-bold text-blue-400 lg:text-sky-400">Safe Source</h5>
                                 <div className="flex items-center justify-center gap-4 p-2">
                                 <GiPlantRoots className="h-10 w-10 text-yellow-400"/>
                                 <h4 className="text-xl lg:text-2xl font-bold lg:font-extrabold text-yellow-500">Root</h4>

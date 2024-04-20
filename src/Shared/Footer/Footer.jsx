@@ -6,7 +6,7 @@ import img from  '../../assets/goole.png'
 
 const Footer = () => {
     return (
-        <footer className="  footer footer-center p-10 bg-gradient-to-bl from-blue-950 to-lime-950 text-primary-content">
+        <footer className="footer footer-center p-10 bg-gradient-to-bl from-blue-950 to-lime-950 text-primary-content">
             {/* <div className="flex flex-col "> */}
             <div className="flex flex-col  items-center p-5">
                 <img className="h-36 w-36 p-2 m-5 -ml-1 " src={logo} alt="logo of raw relish" />
@@ -33,30 +33,28 @@ const Footer = () => {
             </nav>
 
             <div className="flex flex-col gap-6  sm:flex-row m-5">
-                {/* <div className="mb-5 sm:mb-0 sm:mr-5"> */}
+                <Link>
                 <div className=" w-56 h-20 flex items-center justify-center p-3 bg-black px-5  rounded-xl ">
-                    <div className="text-gray-500">
+                    <div className="text-yellow-100 font-medium">
                         <p className="">Download</p>
                         <p className=" ">From play store</p>
                     </div>
-                    <Link className="">
-                        {/* <FaGooglePlay ></FaGooglePlay> */}
+                   
                         <img className="h-14 w-16 mx-2 " src={img} alt="" />
-                    </Link>
-                </div>
-                {/* </div> */}
+                    </div>
+                </Link>
 
-              
-                    <div className=" w-56 h-20 flex items-center justify-center p-3 bg-black px-5  rounded-xl ">
-                        <div className="text-gray-500">
+                <Link>
+                
+                <div className=" w-56 h-20 flex items-center justify-center p-3 bg-black px-5  rounded-xl ">
+                        <div className="text-yellow-100 font-semibold">
                             <p className=" ">Download</p>
                             <p className="">From apple store</p>
                         </div>
 
-                        <Link className="">
                             <FaApple className="h-14 w-16"></FaApple>
-                        </Link>
                     </div>
+                </Link>
               
             </div>
             <p className=" text-gray-300 rounded-3xl text-center">Copyright © 2024 - All rights reserved</p>
