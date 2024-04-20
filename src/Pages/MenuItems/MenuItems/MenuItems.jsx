@@ -20,7 +20,7 @@ import img10 from '../../../assets/food1.jpg'
 
 const MenuItems = () => {
 
-    const [menu] = useItems([  ]);
+    const [menu] = useItems([]);
     
     const spicy = menu.filter(item => item.category === "spicy" )
     const rawSpecial = menu.filter(item => item.category === "raw-special" )
@@ -38,20 +38,20 @@ const MenuItems = () => {
         <div className="">
             <Helmet><title>Raw Relish Items list </title></Helmet>
 
-            <CategoryHero videoSource ={video2} heading="Today's offer "
+            <CategoryHero videoSource ={video4} heading="Today's offer "
            details=" spicy khao chapar sobde birokto koro char pash"></CategoryHero>
             <MenuItemsCategory items={offered} bgPhoto={img3}  categoryHeadline="offered" categoryDetails=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia.h"></MenuItemsCategory>
             
-           <CategoryHero videoSource ={video4} heading="How do we prepare raw items"
+           <CategoryHero videoSource ={video1} heading="How do we prepare raw items"
            details="  raw khao chapar sobde birokto koro char pash"></CategoryHero>
-           <MenuItemsCategory items={rawSpecial} bgPhoto={img4} categoryHeadline="rawSpecial" categoryDetails="raw khao sadd nao birokto koro char pash  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia."></MenuItemsCategory>
+           <MenuItemsCategory items={rawSpecial} bgPhoto={img4} categoryHeadline="Raw Special" categoryDetails="raw khao sadd nao birokto koro char pash  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia."></MenuItemsCategory>
 
-           <CategoryHero videoSource ={video3} heading="How do we make something special with honey"
+           <CategoryHero videoSource ={video3} heading="How do we make honey's items"
            details=" spicy khao chapar sobde birokto koro char pash"></CategoryHero>
            <MenuItemsCategory items={honey} bgPhoto={img1} categoryHeadline="honey" categoryDetails="honey khao chapar sobde birokto koro char pash  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia."></MenuItemsCategory>
 
 
-           <CategoryHero videoSource ={video1} heading="how do we make fruits items "
+           <CategoryHero videoSource ={video2} heading="how do we make fruits items "
            details=" juice khao cool thako cool koro char pash"></CategoryHero>
            <MenuItemsCategory items={fruits} bgPhoto={img2} categoryHeadline="fruits" categoryDetails="juice khao chapar sobde birokto koro char pash  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia."></MenuItemsCategory>
 
@@ -63,7 +63,7 @@ const MenuItems = () => {
            details=" spicy khao chapar sobde birokto koro char pash"></CategoryHero>
            <MenuItemsCategory items={pickles} bgPhoto={img6} categoryHeadline="pickles" categoryDetails="dessert khao ar koro char pash  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia."></MenuItemsCategory>
 
-           <CategoryHero videoSource ={video2} heading="How do we make special bread"
+           <CategoryHero videoSource ={video3} heading="How do we make special bread"
            details=" spicy khao chapar sobde birokto koro char pash"></CategoryHero>
            <MenuItemsCategory items={food_Bread} bgPhoto={img7} categoryHeadline="food Bread" categoryDetails="dessert khao  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia. koro char pash"></MenuItemsCategory>
 
@@ -71,11 +71,11 @@ const MenuItems = () => {
            details=" spicy khao chapar sobde birokto koro char pash"></CategoryHero>
            <MenuItemsCategory items={dessert} bgPhoto={img8} categoryHeadline="dessert" categoryDetails="dessert khao  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia. koro char pash"></MenuItemsCategory>
 
-           <CategoryHero videoSource ={video2} heading="How do we make grilled items"
+           <CategoryHero videoSource ={video1} heading="How do we make grilled items"
            details=" spicy khao chapar sobde birokto koro char pash"></CategoryHero>
            <MenuItemsCategory items={grilled} bgPhoto={img9} categoryHeadline="grilled" categoryDetails="dessert khao  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia. koro char pash"></MenuItemsCategory>
 
-           <CategoryHero videoSource ={video2} heading="How do we make spicy "
+           <CategoryHero videoSource ={video3} heading="How do we make spicy "
            details=" spicy khao chapar sobde birokto koro char pash"></CategoryHero>
            <MenuItemsCategory items={spicy} bgPhoto={img10} categoryHeadline="spicy" categoryDetails="dessert khao  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia. koro char pash lorem20
            "></MenuItemsCategory>

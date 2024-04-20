@@ -3,6 +3,8 @@ import { IoFastFoodSharp } from "react-icons/io5";
 import { RiRefund2Fill } from "react-icons/ri";
 import { IoMdColorFill } from "react-icons/io";
 import { GiPlantRoots } from "react-icons/gi";
+import { Helmet } from "react-helmet";
+
 
 
 
@@ -14,6 +16,9 @@ import { TbChefHat } from "react-icons/tb";
 const DetailAbout = () => {
     return (
         <div className="h-fit">
+             <Helmet>
+                <title>Raw Relish Details About </title>
+            </Helmet>
             <div className="">
                 <img  className="  h-[700px] w-full opacity-70" src={img} alt="" />
             </div>
@@ -54,7 +59,7 @@ const DetailAbout = () => {
                                 <RiRefund2Fill className="h-10 w-10 text-yellow-400"/>
                                 <h4 className="text-xl lg:text-2xl font-bold lg:font-extrabold text-yellow-500">Policy</h4>
                               </div>
-                                <p className=" text-gray-400">If test won't expectable</p>
+                                <p className=" text-gray-400">If test wont expectable</p>
                             </div>
                             <div className="h-full  w-full p-2 text-center border lg:border-b-0 border-r-0 border-t-1 border-l-8 lg:border-r-8 lg:border-l-0 border-yellow-400 ">
                                 <h5 className="text-lg lg:text-xl font-semibold lg:font-bold text-blue-400 lg:text-sky-500">Varius Items</h5>

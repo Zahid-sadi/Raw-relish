@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { FaQuoteLeft } from "react-icons/fa";
@@ -14,6 +15,9 @@ const Review = () => {
 
     return (
         <section className="flex flex-col lg:flex-row p-4 sm:p-8 md:p-12 lg:p-16 ">
+            <Helmet>
+                <title>Raw Relish Reviews </title>
+            </Helmet>
             <div className="w-full lg:w-1/2 h-[400px] lg:h-[550px] mt-10 lg:mt-24">
                 <Swiper
                     direction={"horizontal"}

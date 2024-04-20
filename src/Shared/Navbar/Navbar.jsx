@@ -13,7 +13,6 @@ const Navbar = () => {
     const [cart] = useCart();
     const [isAdmin] = useAdmin();
 
-    const navStyle = "px-3 mx-3 hover:text-yellow-500 hover:rounded-lg hover:pb-3 hover:font-extrabold hover:bg-gradient to-green-950 from-black hover:shadow-md hover:shadow-yellow-400";
 
     const logOutHandler = () => {
         logOut()
@@ -24,6 +23,9 @@ const Navbar = () => {
                 toast.error(error.message);
             });
     };
+
+    const navStyle = "px-3 mx-3 hover:text-yellow-500 hover:rounded-lg hover:pb-3 hover:font-bold hover:bg-gradient to-green-950 from-black hover:shadow-md hover:shadow-yellow-400";
+
 
     const navItems = (
         <>
