@@ -13,7 +13,7 @@ const CategoryHero = ({ videoSource, heading }) => {
                     {heading}
                     </h2>
                 </div>
-            <video className="w-screen rounded-t-3xl border border-b-0 border-yellow-500   object-cover h-[600px]  " muted src={videoSource} loop={true} autoPlay />
+            <video className="w-screen rounded-t-3xl border border-b-0 border-yellow-500   object-cover h-96 md:h-[600px]  " muted src={videoSource} loop={true} autoPlay />
         </div>
     );
 };

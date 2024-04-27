@@ -9,7 +9,7 @@ import ServiceType from '../ServiceType/ServiceType';
 const Home = () => {
     return (
         <div className=''>
-            {/* <Helmet> <title>Raw Relish Home</title> </Helmet> */}
+            <Helmet> <title>Raw Relish Home</title> </Helmet>
             <Hero></Hero>
             <ServiceType></ServiceType>
             <Category></Category>

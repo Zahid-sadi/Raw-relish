@@ -13,22 +13,18 @@ const FoodCard = ({ item }) => {
     const location = useLocation();
     const [ , refetch ] = useCart();
 
-    const [ react, setReact ] = useState("text-white");
-    const [ reactCount, setReactCount ] = useState(0);
-    let clicked = 1;
+   
 
-    const handleToReact = () => {
-        if (clicked > 0) {
-            setReact("text-red-600");
-            let addCount = reactCount + 1;
-            setReactCount(addCount);
-        } else {
-            setReact("text-pink-600");
-            let addCount = reactCount - 1;
-            setReactCount(addCount);
-        }
+    const colors = ['text-white','text-red-800', 'text-pink-500']; // Define an array of text colors
+    const [currentColorIndex, setCurrentColorIndex] = useState(0);
+  
+    const handleClick = () => {
+      // Calculate the next color index
+      const nextIndex = (currentColorIndex + 1) % colors.length;
+      setCurrentColorIndex(nextIndex);
     };
-
+  
+    
     const handleToCart = (item) => {
         // console.log("from handleToCart of foodCard", item);
         if (user && user.email) {
@@ -63,11 +59,11 @@ const FoodCard = ({ item }) => {
 
             <div className="card-body   text-neutral-content  rounded-b-lg  group-hover:bg-slate-950 transition delay-300 duration-700">
                 <div
-                    onClick={handleToReact}
-                    className={` h-16 w-full  -mt-10 z-20 flex gap-5 items-center content-center  ${react}`}
+                    onClick={handleClick}
+                    className={`h-16 w-full -mt-10 z-20 flex gap-5 items-center content-center ${colors[currentColorIndex]}`}
                 >
                     <FaHeart className="h-16 w-16" />
-                    <p className=" p-2 text-yellow-400 font-bold text-lg h-10">{reactCount}</p>
+                    {/* <p className=" p-2 text-yellow-400 font-bold text-lg h-10">{reactCount}</p> */}
                 </div>
                 <h2 className="card-title text-md pl-5 my-2  text-yellow-600 capitalize group-hover:text-yellow-400 ">
                     {name} <p className="text-yellow-600 p-1 group-hover:text-yellow-400  text-end">$ {price} </p>{" "}

@@ -65,8 +65,8 @@ const Navbar = () => {
     );
 
     return (
-        <div className="navbar mx-auto sticky top-0 h-28 bg-opacity-30 bg-black z-10 text-white justify-evenly items-center ">
-            <div className="flex items-center">
+        <div className="navbar w-full sticky top-0 h-28 bg-opacity-30 bg-black z-10 justify-around items-center ">
+            <div className="flex w-1/3 items-center">
                 <div className="dropdown lg:hidden sm:block md:block">
                     <label tabIndex={0} className="btn btn-ghost">
                         <svg
@@ -88,7 +88,7 @@ const Navbar = () => {
                         {navItems}
                     </ul>
                 </div>
-                <div className="flex items-center">
+                <div className="flex ml-20 pl-10 items-center">
                     <Link to="/">
                         <img
                             className="h-12 md:h-16 lg:h-20 w-fit md:w-16 lg:w-20"
@@ -104,11 +104,11 @@ const Navbar = () => {
                     </Link>
                 </div>
             </div>
-            <div className="hidden px-5 lg:flex">
-                <ul className=" menu-horizontal text-yellow-400">{navItems}</ul>
+            <div className="hidden w-2/3 px-5 lg:flex justify-center ">
+                <ul className="menu-horizontal text-yellow-400">{navItems}</ul>
             </div>
-            <div className="flex items-center justify-center">
-                {user?.uid && <p className="text-blue-400 font-bold mx-auto">{user.displayName}</p>}
+            <div className="flex w-1/3  items-center justify-center">
+                {user?.uid && <p className="text-blue-400 font-bold px-2 mx-auto">{user.displayName}</p>}
                 <Link
                     onClick={logOutHandler}
                     to={user?.uid ? "/login" : "/"}
