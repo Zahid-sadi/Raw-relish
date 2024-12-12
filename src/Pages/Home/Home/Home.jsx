@@ -1,5 +1,4 @@
 import Hero from '../../Hero/Hero';
-import Category from '../../CategorySlide/CategorySlide';
 import About from '../About/About';
 import Review from '../Review/Review';
 import { Helmet } from 'react-helmet';
@@ -12,7 +11,6 @@ const Home = () => {
             <Helmet> <title>Raw Relish Home</title> </Helmet>
             <Hero></Hero>
             <ServiceType></ServiceType>
-            <Category></Category>
             <About></About>
             <OfferedFood></OfferedFood>
             <Review></Review>

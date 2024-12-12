@@ -9,6 +9,7 @@ const useItems = () => {
         queryKey: [ "menu" ],
         queryFn: async () => {
             const res = await fetch("https://raw-relish-server.vercel.app/items");
+            // const res = await fetch("http://localhost:3000//items");
             return res.json();
         },
     });

@@ -1,8 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
-import img from "../../assets/bg111.jpg";
 import { useContext } from "react";
-import { AuthContext } from "../../Providers/AuthProvider";
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import img from "../../assets/bg111.jpg";
+import { AuthContext } from "../../Providers/AuthProvider";
 import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
 
 const SignUp = () => {

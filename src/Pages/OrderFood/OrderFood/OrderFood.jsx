@@ -1,11 +1,11 @@
 import { useState } from "react";
+import { useParams } from "react-router";
+import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
+import useItems from "../../../Hooks/useItems";
 import Cover from "../../../Shared/Cover/Cover";
 import coverImage from "../../../assets/bl-spooon.jpg";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import "react-tabs/style/react-tabs.css";
 import FoodMap from "../FoodMap/FoodMap";
-import useItems from "../../../Hooks/useItems";
-import { useParams } from "react-router";
 
 const OrderFood = () => {
     const categories = [
@@ -25,8 +25,6 @@ const OrderFood = () => {
     const initialIndex = categories.indexOf(category);
     const [ tabIndex, setTabIndex ] = useState(initialIndex);
 
-   
-
     const [ menu ] = useItems([]);
     // console.log(menu);
     // console.log(spicy);
@@ -38,18 +36,22 @@ const OrderFood = () => {
     const fruits = menu.filter((item) => item.category === "fruits");
     const juice = menu.filter((item) => item.category === "juice");
     const pickles = menu.filter((item) => item.category === "pickles");
-    const foodbread = menu.filter((item) => item.category === "foodbread");
+    const foodBread = menu.filter((item) => item.category === "foodbread");
     const dessert = menu.filter((item) => item.category === "dessert");
     const grilled = menu.filter((item) => item.category === "grilled");
 
     return (
         <div>
-            <Cover coverPhoto={coverImage} coverHeadline="Order Us " coverDetails="we ensure your demand"></Cover>
+            <Cover
+                coverPhoto={coverImage}
+                coverHeadline="Order Us "
+                coverDetails="we ensure your demand we ensure your demand we ensure your demand we ensure your demand we ensure your demand we ensure your demand we ensure your demand we ensure your demand we ensure your demand we ensure your demand we ensure your demand "
+            ></Cover>
 
             <div className=" h-fit p-10  bg-gradient-to-b from-slate-900 to-slate-700  text-black ">
                 <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                     <div className=" text-yellow-600 p-8 font-bold  text-center m-5  ">
-                        <TabList className=''>
+                        <TabList className="">
                             <Tab>Today's offer</Tab>
                             <Tab>Raw Special</Tab>
                             <Tab>Spicy</Tab>
@@ -62,44 +64,42 @@ const OrderFood = () => {
                             <Tab>Juice</Tab>
                             <Tab>All Items</Tab>
                         </TabList>
-                     
                     </div>
-                  
 
                     <div className="">
-                    <TabPanel>
-                        <FoodMap items={offered}></FoodMap>
-                    </TabPanel>
-                    <TabPanel>
-                        <FoodMap items={rawSpecial}></FoodMap>
-                    </TabPanel>
-                    <TabPanel>
-                        <FoodMap items={spicy}></FoodMap>
-                    </TabPanel>
-                    <TabPanel>
-                        <FoodMap items={dessert}></FoodMap>
-                    </TabPanel>
-                    <TabPanel>
-                        <FoodMap items={foodbread}></FoodMap>
-                    </TabPanel>
-                    <TabPanel>
-                        <FoodMap items={grilled}></FoodMap>
-                    </TabPanel>
-                    <TabPanel>
-                        <FoodMap items={pickles}></FoodMap>
-                    </TabPanel>
-                    <TabPanel>
-                        <FoodMap items={honey}></FoodMap>
-                    </TabPanel>
-                    <TabPanel>
-                        <FoodMap items={fruits}></FoodMap>
-                    </TabPanel>
-                    <TabPanel>
-                        <FoodMap items={juice}></FoodMap>
-                    </TabPanel>
-                    <TabPanel>
-                        <FoodMap items={menu}></FoodMap>
-                    </TabPanel>
+                        <TabPanel>
+                            <FoodMap items={offered}></FoodMap>
+                        </TabPanel>
+                        <TabPanel>
+                            <FoodMap items={rawSpecial}></FoodMap>
+                        </TabPanel>
+                        <TabPanel>
+                            <FoodMap items={spicy}></FoodMap>
+                        </TabPanel>
+                        <TabPanel>
+                            <FoodMap items={dessert}></FoodMap>
+                        </TabPanel>
+                        <TabPanel>
+                            <FoodMap items={foodBread}></FoodMap>
+                        </TabPanel>
+                        <TabPanel>
+                            <FoodMap items={grilled}></FoodMap>
+                        </TabPanel>
+                        <TabPanel>
+                            <FoodMap items={pickles}></FoodMap>
+                        </TabPanel>
+                        <TabPanel>
+                            <FoodMap items={honey}></FoodMap>
+                        </TabPanel>
+                        <TabPanel>
+                            <FoodMap items={fruits}></FoodMap>
+                        </TabPanel>
+                        <TabPanel>
+                            <FoodMap items={juice}></FoodMap>
+                        </TabPanel>
+                        <TabPanel>
+                            <FoodMap items={menu}></FoodMap>
+                        </TabPanel>
                     </div>
                 </Tabs>
             </div>

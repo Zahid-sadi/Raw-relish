@@ -5,6 +5,7 @@ import axios from "axios";
 
 const axiosSecure = axios.create({
     baseURL: "https://raw-relish-server.vercel.app",
+    // baseURL: "http://localhost:3000",
 });
 
 const useAxiosSecure = () => {

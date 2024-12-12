@@ -1,63 +1,78 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
 import { FaCartArrowDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo3.png";
 
-import { AuthContext } from "../../Providers/AuthProvider";
-import useCart from "../../Hooks/useCart";
 import { toast } from "react-toastify";
 import useAdmin from "../../Hooks/useAdmin";
+import useCart from "../../Hooks/useCart";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
-    const [cart] = useCart();
-    const [isAdmin] = useAdmin();
-
+    const [ cart ] = useCart();
+    const [ isAdmin ] = useAdmin();
 
     const logOutHandler = () => {
         logOut()
-            .then(() => {
-                toast("SignOut successfully");
-            })
-            .catch((error) => {
-                toast.error(error.message);
-            });
+        .then(() => {
+            toast("SignOut successfully");
+        })
+        .catch((error) => {
+            toast.error(error.message);
+        });
     };
 
-    const navStyle = "px-3 mx-3 hover:text-yellow-500 hover:rounded-lg hover:pb-3 hover:font-bold hover:bg-gradient to-green-950 from-black hover:shadow-md hover:shadow-yellow-400";
-
+    const navStyle =
+        "px-3 mx-3 hover:text-yellow-500 hover:rounded-lg hover:pb-3  hover:bg-gradient to-green-950 from-black hover:shadow-md hover:shadow-yellow-400";
 
     const navItems = (
         <>
             <li>
-                <Link className={navStyle} to="/">Home</Link>
+                <Link className={navStyle} to="/">
+                    Home
+                </Link>
             </li>
             <li>
-                <Link className={navStyle} to="/about">About</Link>
+                <Link className={navStyle} to="/about">
+                    About
+                </Link>
             </li>
             <li>
-                <Link className={navStyle} to="/review">Reviews</Link>
+                <Link className={navStyle} to="/review">
+                    Reviews
+                </Link>
             </li>
             <li>
-                <Link className={navStyle} to="/items">Items</Link>
+                <Link className={navStyle} to="/items">
+                    Items
+                </Link>
             </li>
             <li>
-                <Link className={navStyle} to="/order">Food Order</Link>
+                <Link className={navStyle} to="/order">
+                    Food Order
+                </Link>
             </li>
             {isAdmin ? (
                 <li>
-                    <Link className={navStyle} to="/dashboard/adminHome">Dashboard</Link>
+                    <Link className={navStyle} to="/dashboard/adminHome">
+                        Dashboard
+                    </Link>
                 </li>
             ) : (
                 <li>
-                    <Link className={navStyle} to="/dashboard/userHome">Dashboard</Link>
+                    <Link className={navStyle} to="/dashboard/userHome">
+                        Dashboard
+                    </Link>
                 </li>
             )}
             <li>
                 <Link className="group" to="dashboard/my/cart">
                     <div className="indicator group-hover:text-yellow-400">
                         <FaCartArrowDown className="h-7 w-6" />
-                        <span className="badge badge-xs badge-primary group-hover:bg-yellow-400 group-hover:text-gray-700 indicator-item p-2">{cart?.length || 0}</span>
+                        <span className="badge badge-xs badge-primary group-hover:bg-yellow-400 group-hover:text-gray-700 indicator-item p-2">
+                            {cart?.length || 0}
+                        </span>
                     </div>
                 </Link>
             </li>
@@ -122,4 +137,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-

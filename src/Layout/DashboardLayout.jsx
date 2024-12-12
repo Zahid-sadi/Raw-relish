@@ -1,9 +1,9 @@
+import { FaHome, FaShoppingCart, FaUsers, FaWallet } from "react-icons/fa";
+import { ImHome, ImHome2, ImList, ImSpoonKnife } from "react-icons/im";
 import { Outlet } from "react-router";
 import { NavLink } from "react-router-dom";
-import { FaHome, FaShoppingCart, FaStore, FaUsers, FaWallet } from "react-icons/fa";
-import { ImBook, ImHome, ImHome2, ImList, ImMenu, ImMobile, ImSpoonKnife } from "react-icons/im";
-import useCart from "../Hooks/useCart";
 import useAdmin from "../Hooks/useAdmin";
+import useCart from "../Hooks/useCart";
 
 const DashboardLayout = () => {
     const [ cart ] = useCart();
@@ -46,30 +46,11 @@ const DashboardLayout = () => {
                                     <ImList></ImList> Manage Items
                                 </NavLink>
                             </li>
-                            <li>
-                                <NavLink to=" ">
-                                    <ImBook></ImBook> Manage Items
-                                </NavLink>
-                            </li>
+
                             <div className="divider divide-accent ">and</div>
                             <li>
                                 <NavLink to="/">
                                     <ImHome2></ImHome2> Home
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to=" ">
-                                    <ImMobile></ImMobile> Contact
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to=" ">
-                                    <ImMenu></ImMenu> Menu
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink to=" ">
-                                    <FaStore></FaStore> Shope
                                 </NavLink>
                             </li>
                         </>
@@ -81,28 +62,14 @@ const DashboardLayout = () => {
                                     <span className=" badge  badge-info">+{cart?.length || 0}</span>
                                 </NavLink>
                             </li>
-                            <li>
-                                <NavLink to=" ">
-                                    <FaWallet></FaWallet> My Wallet
-                                </NavLink>
-                            </li>
 
                             <li>
                                 <NavLink to="/dashboard/payment">
                                     <FaWallet></FaWallet> Payment
                                 </NavLink>
                             </li>
-                            <li>
-                                <NavLink to=" ">
-                                    <FaWallet></FaWallet> My Wallet
-                                </NavLink>
-                            </li>
+
                             <div className="divider"></div>
-                            <li>
-                                <NavLink to="/">
-                                    <FaHome></FaHome>Home
-                                </NavLink>
-                            </li>
                             <li>
                                 <NavLink to="/">
                                     <FaHome></FaHome>Home

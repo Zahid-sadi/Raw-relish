@@ -7,16 +7,12 @@ const OfferedFood = () => {
     // console.log(offered, "from offeredFood");
 
     return (
-        <section>
+        <section className="h-fit">
             <MenuItemsCategory
                 items={offered}
                 categoryHeadline="offered"
                 categoryDetails="offer khao chapar sobde birokto koro char pash Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit "
-                
-            >
-               
-            </MenuItemsCategory>
-            
+            ></MenuItemsCategory>
         </section>
     );
 };

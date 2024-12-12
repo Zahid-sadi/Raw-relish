@@ -5,10 +5,12 @@ import video1 from '../../../assets/Cooking The Most Delicious Juicy Steak.mp4'
 import video2 from '../../../assets/DESSERT MAKING B-ROLL VIDEO.mp4'
 import video3 from '../../../assets/burger-making.mp4'
 import video4 from '../../../assets/Food Showreel.mp4'
+import video5 from '../../../assets/Fruit drink advertisement video  Created using IMOVIE.mp4'
+
 import MenuItemsCategory from "../MenuItemsCategory/MenuItemsCategory";
 import img1 from '../../../assets/smoke-cook.jpg'
 import img2 from '../../../assets/smoke-cook.jpg'
-import img3 from '../../../assets/smoke-cook.jpg'
+// import img3 from '../../../assets/smoke-cook.jpg'
 import img4 from '../../../assets/smoke-cook.jpg'
 import img5 from '../../../assets/smoke-cook.jpg'
 import img6 from '../../../assets/smoke-cook.jpg'
@@ -40,7 +42,7 @@ const MenuItems = () => {
 
             <CategoryHero videoSource ={video4} heading="Today's offer "
            details=" spicy khao chapar sobde birokto koro char pash"></CategoryHero>
-            <MenuItemsCategory items={offered} bgPhoto={img3}  categoryHeadline="offered" categoryDetails=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia.h"></MenuItemsCategory>
+            <MenuItemsCategory items={offered} bgPhoto={img10}  categoryHeadline="offered" categoryDetails=" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia.h"></MenuItemsCategory>
             
            <CategoryHero videoSource ={video1} heading="How do we prepare raw items"
            details="  raw khao chapar sobde birokto koro char pash"></CategoryHero>
@@ -55,7 +57,7 @@ const MenuItems = () => {
            details=" juice khao cool thako cool koro char pash"></CategoryHero>
            <MenuItemsCategory items={fruits} bgPhoto={img2} categoryHeadline="fruits" categoryDetails="juice khao chapar sobde birokto koro char pash  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia."></MenuItemsCategory>
 
-           <CategoryHero videoSource ={video1} heading="How do we make juice items"
+           <CategoryHero videoSource ={video5} heading="How do we make juice items"
            details=" fruits  khao dat er sobde birokto koro char pash"></CategoryHero>
            <MenuItemsCategory items={juice} bgPhoto={img5} categoryHeadline="juice" categoryDetails="juice khao chapar sobde birokto koro char pash  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia."></MenuItemsCategory>
 
@@ -77,7 +79,7 @@ const MenuItems = () => {
 
            <CategoryHero videoSource ={video3} heading="How do we make spicy "
            details=" spicy khao chapar sobde birokto koro char pash"></CategoryHero>
-           <MenuItemsCategory items={spicy} bgPhoto={img10} categoryHeadline="spicy" categoryDetails="dessert khao  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia. koro char pash lorem20
+           <MenuItemsCategory items={spicy} bgPhoto={img1} categoryHeadline="spicy" categoryDetails="dessert khao  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium dolores temporibus nostrum pariatur nihil quaerat veritatis reprehenderit voluptates tempore sit aut, quam consectetur, esse, repudiandae fugit! Soluta expedita delectus nisi, nemo at magnam consectetur dignissimos obcaecati! Autem ratione excepturi officia. koro char pash lorem20
            "></MenuItemsCategory>
 
         </div>

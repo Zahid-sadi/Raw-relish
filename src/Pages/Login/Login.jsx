@@ -1,15 +1,15 @@
-import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from "react-simple-captcha";
+import { LoadCanvasTemplate, loadCaptchaEnginge, validateCaptcha } from "react-simple-captcha";
 
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import img from "../../assets/imagr of login page.jpg";
 import { useContext, useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import img from "../../assets/imagr of login page.jpg";
 import { AuthContext } from "../../Providers/AuthProvider";
 import SocialLogin from "../../Shared/SocialLogin/SocialLogin";
-import { toast } from "react-toastify";
 
 const Login = () => {
     const [ isDisable, setDisable ] = useState(true);
-    const {  logIn } = useContext(AuthContext);
+    const { logIn } = useContext(AuthContext);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -31,7 +31,7 @@ const Login = () => {
             const user = result.user;
 
             // console.log(user);
-            toast.success('login successfully')
+            toast.success("login successfully");
             navigate(from, { replace: true });
         });
     };
@@ -48,9 +48,7 @@ const Login = () => {
     };
 
     return (
-        <div
-            className="hero h-screen"
-        >
+        <div className="hero h-screen">
             <img src={img} alt="" className="w-full h-screen " />
 
             <div className="hero-overlay bg-opacity-40"></div>
@@ -59,8 +57,7 @@ const Login = () => {
                 <div className="max-w-md">
                     <form onSubmit={handleLogin} className="card-body w-96 rounded-3xl  bg-black bg-opacity-40">
                         <div className="mx-auto">
-                        <SocialLogin></SocialLogin>
-
+                            <SocialLogin></SocialLogin>
                         </div>
 
                         <h4 className="text-white font-bold text-4xl p-4 m-2">LOGIN</h4>
@@ -102,11 +99,13 @@ const Login = () => {
                             className=" mt-4 btn btn-outline border-b-4 border-slate-900"
                             value="Login"
                         />
-                           <Link className="px-5 mt-5 bg-gradient-to-r from-yellow-400 to-orange-400  text-black " to="/signUp">
-                        Please Make An Account
-                    </Link>
+                        <Link
+                            className="px-5 mt-5 bg-gradient-to-r from-yellow-400 to-orange-400  text-black "
+                            to="/signUp"
+                        >
+                            Please Make An Account
+                        </Link>
                     </form>
-                 
                 </div>
             </div>
         </div>

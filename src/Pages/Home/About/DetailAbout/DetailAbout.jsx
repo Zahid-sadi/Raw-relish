@@ -4,27 +4,62 @@ import { RiRefund2Fill } from "react-icons/ri";
 import { IoMdColorFill } from "react-icons/io";
 import { GiPlantRoots } from "react-icons/gi";
 import { Helmet } from "react-helmet";
+import  { useEffect } from 'react';
 
 
 
 
-import img from "../../../../assets/abut.jpg";
-import img2 from "../../../../assets/sigUpbg.jpg";
-import img3 from "../../../../assets/restaurent1.jpg";
-import img4 from "../../../../assets/food5 (2).jpg";
+
+import img from "../../../../assets/about.jpg";
+import img0 from "../../../../assets/restaurant0.jpg";
+import img1 from "../../../../assets/restaurant.jpg";
+import img2 from "../../../../assets/signUpbg.jpg";
+import img3 from "../../../../assets/restaurant1.jpg";
+import img4 from "../../../../assets/image2.jpg";
 import { TbChefHat } from "react-icons/tb";
+import { Link } from "react-router-dom";
 const DetailAbout = () => {
+    useEffect(() => {
+        const hash = window.location.hash;
+        const targetId = hash.slice(1); // Remove the leading "#"
+    
+        if (targetId) {
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+    }, []);
+   
     return (
-        <div className="h-fit">
+        <div className="h-fit scroll-auto ">
              <Helmet>
                 <title>Raw Relish Details About </title>
             </Helmet>
-            <div className="">
-                <img  className="  h-[700px] w-full opacity-70" src={img} alt="" />
+           
+            
+            <div className="h-[800px]  w-full flex items-center relative">
+                <div  className="text-yellow-500  absolute top-1/3  space-y-5 p-10 z-10 border-2 border-l-0 border-yellow-500 bg-gradient-to-l from-lime-950 to-blue-950  ">
+                    <h1 className="text-sm sm:text-md md:text-xl lg:text3xl text-yellow-600 font-semibold md:font-extrabold"> You need to know about ourself we always ready to give you information about us</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, quis labore laborum repellat vitae at pariatur earum? Tenetur, praesentium a.</p>
+                </div>
+                
+                <div className="w-full h-full">
+                <img className="opacity-70 w-full h-full rounded-3xl rounded-l-none" src={ img0 } alt="Restaurant Image" />
+                </div>
+                <div className="w-full h-full">
+                <img className="opacity-70 w-full h-full py-10 rounded-3xl rounded-r-none" src={ img2 } alt="Restaurant Image" />
+
+                </div>
+                <div className="w-full h-full">
+                <img className="opacity-70 w-full h-full rounded-3xl rounded-r-none" src={ img } alt="Restaurant Image" />
+
+                </div>
             </div>
 
-            <div className=" h-fit max-w-7xl mx-auto space-y-10 my-12">
-                <div id="who" className="h-fit lg:h-[500px] flex flex-col lg:flex-row gap-5  items-center border border-yellow-400 pb-5 lg:border-none  ">
+            <div className=" h-fit max-w-7xl mx-auto space-y-3  mb-24">
+           <div className="sticky top-1/3 right-1/3 "> <Link className="btn btn-warning px-3 z-20 text-white" to="/about"> Back </Link></div>
+                <div id="who" className="h-fit  lg:h-[600px] flex flex-col lg:flex-row gap-5  items-center pb-5 py-32">
                     <div className="w-full lg:w-1/2 h-full rounded-3xl">
                         <img className="h-full w-full px-12 lg:p-0 rounded-3xl" src={img2} alt="" />
                     </div>
@@ -40,7 +75,7 @@ const DetailAbout = () => {
                         </p>
                     </div>
                 </div>
-                <div id="why" className="h-fit lg:h-[500px] flex flex-col-reverse lg:flex-row gap-5  items-center border border-yellow-400 pb-5 lg:border-none ">
+                <div id="why" className="h-fit lg:h-[600px] flex flex-col-reverse lg:flex-row gap-5  items-center pb-5 py-32 ">
                   
                     <div className="lg:w-1/2  p-10 lg:p-5 space-y-5 text-justify lg:text-end ">
                         <h3 className="text-xl sm:text-2xl lg:text-5xl text-center lg:text-end  text-blue-400 font-bold ">Why from us </h3>
@@ -85,7 +120,7 @@ const DetailAbout = () => {
                         <img className="h-full w-full px-12 lg:p-0 rounded-3xl " src={img4} alt="" />
                     </div>
                 </div>
-                <div id="what" className="h-fit lg:h-[500px] flex flex-col lg:flex-row gap-5  items-center border border-yellow-400 pb-5 lg:border-none ">
+                <div id="what" className="h-fit lg:h-[600px] flex flex-col lg:flex-row gap-5  items-center pb-5 py-32 ">
                     <div className="w-full lg:w-1/2 h-full">
                         <img className="h-full w-full px-12 lg:p-0 rounded-3xl" src={img3} alt="" />
                     </div>
